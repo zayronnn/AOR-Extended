@@ -236,11 +236,6 @@ class HarvestablesHandler
         }
     }
 
-    clear()
-    {
-        this.harvestableList = [];
-    }
-
     GetStringType(typeNumber)
     {
         if (typeNumber >= 0 && typeNumber <= 5)
