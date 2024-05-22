@@ -1,7 +1,5 @@
-class Cage
-{
-    constructor(id, posX, posY, name)
-    {
+class Cage {
+    constructor(id, posX, posY, name) {
         this.id = id;
         this.posX = posX;
         this.posY = posY;
@@ -11,16 +9,13 @@ class Cage
     }
 }
 
-export class WispCageHandler
-{
-    constructor(settings)
-    {
+export class WispCageHandler {
+    constructor(settings) {
         this.settings = settings;
         this.cages = [];
     }
 
-    NewCageEvent(Parameters)
-    {
+    NewCageEvent(Parameters) {
         if (!this.settings.wispCage || Parameters[4] != undefined) return;
 
         const id = Parameters[0];
@@ -31,8 +26,7 @@ export class WispCageHandler
         this.cages.push(new Cage(Parameters[0], Parameters[1][0], Parameters[1][1], Parameters[2]));
     }
 
-    CageOpenedEvent(Parameters)
-    {
+    CageOpenedEvent(Parameters) {
         if (!this.settings.wispCage) return;
 
         const id = Parameters[0];
@@ -43,8 +37,21 @@ export class WispCageHandler
         this.RemoveCage(id);
     }
 
-    RemoveCage(id)
-    {
+    RemoveCage(id) {
         this.cages = this.cages.filter(cage => cage.id !== id);
+    }
+
+    removeNotInRange(lpX, lpY) {
+        this.cages = this.cages.filter(
+            (x) => this.calculateDistance(lpX, lpY, x.posX, x.posY) <= 80
+        );
+    }
+
+    calculateDistance(lpX, lpY, posX, posY) {
+        const deltaX = lpX - posX;
+        const deltaY = lpY - posY;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+        return distance;
     }
 }
