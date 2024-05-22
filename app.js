@@ -1,4 +1,3 @@
-﻿
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
@@ -6,22 +5,16 @@ const PhotonParser = require('./scripts/classes/PhotonPacketParser');
 var Cap = require('cap').Cap;
 var decoders = require('cap').decoders;
 const WebSocket = require('ws');
-
 const fs = require("fs");
 
 const { getAdapterIp } = require('./server-scripts/adapter-selector')
 
-
-
 const app = express();
-
 
 BigInt.prototype.toJSON = function() { return this.toString() }
 
 app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'ejs');
-
-
 
 app.get('/', (req, res) => {
   const viewName = 'main/home'; 
@@ -74,21 +67,14 @@ app.get('/settings', (req, res) => {
   res.render('layout', { mainContent: viewName });
 });
 
-
-
-
 app.get('/drawing', (req, res) => {
-
   res.render('main/drawing');
 });
 
 app.get('/logout', (req, res) => {
-
   req.session.destroy();
   res.redirect('/');
 });
-
-
 
 app.use('/scripts', express.static(__dirname + '/scripts'))
 app.use('/scripts/Handlers', express.static(__dirname + '/scripts/Handlers'))
@@ -101,13 +87,18 @@ app.use('/images/Flags', express.static(__dirname + '/images/Flags'));
 app.use('/sounds', express.static(__dirname + '/sounds'));
 app.use('/config', express.static(__dirname + '/config'));
 
-
-
 const port = 5001;
-
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
+  // Dynamically import the 'open' package
+  import('open').then(open => {
+    open.default(`http://localhost:${port}`).then(() => {
+      open.default(`http://localhost:${port}/drawing`);
+    });
+  }).catch(err => {
+    console.error('Failed to open browser:', err);
+  });
 });
 
 
@@ -151,7 +142,6 @@ var linkType = c.open(device, filter, bufSize, buffer);
 
 c.setMinBytes && c.setMinBytes(0);
 
-
 // setup Cap event listener on global level
 c.on('packet', function (nbytes, trunc) {
   let ret = decoders.Ethernet(buffer);
@@ -169,7 +159,7 @@ c.on('packet', function (nbytes, trunc) {
 
 const server = new WebSocket.Server({ port: 5002, host: 'localhost'});
 server.on('listening', () => {
-  console.log("openned");
+  console.log("opened");
 
   manager.on('event', (dictonary) =>
   {
@@ -179,7 +169,6 @@ server.on('listening', () => {
     });
   });
 
-  
   manager.on('request', (dictonary) =>
   {
     const dictionaryDataJSON = JSON.stringify(dictonary);
@@ -200,8 +189,4 @@ server.on('listening', () => {
 server.on('close', () => {
   console.log('closed')
   manager.removeAllListeners()
-})
-
-
-
-
+});
