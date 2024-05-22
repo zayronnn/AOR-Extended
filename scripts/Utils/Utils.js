@@ -273,8 +273,6 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
-
-
 function update() {
 
     const currentTime = performance.now();
@@ -293,6 +291,7 @@ function update() {
 
 
     chestsDrawing.interpolate(chestsHandler.chestsList, lpX, lpY, t);
+    wispCageHandler.removeNotInRange(lpX, lpY);
     wispCageDrawing.Interpolate(wispCageHandler.cages, lpX, lpY, t);
     fishingDrawing.Interpolate(fishingHandler.fishes, lpX, lpY, t);
     dungeonsDrawing.interpolate(dungeonsHandler.dungeonList, lpX, lpY, t);
@@ -327,7 +326,6 @@ setInterval(checkLocalStorage, interval)
 
 
 document.getElementById("button").addEventListener("click", function () {
-
     chestsHandler.chestsList = [];
     dungeonsHandler.dungeonList = [];
     harvestablesHandler.harvestableList = [];
@@ -335,6 +333,7 @@ document.getElementById("button").addEventListener("click", function () {
     mobsHandler.mistList = [];
     playersHandler.playersInRange = [];
     playersDrawing.images = {};
+    wispCageHandler.cages = [];
 });
 
 setDrawingViews();
