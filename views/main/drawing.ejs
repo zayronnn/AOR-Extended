@@ -7,125 +7,54 @@
             background-color: #121317;
         }
 
-        /* Position the canvases, with the topCanvas above the gridCanvas */
-        #mapCanvas {
+        /* Position the canvases */
+        #mapCanvas, #gridCanvas, #ourPlayerCanvas, #drawCanvas {
             position: absolute;
             top: 0;
             left: 0;
             margin: 10px;
         }
 
-        #gridCanvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin: 10px;
+        #gridCanvas, #thirdCanvas, #bottomCanvas {
             border: 2px solid grey;
         }
 
-        #drawCanvas {
+        #bottomCanvas {
             position: absolute;
             top: 0;
-            left: 0;
+            left: 520px; /* Position to the right of mapCanvas which is 500px wide plus margin */
             margin: 10px;
-        }
-
-        #ourPlayerCanvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin: 10px;
-        }
-
-        #button {
-            position: absolute;
-            top: 520px;
-            background-color: #1a1c23;
-            color: white;
-            margin: 10px;
-            border: 1px solid gray;
-            padding: 8px 18px;
-            cursor: pointer;
-            left: 0;
-        }
-
-        #logEnemiesList {
-            position: absolute;
-            top: 520px;
-            background-color: #1a1c23;
-            color: white;
-            margin: 10px;
-            border: 1px solid gray;
-            padding: 8px 18px;
-            cursor: pointer;
-            left: 100px;
-        }
-
-        #sonarButton {
-            position: absolute;
-            top: 520px;
-            background-color: #1a1c23;
-            color: white;
-            margin: 10px;
-            border: 1px solid gray;
-            padding: 8px 18px;
-            cursor: pointer;
-            left: 250px;
-        }
-
-        #volumeLabel {
-            position: absolute;
-            top: 520px;
-            left: 400px;
-            background-color: #1a1c23;
-            color: white;
-            margin: 10px;
-        }
-
-        #volumeSlider {
-            position: absolute;
-            top: 550px;
-            background-color: #1a1c23;
-            color: white;
-            margin: 10px;
-            border: 1px solid gray;
-            padding: 8px 18px;
-            cursor: pointer;
-            left: 400px;
-        }
-
-        #playerVolumeLabel {
-            position: absolute;
-            top: 590px;
-            left: 400px;
-            background-color: #1a1c23;
-            color: white;
-            margin: 10px;
-        }
-
-        #playerVolumeSlider {
-            position: absolute;
-            top: 620px;
-            background-color: #1a1c23;
-            color: white;
-            margin: 10px;
-            border: 1px solid gray;
-            padding: 8px 18px;
-            cursor: pointer;
-            left: 400px;
-        }
-
-        #canvasContainer {
-            position: relative;
+            width: 500px;
+            height: 500px;
         }
 
         #thirdCanvas {
             position: absolute;
-            margin: 10px;
             top: 0;
-            bottom: 0;
-            left: 520px;
-            border: 2px solid grey;
+            left: 0;
+            margin: 10px;
+        }
+
+        #button, #logEnemiesList, #sonarButton, #volumeLabel, #volumeSlider, #playerVolumeLabel, #playerVolumeSlider {
+            position: absolute;
+            background-color: #1a1c23;
+            color: white;
+            margin: 10px;
+            border: 1px solid gray;
+            padding: 8px 18px;
+            cursor: pointer;
+        }
+
+        #button { top: 520px; left: 0; }
+        #logEnemiesList { top: 520px; left: 100px; }
+        #sonarButton { top: 520px; left: 250px; }
+        #volumeLabel { top: 520px; left: 400px; background-color: transparent; margin: 0; border: none; padding: 0; }
+        #volumeSlider { top: 550px; left: 400px; }
+        #playerVolumeLabel { top: 520px; left: 650px; background-color: transparent; margin: 0; border: none; padding: 0; }
+        #playerVolumeSlider { top: 550px; left: 650px; }
+
+        #canvasContainer {
+            position: relative;
         }
     </style>
 </head>
@@ -133,9 +62,11 @@
     <div id="canvasContainer">
         <canvas id="mapCanvas" width="500" height="500"></canvas>
         <canvas id="gridCanvas" width="500" height="500"></canvas>
-        <canvas id="drawCanvas" width="500" height="500"></canvas>
         <canvas id="ourPlayerCanvas" width="500" height="500"></canvas>
-        <canvas id="thirdCanvas" width="500" height="500"></canvas>
+        <div id="bottomCanvas">
+            <canvas id="thirdCanvas" width="500" height="500"></canvas>
+        </div>
+        <canvas id="drawCanvas" width="500" height="500"></canvas>
         <button id="button">Clear</button>
         <button id="logEnemiesList">Log Enemies List</button>
         <button id="sonarButton">Enable Sonar</button>
