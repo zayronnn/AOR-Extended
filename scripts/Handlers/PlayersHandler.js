@@ -169,9 +169,14 @@ export class PlayersHandler {
         if (!sound) return;
 
         const audio = new Audio('/sounds/player.mp3');
+
+        // Get volume from the player volume slider (converted from 0-100 to 0.0-1.0 range)
+        const volume = document.getElementById("playerVolumeSlider").value / 100;
+        audio.volume = volume;
+
         audio.play();
     }
-
+    
     updateLocalPlayerNextPosition(posX, posY) {
         // TODO: Implement update local player next position
         throw new Error('Not implemented');
