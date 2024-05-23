@@ -456,13 +456,11 @@ function setDrawingViews() {
 
     // Check if the values exist in local storage and handle them
     if (mainWindowMarginXValue !== null) {
-        document.getElementById('bottomCanvas').style.left = mainWindowMarginXValue + "px";
         document.getElementById('drawCanvas').style.left = mainWindowMarginYValue + "px";
     }
 
     if (mainWindowMarginYValue !== null) {
         document.getElementById('drawCanvas').style.top = mainWindowMarginYValue + "px";
-        document.getElementById('bottomCanvas').style.top = mainWindowMarginYValue + "px";
     }
 
     if (itemsWindowMarginXValue !== null) {
