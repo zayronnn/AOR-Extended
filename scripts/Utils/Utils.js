@@ -336,6 +336,110 @@ document.getElementById("button").addEventListener("click", function () {
     wispCageHandler.cages = [];
 });
 
+// SONAR CODE
+let sonarEnabled = false;
+let sonarTimeout;
+
+// Assume that playersDrawingInstance is an instance of the PlayersDrawing class
+const playersDrawingInstance = new PlayersDrawing(Settings);
+
+function playBeep() {
+    console.log("Playing beep sound...");
+    const context = new AudioContext();
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+
+    oscillator.connect(gain);
+    gain.connect(context.destination);
+
+    oscillator.type = 'sine';
+    oscillator.frequency.value = 440; // A lower frequency for a softer beep
+
+    // Get volume from the slider (converted from 0-100 to 0.0-1.0 range)
+    const volume = document.getElementById("volumeSlider").value / 100;
+    gain.gain.value = volume;
+
+    oscillator.start(0);
+    gain.gain.exponentialRampToValueAtTime(
+        0.00001, context.currentTime + 0.3 // Set the beep duration to 0.3 seconds
+    );
+
+    oscillator.stop(context.currentTime + 0.3);
+}
+
+
+function calculateSonarInterval(distance) {
+    const minInterval = 50; // Minimum interval in milliseconds for constant beep when very close
+    const maxInterval = 2000; // Maximum interval in milliseconds for very slow beeping when far
+    const maxDistance = 500; // The maximum distance at which the beeping interval is maxInterval
+
+    // Ensure distance is within the maximum distance range
+    const validDistance = Math.min(distance, maxDistance);
+
+    // Linear interpolation between minInterval and maxInterval based on distance
+    const interval = minInterval + ((maxInterval - minInterval) * (validDistance / maxDistance));
+    console.log(`Valid distance: ${validDistance}, Calculated sonar interval: ${interval} ms for distance: ${distance}`);
+    return interval;
+}
+
+function sonarBeep() {
+    if (!sonarEnabled) return;
+
+    let closestPlayer = null;
+    let closestDistance = Infinity;
+
+    // Local player's canvas position (assuming the center of the radar is at (250, 250))
+    const localPlayerX = 250;
+    const localPlayerY = 250;
+
+    for (const player of playersHandler.playersInRange) {
+        // Get the player's transformed position using playersDrawingInstance
+        const transformedPlayer = playersDrawingInstance.transformPoint(player.hX, player.hY);
+
+        // Calculate distance from the local player's position to the other player's position
+        const distance = Math.sqrt(
+            Math.pow(transformedPlayer.x - localPlayerX, 2) + Math.pow(transformedPlayer.y - localPlayerY, 2)
+        );
+
+        player.distance = distance; // Store the calculated distance in the player object
+        console.log(`Player position: (${transformedPlayer.x}, ${transformedPlayer.y}), Distance: ${distance}`);
+
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestPlayer = player;
+        }
+    }
+
+    if (closestPlayer) {
+        const interval = calculateSonarInterval(closestDistance);
+        console.log(`Closest player position: (${closestPlayer.hX}, ${closestPlayer.hY}), Beep interval: ${interval} ms, Distance: ${closestDistance}`);
+        playBeep();
+        clearTimeout(sonarTimeout);
+        sonarTimeout = setTimeout(sonarBeep, interval); // Use setTimeout for adaptive intervals
+    } else {
+        console.log("No players in range. Rechecking...");
+        // Check again after a default interval if no players are found
+        const defaultInterval = 2000; // Check every 2 seconds when no players are in range
+        clearTimeout(sonarTimeout);
+        sonarTimeout = setTimeout(sonarBeep, defaultInterval);
+    }
+}
+
+document.getElementById("sonarButton").addEventListener("click", function () {
+    sonarEnabled = !sonarEnabled;
+    this.textContent = sonarEnabled ? "Disable Sonar" : "Enable Sonar";
+    console.log(`Sonar ${sonarEnabled ? "enabled" : "disabled"}`);
+
+    if (sonarEnabled) {
+        sonarBeep(); // Start the sonar beep immediately
+    } else {
+        clearTimeout(sonarTimeout);
+    }
+});
+
+
+//END OF SONAR CODE
+
 setDrawingViews();
 
 function setDrawingViews() {
