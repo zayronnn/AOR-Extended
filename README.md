@@ -9,3 +9,8 @@
 - Added volume slider for Player Detected sound.
 - Added Sonar.
 - Added Sonar volume slider.
+
+
+Item pack:
+
+https://github.com/Zeldruck/Albion-Online-ZQRadar/releases/tag/item-pack-v1.1
