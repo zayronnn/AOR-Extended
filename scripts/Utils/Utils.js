@@ -336,12 +336,14 @@ document.getElementById("button").addEventListener("click", function () {
     wispCageHandler.cages = [];
 });
 
-// SONAR CODE
-let sonarEnabled = false;
-let sonarTimeout;
+// Only the relevant modifications are shown here
 
 // Assume that playersDrawingInstance is an instance of the PlayersDrawing class
 const playersDrawingInstance = new PlayersDrawing(Settings);
+
+// SONAR CODE
+let sonarEnabled = false;
+let sonarTimeout;
 
 function playBeep() {
     console.log("Playing beep sound...");
@@ -366,7 +368,6 @@ function playBeep() {
 
     oscillator.stop(context.currentTime + 0.3);
 }
-
 
 function calculateSonarInterval(distance) {
     const minInterval = 50; // Minimum interval in milliseconds for constant beep when very close
@@ -419,7 +420,7 @@ function sonarBeep() {
     } else {
         console.log("No players in range. Rechecking...");
         // Check again after a default interval if no players are found
-        const defaultInterval = 1000; // Check every 1 seconds when no players are in range
+        const defaultInterval = 1000; // Check every 1 second when no players are in range
         clearTimeout(sonarTimeout);
         sonarTimeout = setTimeout(sonarBeep, defaultInterval);
     }
@@ -437,8 +438,101 @@ document.getElementById("sonarButton").addEventListener("click", function () {
     }
 });
 
-
 //END OF SONAR CODE
+
+// PLAYER DIRECTION ANNOUNCER CODE
+let announcerEnabled = false;
+let announcerInterval;
+let lastAnnouncedDirection = null;
+let lastAnnounceTime = 0;
+
+function getDirection(deltaX, deltaY) {
+    const angle = Math.atan2(deltaY, deltaX) * 180 / Math.PI;
+
+    if (angle >= -22.5 && angle < 22.5) {
+        return "enemy_on_the_right";
+    } else if (angle >= 22.5 && angle < 67.5) {
+        return "enemy_bottom_right";
+    } else if (angle >= 67.5 && angle < 112.5) {
+        return "enemy_at_the_bottom";
+    } else if (angle >= 112.5 && angle < 157.5) {
+        return "enemy_bottom_left";
+    } else if ((angle >= 157.5 && angle <= 180) || (angle >= -180 && angle < -157.5)) {
+        return "enemy_on_the_left";
+    } else if (angle >= -157.5 && angle < -112.5) {
+        return "enemy_top_left";
+    } else if (angle >= -112.5 && angle < -67.5) {
+        return "enemy_at_the_top";
+    } else if (angle >= -67.5 && angle < -22.5) {
+        return "enemy_top_right";
+    }
+}
+
+function announceDirection(direction) {
+    const currentTime = Date.now();
+    if (direction !== lastAnnouncedDirection || currentTime - lastAnnounceTime > 2000) {
+        const audio = new Audio(`/sounds/${direction}.mp3`);
+        // Get volume from the slider (converted from 0-100 to 0.0-1.0 range)
+        const volume = document.getElementById("announcerVolumeSlider").value / 100;
+        audio.volume = volume;
+        audio.play();
+        lastAnnouncedDirection = direction;
+        lastAnnounceTime = currentTime;
+    }
+}
+
+function detectPlayers() {
+    if (!announcerEnabled) return;
+
+    let closestPlayer = null;
+    let closestDistance = Infinity;
+
+    // Local player's canvas position (assuming the center of the radar is at (250, 250))
+    const localPlayerX = 250;
+    const localPlayerY = 250;
+
+    for (const player of playersHandler.playersInRange) {
+        // Get the player's transformed position using playersDrawingInstance
+        const transformedPlayer = playersDrawingInstance.transformPoint(player.hX, player.hY);
+
+        // Calculate distance from the local player's position to the other player's position
+        const distance = Math.sqrt(
+            Math.pow(transformedPlayer.x - localPlayerX, 2) + Math.pow(transformedPlayer.y - localPlayerY, 2)
+        );
+
+        player.distance = distance; // Store the calculated distance in the player object
+
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestPlayer = player;
+        }
+    }
+
+    if (closestPlayer) {
+        const transformedClosestPlayer = playersDrawingInstance.transformPoint(closestPlayer.hX, closestPlayer.hY);
+        const deltaX = transformedClosestPlayer.x - localPlayerX;
+        const deltaY = transformedClosestPlayer.y - localPlayerY;
+        const direction = getDirection(deltaX, deltaY);
+        announceDirection(direction);
+    } else {
+        console.log("No players in range. Rechecking...");
+    }
+}
+
+document.getElementById("announcerButton").addEventListener("click", function () {
+    announcerEnabled = !announcerEnabled;
+    this.textContent = announcerEnabled ? "Disable Player Direction Announcer" : "Enable Player Direction Announcer";
+    console.log(`Player Direction Announcer ${announcerEnabled ? "enabled" : "disabled"}`);
+
+    if (announcerEnabled) {
+        detectPlayers(); // Check immediately when enabled
+        announcerInterval = setInterval(detectPlayers, 1000); // Check every 1 second
+    } else {
+        clearInterval(announcerInterval);
+    }
+});
+
+// END OF PLAYER DIRECTION ANNOUNCER CODE
 
 setDrawingViews();
 
