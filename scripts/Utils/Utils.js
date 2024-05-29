@@ -12,9 +12,12 @@ import { TrackFootprintsDrawing } from '../Drawings/TrackFootprintsDrawing.js';
 import { EventCodes } from './EventCodes.js';
 
 import { PlayersHandler } from '../Handlers/PlayersHandler.js';
+import { MobsHandler } from '../Handlers/MobsHandler.js';
 import { WispCageHandler } from '../Handlers/WispCageHandler.js';
 import { FishingHandler } from '../Handlers/FishingHandler.js';
 import { TrackFootprintsHandler } from '../Handlers/TrackFootprintsHandler.js';
+
+import { GetMobList } from '../../mob-info/MobsInfo.js';
 
 var canvasMap = document.getElementById("mapCanvas");
 var contextMap = canvasMap.getContext("2d");
@@ -40,17 +43,15 @@ const harvestablesDrawing = new HarvestablesDrawing(settings);
 const dungeonsHandler = new DungeonsHandler(settings);
 
 var itemsInfo = new ItemsInfo();
-var mobsInfo = new MobsInfo();
 
 itemsInfo.initItems();
-mobsInfo.initMobs();
 
 var map = new MapH(-1);
 const mapsDrawing = new MapDrawing(settings);
 
 const chestsHandler = new ChestsHandler();
 const mobsHandler = new MobsHandler(settings);
-mobsHandler.updateMobInfo(mobsInfo.moblist);
+mobsHandler.updateMobInfo(await GetMobList());
 
 
 const harvestablesHandler = new HarvestablesHandler(settings);
@@ -147,7 +148,7 @@ function onEvent(Parameters)
             trackFootprintsHandler.updateFootprintPosition(id, posX, posY);
             break;
 
-        case EventCodes.NewPlayer:
+        case EventCodes.NewCharacter:
             playersHandler.handleNewPlayerEvent(Parameters);
             break;
 
@@ -273,6 +274,8 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
+
+
 function update() {
 
     const currentTime = performance.now();
@@ -291,7 +294,7 @@ function update() {
 
 
     chestsDrawing.interpolate(chestsHandler.chestsList, lpX, lpY, t);
-    wispCageHandler.removeNotInRange(lpX, lpY);
+	wispCageHandler.removeNotInRange(lpX, lpY);
     wispCageDrawing.Interpolate(wispCageHandler.cages, lpX, lpY, t);
     fishingDrawing.Interpolate(fishingHandler.fishes, lpX, lpY, t);
     dungeonsDrawing.interpolate(dungeonsHandler.dungeonList, lpX, lpY, t);
@@ -326,13 +329,13 @@ setInterval(checkLocalStorage, interval)
 
 
 document.getElementById("button").addEventListener("click", function () {
+
     chestsHandler.chestsList = [];
     dungeonsHandler.dungeonList = [];
     harvestablesHandler.harvestableList = [];
     mobsHandler.mobsList = [];
     mobsHandler.mistList = [];
     playersHandler.playersInRange = [];
-    playersDrawing.images = {};
     wispCageHandler.cages = [];
 });
 
