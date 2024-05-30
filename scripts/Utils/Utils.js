@@ -32,7 +32,7 @@ var canvasOurPlayer = document.getElementById("ourPlayerCanvas");
 var contextOurPlayer = canvasOurPlayer .getContext("2d");
 
 
-var canvasItems = document.getElementById("thirdCanvas");
+var canvasItems = document.getElementById("playersCanvas");
 var contextItems = canvasItems.getContext("2d");
 
 const settings = new Settings();
@@ -553,39 +553,39 @@ function setDrawingViews() {
 
     // Check if the values exist in local storage and handle them
     if (mainWindowMarginXValue !== null) {
-        document.getElementById('bottomCanvas').style.left = mainWindowMarginXValue + "px";
+        document.getElementById('rightCanvas').style.left = mainWindowMarginXValue + "px";
         document.getElementById('drawCanvas').style.left = mainWindowMarginYValue + "px";
     }
 
     if (mainWindowMarginYValue !== null) {
         document.getElementById('drawCanvas').style.top = mainWindowMarginYValue + "px";
-        document.getElementById('bottomCanvas').style.top = mainWindowMarginYValue + "px";
+        document.getElementById('rightCanvas').style.top = mainWindowMarginYValue + "px";
     }
 
     if (itemsWindowMarginXValue !== null) {
-        document.getElementById('thirdCanvas').style.left = itemsWindowMarginXValue + "px";
+        document.getElementById('playersCanvas').style.left = itemsWindowMarginXValue + "px";
     }
 
     if (itemsWindowMarginYValue !== null) {
-        document.getElementById('thirdCanvas').style.top = itemsWindowMarginYValue + "px";
+        document.getElementById('playersCanvas').style.top = itemsWindowMarginYValue + "px";
     }
 
     if (itemsWidthValue !== null) {
-        document.getElementById('thirdCanvas').style.width = itemsWidthValue + "px";
+        document.getElementById('playersCanvas').style.width = itemsWidthValue + "px";
     }
 
     if (itemsHeightValue !== null) {
-        document.getElementById('thirdCanvas').style.height = itemsHeightValue + "px";
+        document.getElementById('playersCanvas').style.height = itemsHeightValue + "px";
     }
 
     if (settingItemsBorderValue !== null) {
         // Apply border based on the settingItemsBorderValue
         if (settingItemsBorderValue === "true") {
 
-            document.getElementById('thirdCanvas').style.border = "2px solid grey";
+            document.getElementById('playersCanvas').style.border = "2px solid grey";
         } else {
 
-            document.getElementById('thirdCanvas').style.border = "none";
+            document.getElementById('playersCanvas').style.border = "none";
         }
     }
 

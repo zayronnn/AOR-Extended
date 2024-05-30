@@ -15,24 +15,25 @@
             margin: 10px;
         }
 
-        #gridCanvas, #thirdCanvas, #bottomCanvas {
+        #gridCanvas, #playersCanvas, #rightCanvas {
             border: 2px solid grey;
         }
 
-        #bottomCanvas {
+        #rightCanvas {
             position: absolute;
             top: 0;
             left: 520px; /* Position to the right of mapCanvas which is 500px wide plus margin */
             margin: 10px;
             width: 500px;
             height: 500px;
+            overflow-y: auto; /* Add vertical scroll if content overflows */
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
-        #thirdCanvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin: 10px;
+        #playersCanvas {
+            position: relative; /* Change to relative to stay inside the container */
+            width: 100%;
+            height: 100%;
         }
 
         #buttonContainer, #volumeContainer {
@@ -86,8 +87,8 @@
         <canvas id="mapCanvas" width="500" height="500"></canvas>
         <canvas id="gridCanvas" width="500" height="500"></canvas>
         <canvas id="ourPlayerCanvas" width="500" height="500"></canvas>
-        <div id="bottomCanvas">
-            <canvas id="thirdCanvas" width="500" height="500"></canvas>
+        <div id="rightCanvas">
+            <canvas id="playersCanvas" width="500" height="500"></canvas>
         </div>
         <canvas id="drawCanvas" width="500" height="500"></canvas>
         <div id="buttonContainer">
