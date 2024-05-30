@@ -9,7 +9,8 @@
 - Added volume slider for Player Detected sound.
 - Added Sonar.
 - Added Sonar volume slider.
-
+- Added Player Direction Announcer (great for people with only one screen)
+- Added Player Direction Announcer volume slider
 
 Item pack:
 
