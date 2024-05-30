@@ -71,11 +71,6 @@ app.get('/drawing', (req, res) => {
   res.render('main/drawing');
 });
 
-app.get('/logout', (req, res) => {
-  req.session.destroy();
-  res.redirect('/');
-});
-
 app.use('/scripts', express.static(__dirname + '/scripts'))
 app.use('/mob-info', express.static(__dirname + '/mob-info'))
 app.use('/scripts/Handlers', express.static(__dirname + '/scripts/Handlers'))
