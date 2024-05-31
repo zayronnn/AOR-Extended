@@ -174,7 +174,7 @@ function onEvent(Parameters) {
       playersHandler.handleMountedPlayerEvent(id, Parameters);
       break;
 
-    case EventCodes.NewRandomDungeon:
+    case EventCodes.NewRandomDungeonExit:
       dungeonsHandler.dungeonEvent(Parameters);
       break;
 
