@@ -86,11 +86,12 @@ const port = 5001;
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
-  // Dynamically import the 'open' package
   import("open")
     .then((open) => {
       open.default(`http://localhost:${port}`).then(() => {
-        open.default(`http://localhost:${port}/drawing`);
+        setTimeout(() => {
+          open.default(`http://localhost:${port}/drawing`);
+        }, 500); // Adjust the delay as needed
       });
     })
     .catch((err) => {
