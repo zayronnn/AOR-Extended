@@ -12,8 +12,7 @@
 - Added Player Direction Announcer volume slider
 - Added Min HP to show monsters
 
-
-[Item pack download to see the items]([https://www.google.com](https://github.com/T0T0W/AOR-Extended/releases/download/Items/Items.7z))
+[Item pack download to see the items](https://github.com/T0T0W/AOR-Extended/releases/download/Items/Items.7z)
 
 
 How to download:
