@@ -10,6 +10,7 @@
 - Added Sonar volume slider.
 - Added Player Direction Announcer (great for people with only one screen)
 - Added Player Direction Announcer volume slider
+- Added Min HP to show monsters
 
 Item pack:
 
