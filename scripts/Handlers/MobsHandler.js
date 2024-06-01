@@ -117,6 +117,10 @@ export class MobsHandler {
 
     const h = new Mob(id, typeId, posX, posY, health, enchant, rarity);
 
+    // Check minimum HP
+    const minHP = localStorage.getItem("settingMinHP");
+    if (h.health < minHP) return;
+
     // TODO
     // List of enemies
     if (this.mobinfo[typeId] != null) {
@@ -127,21 +131,11 @@ export class MobsHandler {
       h.name = mobsInfo[2];
 
       if (h.type == EnemyType.LivingSkinnable) {
-        /* 
-                   If animal is enchanted, it'll probably never work and jump into this return
-                   Because it's sending an event with normal animal with tier, ect
-                   And after send another event to say, this animal is enchant Y
-                   And it's the same with the other living harvestables
-                   But keep that in case it changes
-                */
         if (!this.settings.harvestingLivingHide[`e${enchant}`][h.tier - 1]) {
           this.harvestablesNotGood.push(h);
           return;
         }
       } else if (h.type == EnemyType.LivingHarvestable) {
-        /* 
-                   Same as animals comment before
-                */
         let iG = true;
 
         switch (h.name) {
@@ -178,9 +172,7 @@ export class MobsHandler {
           this.harvestablesNotGood.push(h);
           return;
         }
-      }
-      // Should do the work and handle all the enemies
-      else if (h.type >= EnemyType.Enemy && h.type <= EnemyType.Boss) {
+      } else if (h.type >= EnemyType.Enemy && h.type <= EnemyType.Boss) {
         const offset = EnemyType.Enemy;
 
         if (!this.settings.enemyLevels[h.type - offset]) return;
@@ -197,16 +189,10 @@ export class MobsHandler {
         else if (h.name == "VEILWEAVER" && !this.settings.bossVeilWeaver)
           return;
         else if (h.name == "GRIFFIN" && !this.settings.bossGriffin) return;
-      }
-      // Events
-      else if (h.type == EnemyType.Events) {
+      } else if (h.type == EnemyType.Events) {
         if (!this.settings.showEventEnemies) return;
-      }
-      // Unmanaged type
-      else if (!this.settings.showUnmanagedEnemies) return;
-    }
-    // Unmanaged id
-    else if (!this.settings.showUnmanagedEnemies) return;
+      } else if (!this.settings.showUnmanagedEnemies) return;
+    } else if (!this.settings.showUnmanagedEnemies) return;
 
     this.mobsList.push(h);
   }
@@ -216,7 +202,6 @@ export class MobsHandler {
 
     this.mobsList = this.mobsList.filter((x) => x.id !== id);
 
-    // That means we already removed the enemy, so it can't be in the other list
     if (this.mobsList.length < pSize) return;
 
     this.harvestablesNotGood = this.harvestablesNotGood.filter(
@@ -230,24 +215,14 @@ export class MobsHandler {
     if (enemy) {
       enemy.posX = posX;
       enemy.posY = posY;
-
       return;
     }
-
-    // We don't need to update mobs we don't show yet
-    /*enemy = this.harvestablesNotGood.find((enemy) => enemy.id === id);
-
-        if (!enemy) return;
-
-        enemy.posX = posX;
-        enemy.posY = posY;*/
   }
 
   updateEnchantEvent(parameters) {
     const mobId = parameters[0];
     const enchantmentLevel = parameters[1];
 
-    // Check in this list for the harvestables & skinnables with the id
     var enemy = this.mobsList.find((mob) => mob.id == mobId);
 
     if (enemy) {
@@ -255,7 +230,6 @@ export class MobsHandler {
       return;
     }
 
-    // Else try in our not good list
     enemy = this.harvestablesNotGood.find((mob) => mob.id == mobId);
 
     if (!enemy) return;
