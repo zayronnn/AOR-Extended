@@ -12,8 +12,8 @@
       context,
       ourPlayerCanvas.width / 2,
       ourPlayerCanvas.height / 2,
-      10,
-      "blue",
+      7,
+      "yellow",
     );
   }
 
