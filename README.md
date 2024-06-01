@@ -12,6 +12,8 @@
 - Added Player Direction Announcer volume slider
 - Added Min HP to show monsters
 
+- test
+
 Item pack:
 
 https://github.com/Zeldruck/Albion-Online-ZQRadar/releases/tag/item-pack-v1.1
