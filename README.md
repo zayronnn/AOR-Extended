@@ -14,3 +14,8 @@
 Item pack:
 
 https://github.com/Zeldruck/Albion-Online-ZQRadar/releases/tag/item-pack-v1.1
+
+How to download:
+
+
+![download](https://github.com/T0T0W/AOR-Extended/assets/161255413/72cce3c1-47fc-4cbe-bb1f-fa5a95c3dd84)
