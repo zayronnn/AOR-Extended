@@ -8,7 +8,7 @@ class Player {
     currentHealth,
     initialHealth,
     items,
-    flagId,
+    flagId
   ) {
     this.posX = posX;
     this.posY = posY;
@@ -71,8 +71,7 @@ export class PlayersHandler {
   getPlayersInRange() {
     try {
       return [...this.playersInRange]; // Create a copy of the array
-    } finally {
-    }
+    } finally {}
   }
 
   updateItems(id, Parameters) {
@@ -96,14 +95,11 @@ export class PlayersHandler {
   handleNewPlayerEvent(Parameters) {
     if (!this.settings.settingDot) return;
 
-    if (
-      this.alreadyIgnoredPlayers.find((name) => name === nickname.toUpperCase())
-    )
-      return;
-
     /* General */
     const id = Parameters[0];
     const nickname = Parameters[1];
+
+    if (this.alreadyIgnoredPlayers.find((name) => name === nickname.toUpperCase())) return;
 
     if (this.ignorePlayers.find((name) => name === nickname.toUpperCase())) {
       this.alreadyIgnoredPlayers.push(nickname.toUpperCase());
@@ -147,7 +143,7 @@ export class PlayersHandler {
       initialHealth,
       items,
       this.settings.settingSound,
-      flagId,
+      flagId
     );
   }
 
@@ -175,11 +171,9 @@ export class PlayersHandler {
     initialHealth,
     items,
     sound,
-    flagId,
+    flagId
   ) {
-    const existingPlayer = this.playersInRange.find(
-      (player) => player.id === id,
-    );
+    const existingPlayer = this.playersInRange.find((player) => player.id === id);
 
     if (existingPlayer) return;
 
@@ -192,7 +186,7 @@ export class PlayersHandler {
       currentHealth,
       initialHealth,
       items,
-      flagId,
+      flagId
     );
     this.playersInRange.push(player);
 
@@ -222,9 +216,7 @@ export class PlayersHandler {
   }
 
   removePlayer(id) {
-    this.playersInRange = this.playersInRange.filter(
-      (player) => player.id !== id,
-    );
+    this.playersInRange = this.playersInRange.filter((player) => player.id !== id);
   }
 
   updateLocalPlayerPosition(posX, posY) {
@@ -253,9 +245,7 @@ export class PlayersHandler {
   }
 
   UpdatePlayerHealth(Parameters) {
-    var uPlayer = this.playersInRange.find(
-      (player) => player.id === Parameters[0],
-    );
+    var uPlayer = this.playersInRange.find((player) => player.id === Parameters[0]);
 
     if (!uPlayer) return;
 
