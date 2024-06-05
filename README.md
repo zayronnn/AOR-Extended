@@ -35,7 +35,13 @@ input the number here:
 7. Enjoy.
 
 
-## ✨ Items pack
-[Item pack download to see the items](https://github.com/T0T0W/AOR-Extended/releases/download/Items/Items.7z)
+## ✨ Items pack to see the items in the player inventories tab
+[Download](https://github.com/T0T0W/AOR-Extended/releases/tag/Items)
 
-Put the items folder into the images folder.
+Put the items folder into the images folder
+
+
+## ✨ Layout to get player inventories under the map
+[Download](https://github.com/T0T0W/AOR-Extended/releases/tag/Layout)
+
+Replace this file: AOR-Extended-main\views\main\drawing.ejs
