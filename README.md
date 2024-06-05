@@ -37,3 +37,5 @@ input the number here:
 
 ## ✨ Items pack
 [Item pack download to see the items](https://github.com/T0T0W/AOR-Extended/releases/download/Items/Items.7z)
+
+Put the items folder into the images folder.
