@@ -41,7 +41,7 @@ input the number here:
 Put the items folder into the images folder
 
 
-## ✨ Layout to get player inventories under the map
+## ✨ Layout to get player inventories under the map instead of on the right
 [Download](https://github.com/T0T0W/AOR-Extended/releases/tag/Layout)
 
 Replace this file: AOR-Extended-main\views\main\drawing.ejs
