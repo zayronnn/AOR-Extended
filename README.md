@@ -20,8 +20,9 @@
 ![download](https://github.com/T0T0W/AOR-Extended/assets/161255413/72cce3c1-47fc-4cbe-bb1f-fa5a95c3dd84)
 
 4. Run INSTALL.bat to install dependencies
+(IMPORTANT: IF INSTALL.BAT FAILS AND END UP WITH SOME ERRORS PLEASE INSTALL VISUAL STUDIO WITH DESKTOP DEVELOPMENT FOR C++ !)
 
-5. Once it's finish use RUN.bat to open the radar and wait for the line:
+6. Once it's finish use RUN.bat to open the radar and wait for the line:
 ```
 Please select one of the adapter that you use to connect to the internet:
   1. ******
