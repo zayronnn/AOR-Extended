@@ -27,7 +27,7 @@ export class PlayersDrawing extends DrawingUtils {
 
       // TODO
       // Show more than few players
-      if (total > canvas.height) break; // Ecxeed canvas size
+      if (total > canvas.height) break; // Exceed canvas size
 
       const flagId = playerOne.flagId || 0;
       const flagName = FactionFlagInfo[flagId];
@@ -44,12 +44,12 @@ export class PlayersDrawing extends DrawingUtils {
         playerOne.currentHealth + "/" + playerOne.initialHealth,
         context,
         "14px",
-        "red",
+        "red"
       );
 
       posTemp +=
         context.measureText(
-          playerOne.currentHealth + "/" + playerOne.initialHealth,
+          playerOne.currentHealth + "/" + playerOne.initialHealth
         ).width + 10;
 
       let itemsListString = "";
@@ -85,7 +85,7 @@ export class PlayersDrawing extends DrawingUtils {
           itemsListString,
           context,
           "14px",
-          "white",
+          "white"
         );
       }
 
@@ -100,8 +100,8 @@ export class PlayersDrawing extends DrawingUtils {
       let distance = Math.round(
         Math.sqrt(
           (playerOne.posX - lpX) * (playerOne.posX - lpX) +
-            (playerOne.posY - lpY) * (playerOne.posY - lpY),
-        ),
+            (playerOne.posY - lpY) * (playerOne.posY - lpY)
+        )
       );
       playerOne.distance = distance;
       if (playerOne.hY == 0 && playerOne.hX == 0) {
@@ -119,16 +119,27 @@ export class PlayersDrawing extends DrawingUtils {
       const point = this.transformPoint(playerOne.hX, playerOne.hY);
       let space = 0;
 
-      if (this.settings.settingDot == true) {
-        this.drawFilledCircle(context, point.x, point.y, 10, "red");
-      }
+      const flagId = playerOne.flagId || 0;
+      const flagName = FactionFlagInfo[flagId];
+
+      // Draw a circle around the status icon if settingMounted is enabled
       if (this.settings.settingMounted) {
+        context.beginPath();
+        context.arc(point.x, point.y, 11, 0, 2 * Math.PI, false); // Adjust the circle position and radius as needed
         if (playerOne.mounted) {
-          this.drawText(point.x, point.y + 3, "M", context);
+          context.strokeStyle = 'green';
+        } else {
+          context.strokeStyle = 'red';
         }
+        context.lineWidth = 3;
+        context.stroke();
       }
+
+      // Draw the status icon
+      this.DrawCustomImage(context, point.x, point.y, flagName, "Flags", 20);
+
       if (this.settings.settingNickname == true) {
-        space = space + 20;
+        space = space + 23;
         this.drawText(point.x, point.y + space, playerOne.nickname, context);
       }
       if (this.settings.settingDistance) {
@@ -147,7 +158,7 @@ export class PlayersDrawing extends DrawingUtils {
           point.x - width / 2,
           point.y - height / 2 + space,
           width,
-          height,
+          height
         );
 
         context.fillStyle = "red";
@@ -155,9 +166,8 @@ export class PlayersDrawing extends DrawingUtils {
           point.x - width / 2,
           point.y - height / 2 + space,
           width * percent,
-          height,
+          height
         );
-        //   this.drawText(point.x, point.y + space, playerOne.currentHealth, context);
       }
       if (this.settings.settingGuild) {
         space = space + 14;
@@ -166,22 +176,6 @@ export class PlayersDrawing extends DrawingUtils {
           this.drawText(point.x, point.y + space, playerOne.guildName, context);
         }
       }
-
-      const flagId = playerOne.flagId || 0;
-      const flagName = FactionFlagInfo[flagId];
-      const nicknameWidth = context.measureText(playerOne.nickname).width / 2;
-      const healthWidth = 66 / 2;
-      const farthest = Math.max(nicknameWidth, healthWidth);
-      const xPos = farthest + 10;
-      const yPos = space / 2 + 5;
-      this.DrawCustomImage(
-        context,
-        point.x + xPos,
-        point.y + yPos,
-        flagName,
-        "Flags",
-        20,
-      );
     }
   }
 }
