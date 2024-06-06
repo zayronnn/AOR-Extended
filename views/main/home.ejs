@@ -16,8 +16,8 @@
         </h4>
 
         <label class="flex items-center space-x-2">
-          <input type="checkbox" id="settingDot" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-          <span class="dark:text-white ml-4">Dot</span>
+          <input type="checkbox" id="settingOnOff" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+          <span class="dark:text-white ml-4">ON/OFF</span>
         </label>
 
         <div class="ml-4">
@@ -34,6 +34,15 @@
           <label class="flex items-center space-x-2">
             <input type="checkbox" id="settingMounted" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
             <span class="dark:text-white ml-4">Mounted</span>
+            <span class="relative group">
+              <svg class="w-4 h-4 ml-2 text-gray-600 dark:text-gray-300 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span class="absolute top-1/2 left-full ml-2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                Shows a green circle if the player is mounted and a red circle if the player is unmounted.
+              </span>
+            </span>
           </label>
 
           <label class="flex items-center space-x-2">
@@ -44,6 +53,15 @@
           <label class="flex items-center space-x-2">
             <input type="checkbox" id="settingItemsDev" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
             <span class="dark:text-white ml-4">Items Dev</span>
+            <span class="relative group">
+              <svg class="w-4 h-4 ml-2 text-gray-600 dark:text-gray-300 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span class="absolute top-1/2 left-full ml-2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                Shows the IDs of the player's items, mainly for development purposes.
+              </span>
+            </span>
           </label>
 
           <label class="flex items-center space-x-2">
@@ -65,12 +83,13 @@
     </div>
   </div>
 </div>
+
 <script>
   function returnLocalBool(item) {
     return localStorage.getItem(item) == "true";
   }
 
-  let settingDot = document.getElementById("settingDot");
+  let settingOnOff = document.getElementById("settingOnOff");
   let settingNickname = document.getElementById("settingNickname");
   let settingHealth = document.getElementById("settingHealth");
   let settingMounted = document.getElementById("settingMounted");
@@ -80,7 +99,7 @@
   let settingGuild = document.getElementById("settingGuild");
   let settingSound = document.getElementById("settingSound");
 
-  settingDot.checked = returnLocalBool("settingDot");
+  settingOnOff.checked = returnLocalBool("settingOnOff");
   settingNickname.checked = returnLocalBool("settingNickname");
   settingHealth.checked = returnLocalBool("settingHealth");
   settingMounted.checked = returnLocalBool("settingMounted");
@@ -90,8 +109,8 @@
   settingGuild.checked = returnLocalBool("settingGuild");
   settingSound.checked = returnLocalBool("settingSound");
 
-  settingDot.addEventListener("click", () => {
-    localStorage.setItem("settingDot", settingDot.checked);
+  settingOnOff.addEventListener("click", () => {
+    localStorage.setItem("settingOnOff", settingOnOff.checked);
   });
 
   settingNickname.addEventListener("click", () => {
@@ -126,3 +145,30 @@
     localStorage.setItem("settingSound", settingSound.checked);
   });
 </script>
+
+<style>
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  .group .group-hover\:opacity-100 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
+  .relative.group .absolute {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateX(0.5rem) translateY(-50%);
+    pointer-events: none;
+  }
+</style>

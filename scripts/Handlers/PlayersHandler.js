@@ -93,7 +93,7 @@ export class PlayersHandler {
   }
 
   handleNewPlayerEvent(Parameters) {
-    if (!this.settings.settingDot) return;
+    if (!this.settings.settingOnOff) return;
 
     /* General */
     const id = Parameters[0];

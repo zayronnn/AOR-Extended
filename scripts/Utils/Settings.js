@@ -12,7 +12,7 @@ class Settings {
     //#endregion
 
     //#region Players
-    this.settingDot = false;
+    this.settingOnOff = false;
     this.settingNickname = false;
     this.settingHealth = false;
     this.settingMounted = false;
@@ -330,7 +330,7 @@ class Settings {
     this.showMapBackground = this.returnLocalBool("settingShowMap");
 
     //#region Players
-    this.settingDot = this.returnLocalBool("settingDot");
+    this.settingOnOff = this.returnLocalBool("settingOnOff");
     this.settingNickname = this.returnLocalBool("settingNickname");
     this.settingHealth = this.returnLocalBool("settingHealth");
     this.settingMounted = this.returnLocalBool("settingMounted");
