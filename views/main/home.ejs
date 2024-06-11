@@ -63,6 +63,18 @@
               </span>
             </span>
           </label>
+          <label class="flex items-center space-x-2">
+
+            <input type="checkbox" id ="settingSpells" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            <span class="dark:text-white ml-4">Spells</span>
+
+          </label>
+          <label class="flex items-center space-x-2">
+
+            <input type="checkbox" id="settingSpellsDev" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            <span class="dark:text-white ml-4">Spells Dev</span>
+
+          </label>
 
           <label class="flex items-center space-x-2">
             <input type="checkbox" id="settingDistance" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
@@ -95,6 +107,8 @@
   let settingMounted = document.getElementById("settingMounted");
   let settingItems = document.getElementById("settingItems");
   let settingItemsDev = document.getElementById("settingItemsDev");
+  let settingSpells = document.getElementById("settingSpells");
+  let settingSpellsDev = document.getElementById("settingSpellsDev");
   let settingDistance = document.getElementById("settingDistance");
   let settingGuild = document.getElementById("settingGuild");
   let settingSound = document.getElementById("settingSound");
@@ -105,6 +119,8 @@
   settingMounted.checked = returnLocalBool("settingMounted");
   settingItems.checked = returnLocalBool("settingItems");
   settingItemsDev.checked = returnLocalBool("settingItemsDev");
+  settingSpells.checked =returnLocalBool("settingSpells");
+  settingSpellsDev.checked = returnLocalBool("settingSpellsDev");
   settingDistance.checked = returnLocalBool("settingDistance");
   settingGuild.checked = returnLocalBool("settingGuild");
   settingSound.checked = returnLocalBool("settingSound");
@@ -144,6 +160,14 @@
   settingSound.addEventListener("click", () => {
     localStorage.setItem("settingSound", settingSound.checked);
   });
+  settingSpells.addEventListener("click", () => {
+    localStorage.setItem("settingSpells", settingSpells.checked);
+  });
+
+  settingSpellsDev.addEventListener("click", () => {
+    localStorage.setItem("settingSpellsDev", settingSpellsDev.checked);
+  });
+
 </script>
 
 <style>
