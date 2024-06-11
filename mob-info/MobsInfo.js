@@ -2,9 +2,13 @@ export async function GetMobList() {
   let resp = undefined;
 
   try {
-    resp = await fetch("./mob-info/mobs.json");
-    resp = await resp.json();
-  } catch (error) {}
+    // Make sure the path is correct and accessible
+    const module = await import('/mob-info/mobs.js'); // Adjust this path as needed
+    resp = module.mobs; // Ensure this matches the named export in mobs.js
+  } catch (error) {
+    console.error("Failed to fetch the module:", error);
+    return {};
+  }
 
   var mobList = {};
 
@@ -19,7 +23,7 @@ export async function GetMobList() {
     mobList[id][2] = loc;
   }
 
-  for (const [key, value] of Object.entries(resp.mobs)) {
+  for (const [key, value] of Object.entries(resp)) {
     addItem(parseInt(key), value[0], value[1], value[2]);
   }
 
