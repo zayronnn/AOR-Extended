@@ -1117,36 +1117,62 @@ export const mobs = {
 // Region End
 
 // Region Guards
-  // Bridgewatch
-    "2030": ["5", "9", "BRIDGEWATCH"], // Bridgewatch Guard
-    "2033": ["5", "9", "BRIDGEWATCH"], // Champion of Bridgewatch
-  // Martlock
-    //"ID": ["5", "9", "Martlock"], // Martlock Guard
-    //"ID": ["5", "9", "Martlock"], // Champion of Martlock
-  // Thetford
-    "2030": ["5", "9", "Thetford"], // Thetford Guard
-    "2033": ["5", "9", "Thetford"], // Champion of Thetford
-  // Fort Sterling
-    //"ID": ["5", "9", "Fort_Sterling"], // Fort Sterling Guard
-    //"ID": ["5", "9", "Fort_Sterling"], // Champion of Fort Sterling
-  // Lymhurst
-    //"ID": ["5", "9", "Lymhurst"], // Lymhurst Guard
-    //"ID": ["5", "9", "Lymhurst"], // Champion of Lymhurst
-  // Caerleon
-    //"ID": ["5", "9", "Caerleon"], // Caerleon Guard
-    //"ID": ["5", "9", "Caerleon"], // Champion of Caerleon
-  // Guard
-    "2050": ["4", "9", "GUARD"], // Watchtower Mage
-    "2051": ["5", "9", "GUARD"], // Watchtower Mage
-    "2052": ["6", "9", "GUARD"], // Watchtower Mage
-    "2055": ["4", "9", "GUARD"], // Watchtower Swordsman
-    "2056": ["5", "9", "GUARD"], // Watchtower Swordsman
-    "2057": ["6", "9", "GUARD"], // Watchtower Swordsman
-    "2060": ["4", "9", "GUARD"], // Watchtower Arbelist
-    "2061": ["5", "9", "GUARD"], // Watchtower Arbelist
-    "2062": ["6", "9", "GUARD"], // Watchtower Arbelist
-    "269": ["7", "9", "T7_MOB_WATCHTOWER_ARCANEGUARD_ELITE"], // Sentry Mage
-    "270": ["6", "9", "T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN"], // Siphoning Mage
+
+// Bridgewatch
+"2030": ["5", "9", "GUARD"], // Bridgewatch Guard
+"2031": ["6", "9", "GUARD"], // Bridgewatch Guard
+"2032": ["4", "9", "GUARD"], // Bridgewatch City Guard
+"2033": ["5", "9", "CHAMPION_OF_BRIDGEWATCH"], // Champion of Bridgewatch
+"2034": ["6", "9", "CHAMPION_OF_BRIDGEWATCH"], // Champion of Bridgewatch
+
+// Martlock
+"2020": ["5", "9", "GUARD"], // Martlock Guard
+"2021": ["6", "9", "GUARD"], // Martlock Guard
+"2022": ["4", "9", "GUARD"], // Martlock City Guard
+"2023": ["5", "9", "CHAMPION_OF_MARTLOCK"], // Champion of Martlock
+"2024": ["6", "9", "CHAMPION_OF_MARTLOCK"], // Champion of Martlock
+
+// Thetford
+"2035": ["5", "9", "GUARD"], // Thetford Guard
+"2036": ["6", "9", "GUARD"], // Thetford Guard
+"2037": ["4", "9", "GUARD"], // Thetford City Guard
+"2038": ["5", "9", "CHAMPION_OF_THETFORD"], // Champion of Thetford
+"2039": ["6", "9", "CHAMPION_OF_THETFORD"], // Champion of Thetford
+
+// Fort Sterling
+"2025": ["5", "9", "GUARD"], // Fort Sterling Guard
+"2026": ["6", "9", "GUARD"], // Fort Sterling Guard
+"2027": ["4", "9", "GUARD"], // Fort Sterling City Guard
+"2028": ["5", "9", "CHAMPION_OF_FORT_STERLING"], // Champion of Fort Sterling
+"2029": ["6", "9", "CHAMPION_OF_FORT_STERLING"], // Champion of Fort Sterling
+
+// Lymhurst
+"2013": ["5", "9", "GUARD"], // Lymhurst Guard
+"2014": ["6", "9", "GUARD"], // Lymhurst Guard
+"2015": ["4", "9", "GUARD"], // Lymhurst City Guard
+"2016": ["5", "9", "CHAMPION_OF_LYMHURST"], // Champion of Lymhurst
+"2017": ["6", "9", "CHAMPION_OF_LYMHURST"], // Champion of Lymhurst
+
+// Caerleon
+"2002": ["6", "9", "GUARD"], // Caerleon City Guard
+"2004": ["6", "9", "BANDIT_RINGLEADER"], // Bandit Ringleader
+"2006": ["6", "9", "GUARD"], // Bandit Pillager
+"2010": ["6", "9", "GUARD"], // Bandit Arsonist
+
+// Guard
+"2050": ["4", "9", "GUARD"], // Watchtower Mage
+"2051": ["5", "9", "GUARD"], // Watchtower Mage
+"2052": ["6", "9", "GUARD"], // Watchtower Mage
+"2055": ["4", "9", "GUARD"], // Watchtower Swordsman
+"2056": ["5", "9", "GUARD"], // Watchtower Swordsman
+"2057": ["6", "9", "GUARD"], // Watchtower Swordsman
+"2060": ["4", "9", "GUARD"], // Watchtower Arbelist
+"2061": ["5", "9", "GUARD"], // Watchtower Arbelist
+"2062": ["6", "9", "GUARD"], // Watchtower Arbelist
+"2068": ["4", "9", "GUARD"], // Royal Guard Tower
+"2069": ["6", "9", "GUARD"], // Guard Tower
+"269": ["7", "9", "T7_MOB_WATCHTOWER_ARCANEGUARD_ELITE"], // Sentry Mage
+"270": ["6", "9", "T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN"], // Siphoning Mage
   
 // Region End
 // Hidden treasure
