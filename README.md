@@ -11,6 +11,8 @@
 - Added Player Direction Announcer (great for people with only one screen)
 - Added Player Direction Announcer volume slider
 - Added Min HP to show monsters
+- Show player spells and their cooldown. (FULL CREDITS: IEnjoyToCode0Sometimes)
+- Sorting enemies by their type now works + Important mobs now have an icon showing up (FULL CREDITS: TheShadowGovernment)
 
 ## 🔰 How to Run (Windows)
 1. Download and install [Node.js v18.18.2 (64-bit)](https://nodejs.org/dist/v18.18.2/node-v18.18.2-x64.msi).
