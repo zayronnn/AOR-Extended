@@ -1,3 +1,5 @@
+import { SpellSlots } from './SpellSlots.js';
+
 class Player {
   constructor(
     posX,
@@ -8,7 +10,8 @@ class Player {
     currentHealth,
     initialHealth,
     items,
-    flagId
+    flagId,
+    spells
   ) {
     this.posX = posX;
     this.posY = posY;
@@ -24,6 +27,11 @@ class Player {
     this.items = items;
     this.flagId = flagId;
     this.mounted = false; // Initialize mounted status as false
+    if (Array.isArray(spells) && spells.length >= 6) {
+      this.spells = new SpellSlots (spells[0], spells[1], spells[2], spells[4], spells[3], spells[5]);
+  } else {
+      this.spells = new SpellSlots ();
+  }
   }
 
   setMounted(mounted) {
@@ -32,7 +40,7 @@ class Player {
 }
 
 export class PlayersHandler {
-  constructor(settings) {
+  constructor(settings, spellsInfo) {
     this.playersInRange = [];
     this.localPlayer = new Player();
     this.invalidate = false;
@@ -44,6 +52,9 @@ export class PlayersHandler {
     this.ignoreAlliances = [];
 
     this.alreadyIgnoredPlayers = [];
+
+    this.spellInfo = spellsInfo;
+    this.castedSpells = {};
 
     this.settings.ignoreList.forEach((element) => {
       const name = element["Name"];
@@ -133,6 +144,9 @@ export class PlayersHandler {
     const items = Parameters[38];
     const flagId = Parameters[51];
 
+    /* Spells */
+    const spells = Parameters[41];
+
     this.addPlayer(
       posX,
       posY,
@@ -143,7 +157,8 @@ export class PlayersHandler {
       initialHealth,
       items,
       this.settings.settingSound,
-      flagId
+      flagId,
+      spells
     );
   }
 
@@ -171,7 +186,8 @@ export class PlayersHandler {
     initialHealth,
     items,
     sound,
-    flagId
+    flagId,
+    spells
   ) {
     const existingPlayer = this.playersInRange.find((player) => player.id === id);
 
@@ -186,7 +202,8 @@ export class PlayersHandler {
       currentHealth,
       initialHealth,
       items,
-      flagId
+      flagId,
+      spells
     );
     this.playersInRange.push(player);
 
@@ -252,6 +269,41 @@ export class PlayersHandler {
     uPlayer.currentHealth = Parameters[2];
     uPlayer.initialHealth = Parameters[3];
   }
+
+  updateSpells(playerId, Parameters) {
+    let spells = new SpellSlots(65535, 65535, 65535, 65535, 65535, 65535);
+    try {
+        spellData = Parameters[6];
+        spells = new SpellSlots(spellData[0], spellData[1], spellData[2], spellData[4], spellData[3], spellData[5]);
+    } catch (error) {
+        spells = new SpellSlots(65535, 65535, 65535, 65535, 65535, 65535);
+    }
+    this.playersInRange.forEach(player => {
+        if (player.id === playerId) {
+            player.spells = spells;
+        }
+    });
+}
+
+handleCastSpell(Parameters) {
+    const { playerId, spellId } = Parameters;
+    if (spellId in this.spellInfo.spellList) {
+        const spell = this.spellInfo.spellList[spellId];
+        const expirationTime = new Date();
+        expirationTime.setSeconds(expirationTime.getSeconds() + spell.cooldown);
+        this.castedSpells[`${playerId}_${spell.parentId ? spell.parentId : spell.id}`] = expirationTime;
+    }
+}
+
+removeSpellsWithoutCooldown() {
+    const now = new Date();
+    for (const key in this.castedSpells) {
+        if (this.castedSpells[key] < now) {
+            delete this.castedSpells[key];
+        }
+    }
+}
+
 
   clear() {
     this.playersInRange = [];

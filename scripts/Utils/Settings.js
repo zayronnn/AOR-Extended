@@ -1,10 +1,11 @@
-class Settings {
+export class Settings {
   constructor() {
     //#region Initialization
     this.images = {};
     this.item_images = {};
     this.map_images = {};
     this.flag_images = {};
+    this.spell_images = {}
     //#endregion
 
     //#region Maps
@@ -250,6 +251,32 @@ class Settings {
 
           break;
 
+        case "Spells":
+          if (this.spell_images[path])
+          {
+              resolve();
+          }
+          else
+          {
+              const img = new Image();
+
+              img.onload = () =>
+              {
+                  this.spell_images[path] = img; 
+                  resolve();
+              };
+
+              img.onerror = () =>
+              {
+                  this.spell_images[path] = null;
+                  reject(new Error(`Failed to load item image at ${path}`));
+              };
+
+              img.src = path;
+          }
+
+          break;
+
         case "Flags":
           if (this.flag_images[path]) {
             resolve();
@@ -287,6 +314,9 @@ class Settings {
 
       case "Items":
         return this.item_images[path];
+      
+      case "Spells":
+        return this.spell_images[path];
 
       case "Flags":
         return this.flag_images[path];
@@ -310,10 +340,15 @@ class Settings {
         this.item_images = {};
         break;
 
+      case "Spells":
+        this.spell_images = {};
+        break;
+
       case "_ALL_":
         this.images = {};
         this.map_images = {};
         this.item_images = {};
+        this.spell_images = {};
         break;
     }
   }
@@ -336,6 +371,8 @@ class Settings {
     this.settingMounted = this.returnLocalBool("settingMounted");
     this.settingItems = this.returnLocalBool("settingItems");
     this.settingItemsDev = this.returnLocalBool("settingItemsDev");
+    this.settingSpells = this.returnLocalBool("settingSpells");
+    this.settingSpellsDev = this.returnLocalBool("settingSpellsDev");
     this.settingDistance = this.returnLocalBool("settingDistance");
     this.settingGuild = this.returnLocalBool("settingGuild");
     this.settingSound = this.returnLocalBool("settingSound");
