@@ -1138,7 +1138,8 @@ export const mobs = {
   // Guard
     "2050": ["4", "9", "GUARD"], // Watchtower Mage
     "2052": ["6", "9", "GUARD"], // Watchtower Mage
-    "2055": ["4", "9", "GUARD"], // Watchtower Swordman
+    "2055": ["4", "9", "GUARD"], // Watchtower Swordsman
+    "2057": ["6", "9", "GUARD"], // Watchtower Swordsman
     "2060": ["4", "9", "GUARD"], // Watchtower Arbelist
     "2062": ["6", "9", "GUARD"], // Watchtower Arbelist
     "269": ["7", "9", "T7_MOB_WATCHTOWER_ARCANEGUARD_ELITE"], // Sentry Mage
