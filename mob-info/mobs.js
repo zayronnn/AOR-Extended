@@ -1137,10 +1137,13 @@ export const mobs = {
     //"ID": ["5", "9", "Caerleon"], // Champion of Caerleon
   // Guard
     "2050": ["4", "9", "GUARD"], // Watchtower Mage
+    "2051": ["5", "9", "GUARD"], // Watchtower Mage
     "2052": ["6", "9", "GUARD"], // Watchtower Mage
     "2055": ["4", "9", "GUARD"], // Watchtower Swordsman
+    "2056": ["5", "9", "GUARD"], // Watchtower Swordsman
     "2057": ["6", "9", "GUARD"], // Watchtower Swordsman
     "2060": ["4", "9", "GUARD"], // Watchtower Arbelist
+    "2061": ["5", "9", "GUARD"], // Watchtower Arbelist
     "2062": ["6", "9", "GUARD"], // Watchtower Arbelist
     "269": ["7", "9", "T7_MOB_WATCHTOWER_ARCANEGUARD_ELITE"], // Sentry Mage
     "270": ["6", "9", "T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN"], // Siphoning Mage
