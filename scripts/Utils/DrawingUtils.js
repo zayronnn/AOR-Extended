@@ -8,12 +8,15 @@
   }
 
   InitOurPlayerCanvas(ourPlayerCanvas, context) {
+    const centerX = (ourPlayerCanvas.width / 2) + 2.5; // Adjust by 0.5 for pixel alignment
+    const centerY = (ourPlayerCanvas.height / 2) + 2.5; // Adjust by 0.5 for pixel alignment
+    console.log(`Canvas center: (${centerX}, ${centerY})`);
     this.drawFilledCircle(
       context,
-      ourPlayerCanvas.width / 2,
-      ourPlayerCanvas.height / 2,
+      centerX,
+      centerY,
       7,
-      "yellow",
+      "yellow"
     );
   }
 
