@@ -51,7 +51,7 @@ export class PlayersDrawing extends DrawingUtils {
     for (const playerOne of sortedPlayers) {
       const items = playerOne.items;
       const spells = playerOne.spells;
-      if(filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase()) || filteredAlliances.find((name) => name === alliance.toUpperCase()) || alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase()))
+      if (filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase()) || filteredAlliances.find((name) => name === alliance.toUpperCase()) || alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase()))
         continue;
       if (items == null) continue;
 
@@ -187,43 +187,53 @@ export class PlayersDrawing extends DrawingUtils {
   invalidate(context, players, alreadyFilteredPlayers, filteredGuilds, filteredAlliances) {
     const showFilteredPlayers = this.settings.returnLocalBool("settingDrawFilteredPlayers");
     const showFilteredGuilds = this.settings.returnLocalBool("settingDrawFilteredGuilds");
-    const showFilteredAlliances = this.settings.returnLocalBool("settingDrawFilteredAlliancess");
+    const showFilteredAlliances = this.settings.returnLocalBool("settingDrawFilteredAlliances");
 
     for (const playerOne of players) {
       const point = this.transformPoint(playerOne.hX, playerOne.hY);
       let space = 0;
-      console.log("Player Draw",showFilteredPlayers);
-      if(!showFilteredGuilds && filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase()))
+
+      if (!showFilteredGuilds && filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase()))
         continue;
-      if(!showFilteredAlliances && filteredAlliances.find((name) => name === playerOne.alliance.toUpperCase()))
+      if (!showFilteredAlliances && filteredAlliances.find((name) => name === playerOne.alliance.toUpperCase()))
         continue;
-      if(!showFilteredPlayers && alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase()))
+      if (!showFilteredPlayers && alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase()))
         continue;
 
       const flagId = playerOne.flagId || 0;
       const flagName = FactionFlagInfo[flagId];
 
-      // Draw a circle around the status icon if settingMounted is enabled
+      // Check if the player is part of filtered guilds/alliances/players
+      let isFiltered = false;
+      let iconName = '';
+
+      if (filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase())) {
+        isFiltered = true;
+        iconName = 'guild';
+      } else if (filteredAlliances.find((name) => name === playerOne.alliance.toUpperCase())) {
+        isFiltered = true;
+        iconName = 'alliance';
+      } else if (alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase())) {
+        isFiltered = true;
+        iconName = 'player';
+      }
+
+      // Draw the status circle for mounted/unmounted status
       if (this.settings.settingMounted) {
         context.beginPath();
         context.arc(point.x, point.y, 11, 0, 2 * Math.PI, false); // Adjust the circle position and radius as needed
-        context.strokeStyle = 'red'; // Default strokeStyle
-
-        if (playerOne.mounted) {
-          context.strokeStyle = 'green';
-        } else if (filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase())) {
-          context.strokeStyle = 'aquamarine';
-        } else if (filteredAlliances.find((name) => name === playerOne.alliance.toUpperCase())) {
-          context.strokeStyle = 'purple';
-        } else if (alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase())) {
-          context.strokeStyle = 'orange';
-        }
+        context.strokeStyle = playerOne.mounted ? 'green' : 'red';
         context.lineWidth = 3;
         context.stroke();
       }
 
-      // Draw the status icon
-      this.DrawCustomImage(context, point.x, point.y, flagName, "Flags", 20);
+      if (isFiltered) {
+        // Draw the custom icon for filtered players
+        this.DrawCustomImage(context, point.x, point.y, iconName, "Flags", 20); // Adjust the icon position and size as needed
+      } else {
+        // Draw the status icon for unfiltered players
+        this.DrawCustomImage(context, point.x, point.y, flagName, "Flags", 20);
+      }
 
       if (this.settings.settingNickname) {
         space = space + 23;
