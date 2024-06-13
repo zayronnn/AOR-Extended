@@ -3,34 +3,52 @@ export class PlayersDrawing extends DrawingUtils {
     super(Settings);
 
     this.itemsInfo = {};
-    this.spellsInfo = spellsInfo;  
+    this.spellsInfo = spellsInfo;
   }
 
   updateItemsInfo(newData) {
     this.itemsInfo = newData;
   }
 
-  updateSpellsInfo(newData){
+  updateSpellsInfo(newData) {
     this.spellsInfo = newData;
-}
+  }
 
-calculateRemainingCooldown(currentTime, spellEndTime) {
-  const currentTimeMs = currentTime.getTime();
-  const spellEndTimeMs = spellEndTime.getTime();
-  const timeDifference = Math.abs(spellEndTimeMs - currentTimeMs);
-  return parseFloat((timeDifference / 1000).toFixed(1));
-}
+  calculateRemainingCooldown(currentTime, spellEndTime) {
+    const currentTimeMs = currentTime.getTime();
+    const spellEndTimeMs = spellEndTime.getTime();
+    const timeDifference = Math.abs(spellEndTimeMs - currentTimeMs);
+    return parseFloat((timeDifference / 1000).toFixed(1));
+  }
+
+  sortPlayersByDistance(players) {
+    // Sort all players by their distance
+    const sortedPlayers = players.slice().sort((a, b) => a.distance - b.distance);
+
+    // Extract the top 3 closest players
+    const top3 = sortedPlayers.slice(0, 3);
+
+    // Maintain the original order among the top 3 closest players
+    const originalTop3 = players.filter(player => top3.includes(player));
+
+    // Get the rest of the players, excluding the original top 3
+    const rest = sortedPlayers.slice(3);
+
+    // Combine the original top 3 with the sorted rest
+    return originalTop3.concat(rest);
+  }
 
   drawItems(context, canvas, players, devMode, castedSpells, spellsDev) {
     let posY = 15;
     const currentTime = new Date();
+    const sortedPlayers = this.sortPlayersByDistance(players);
 
     if (players.length <= 0) {
       this.settings.ClearPreloadedImages("Items");
       return;
     }
 
-    for (const playerOne of players) {
+    for (const playerOne of sortedPlayers) {
       const items = playerOne.items;
       const spells = playerOne.spells;
 
@@ -39,7 +57,6 @@ calculateRemainingCooldown(currentTime, spellEndTime) {
       let posX = 5;
       const total = posY + 20;
 
-      // TODO
       // Show more than few players
       if (total > canvas.height) break; // Exceed canvas size
 
@@ -68,7 +85,6 @@ calculateRemainingCooldown(currentTime, spellEndTime) {
 
       let itemsListString = "";
       let spellsListString = "";
-
 
       posX += 20;
       posY += 25;
@@ -109,42 +125,40 @@ calculateRemainingCooldown(currentTime, spellEndTime) {
 
       if (spells != null) {
         for (const key in spells) {
-            if (spells.hasOwnProperty(key)) {
-                spellsListString += spells[key] + " ";
-            }
+          if (spells.hasOwnProperty(key)) {
+            spellsListString += spells[key] + " ";
+          }
         }
         posY += 5;
         if (this.settings.settingSpells) {
-            posX = 25;
-            const spellKeys = ["weaponFirst", "weaponSecond", "weaponThird", "helmet", "chest", "boots"];
-            for (const key of spellKeys) {
-                let spellIcon = "";
-                if (spells[key] in this.spellsInfo.spellList) {
-                    spellIcon = this.spellsInfo.spellList[spells[key]].icon;
-                }else {
-                    this.spellsInfo.logMissingSpell(spells[key]);
-                }
-                if(spellIcon != "" && this.settings.GetPreloadedImage(spellIcon, "Spells") !== null){
-                    this.DrawCustomImage(context, posX, posY, spellIcon, "Spells", 50);
-                }   
-               
-                const spellKey = `${playerOne.id}_${spells[key]}`;
-                if (spellKey in castedSpells) {
-                    const remainingTime = this.calculateRemainingCooldown(currentTime, castedSpells[spellKey]);
-                    this.drawFilledCircle(context, posX, posY, 25, "#00000099");
-                    this.drawText(posX, posY, remainingTime.toString(), context);
-                }
+          posX = 25;
+          const spellKeys = ["weaponFirst", "weaponSecond", "weaponThird", "helmet", "chest", "boots"];
+          for (const key of spellKeys) {
+            let spellIcon = "";
+            if (spells[key] in this.spellsInfo.spellList) {
+              spellIcon = this.spellsInfo.spellList[spells[key]].icon;
+            } else {
+              this.spellsInfo.logMissingSpell(spells[key]);
+            }
+            if (spellIcon != "" && this.settings.GetPreloadedImage(spellIcon, "Spells") !== null) {
+              this.DrawCustomImage(context, posX, posY, spellIcon, "Spells", 50);
+            }
 
-                posX += 50;
+            const spellKey = `${playerOne.id}_${spells[key]}`;
+            if (spellKey in castedSpells) {
+              const remainingTime = this.calculateRemainingCooldown(currentTime, castedSpells[spellKey]);
+              this.drawFilledCircle(context, posX, posY, 25, "#00000099");
+              this.drawText(posX, posY, remainingTime.toString(), context);
             }
-            
+
+            posX += 50;
+          }
         }
-        if (spellsDev)
-            {
-                this.drawTextItems(posTemp - 140, posY - 15, spellsListString, context, "14px", "white");
-            }
+        if (spellsDev) {
+          this.drawTextItems(posTemp - 140, posY - 15, spellsListString, context, "14px", "white");
+        }
         posY += 45;
-    }
+      }
     }
   }
 
@@ -155,7 +169,7 @@ calculateRemainingCooldown(currentTime, spellEndTime) {
       let distance = Math.round(
         Math.sqrt(
           (playerOne.posX - lpX) * (playerOne.posX - lpX) +
-            (playerOne.posY - lpY) * (playerOne.posY - lpY)
+          (playerOne.posY - lpY) * (playerOne.posY - lpY)
         )
       );
       playerOne.distance = distance;
@@ -193,7 +207,7 @@ calculateRemainingCooldown(currentTime, spellEndTime) {
       // Draw the status icon
       this.DrawCustomImage(context, point.x, point.y, flagName, "Flags", 20);
 
-      if (this.settings.settingNickname == true) {
+      if (this.settings.settingNickname) {
         space = space + 23;
         this.drawText(point.x, point.y + space, playerOne.nickname, context);
       }
