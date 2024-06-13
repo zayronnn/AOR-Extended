@@ -272,6 +272,7 @@ export class PlayersHandler {
 
   updateSpells(playerId, Parameters) {
     let spells = new SpellSlots(65535, 65535, 65535, 65535, 65535, 65535);
+    let spellData = {};
     try {
         spellData = Parameters[6];
         spells = new SpellSlots(spellData[0], spellData[1], spellData[2], spellData[4], spellData[3], spellData[5]);
