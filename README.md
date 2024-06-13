@@ -8,11 +8,13 @@
 - Added volume slider for Player Detected sound.
 - Added Sonar.
 - Added Sonar volume slider.
-- Added Player Direction Announcer (great for people with only one screen)
-- Added Player Direction Announcer volume slider
-- Added Min HP to show monsters
+- Added Player Direction Announcer. (great for people with only one screen)
+- Added Player Direction Announcer volume slider.
+- Added Min HP to show monsters.
 - Show player spells and their cooldown. (FULL CREDITS: IEnjoyToCode0Sometimes)
-- Sorting enemies by their type now works + Important mobs now have an icon showing up (FULL CREDITS: TheShadowGovernment)
+- Sorting enemies by their type now works + Important mobs now have an icon showing up. (FULL CREDITS: TheShadowGovernment)
+- Closest players will show up first in the players tab + The top 3 closest players won't move slow between eachothers for better readability of the players tab. (IDEA + CODE: IEnjoyToCode0Sometimes)
+- Own player icon is now centered properly.
 
 ## 🔰 How to Run (Windows)
 1. Download and install [Node.js v18.18.2 (64-bit)](https://nodejs.org/dist/v18.18.2/node-v18.18.2-x64.msi).
