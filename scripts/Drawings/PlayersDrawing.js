@@ -51,7 +51,7 @@ export class PlayersDrawing extends DrawingUtils {
     for (const playerOne of sortedPlayers) {
       const items = playerOne.items;
       const spells = playerOne.spells;
-      if (filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase()) || filteredAlliances.find((name) => name === alliance.toUpperCase()) || alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase()))
+      if (filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase()) || filteredAlliances.find((name) => name === playerOne.alliance.toUpperCase()) || alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase()))
         continue;
       if (items == null) continue;
 
