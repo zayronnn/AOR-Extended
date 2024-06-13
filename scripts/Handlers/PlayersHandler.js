@@ -11,7 +11,8 @@ class Player {
     initialHealth,
     items,
     flagId,
-    spells
+    spells,
+    alliance
   ) {
     this.posX = posX;
     this.posY = posY;
@@ -20,6 +21,7 @@ class Player {
     this.id = id;
     this.nickname = nickname;
     this.guildName = guildName1;
+    this.alliance = alliance;
     this.hX = 0;
     this.hY = 0;
     this.currentHealth = currentHealth;
@@ -47,11 +49,11 @@ export class PlayersHandler {
 
     this.settings = settings;
 
-    this.ignorePlayers = [];
-    this.ignoreGuilds = [];
-    this.ignoreAlliances = [];
+    this.filteredPlayers = [];
+    this.filteredGuilds = [];
+    this.filteredAlliances = [];
 
-    this.alreadyIgnoredPlayers = [];
+    this.alreadyFilteredPlayers = [];
 
     this.spellInfo = spellsInfo;
     this.castedSpells = {};
@@ -61,19 +63,19 @@ export class PlayersHandler {
 
       switch (element["Type"]) {
         case "Player":
-          this.ignorePlayers.push(name);
+          this.filteredPlayers.push(name);
           break;
 
         case "Guild":
-          this.ignoreGuilds.push(name);
+          this.filteredGuilds.push(name);
           break;
 
         case "Alliance":
-          this.ignoreAlliances.push(name);
+          this.filteredAlliances.push(name);
           break;
 
         default: // Default is player
-          this.ignorePlayers.push(name);
+          this.filteredPlayers.push(name);
           break;
       }
     });
@@ -110,25 +112,22 @@ export class PlayersHandler {
     const id = Parameters[0];
     const nickname = Parameters[1];
 
-    if (this.alreadyIgnoredPlayers.find((name) => name === nickname.toUpperCase())) return;
+    if (this.alreadyFilteredPlayers.find((name) => name === nickname.toUpperCase())) return;
 
-    if (this.ignorePlayers.find((name) => name === nickname.toUpperCase())) {
-      this.alreadyIgnoredPlayers.push(nickname.toUpperCase());
-      return;
+    if (this.filteredPlayers.find((name) => name === nickname.toUpperCase())) {
+      this.alreadyFilteredPlayers.push(nickname.toUpperCase());
     }
 
     const guildName = String(Parameters[8]);
 
-    if (this.ignoreGuilds.find((name) => name === guildName.toUpperCase())) {
-      this.alreadyIgnoredPlayers.push(nickname.toUpperCase());
-      return;
+    if (this.filteredGuilds.find((name) => name === guildName.toUpperCase())) {
+      this.alreadyFilteredPlayers.push(nickname.toUpperCase());
     }
 
     const alliance = String(Parameters[49]);
 
-    if (this.ignoreAlliances.find((name) => name === alliance.toUpperCase())) {
-      this.alreadyIgnoredPlayers.push(nickname.toUpperCase());
-      return;
+    if (this.filteredAlliances.find((name) => name === alliance.toUpperCase())) {
+      this.alreadyFilteredPlayers.push(nickname.toUpperCase());
     }
 
     /* Position */
@@ -158,7 +157,8 @@ export class PlayersHandler {
       items,
       this.settings.settingSound,
       flagId,
-      spells
+      spells,
+      alliance
     );
   }
 
@@ -187,7 +187,8 @@ export class PlayersHandler {
     items,
     sound,
     flagId,
-    spells
+    spells,
+    alliance
   ) {
     const existingPlayer = this.playersInRange.find((player) => player.id === id);
 
@@ -203,7 +204,8 @@ export class PlayersHandler {
       initialHealth,
       items,
       flagId,
-      spells
+      spells,
+      alliance
     );
     this.playersInRange.push(player);
 

@@ -93,6 +93,31 @@
         </div>
       </div>
     </div>
+
+    <div class="mt-8 flex items-start p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+			<div>
+				<h2 class=" text-4xl font-semibold text-gray-600 dark:text-gray-300">
+					Filtered Players Drawing
+				</h2>
+			</div>
+		</div>
+		
+		<div class="flex items-start p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+			<div>
+				<label class="flex items-center space-x-2">
+					<input type="checkbox" id="settingDrawFilteredPlayers" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+					<span class="dark:text-white ml-4">Show Filtered Players</span>
+				</label>
+				<label class="flex items-center space-x-2">
+					<input type="checkbox" id="settingDrawFilteredGuilds" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+					<span class="dark:text-white ml-4">Show Filtered Guild Players</span>
+				</label>
+        <label class="flex items-center space-x-2">
+					<input type="checkbox" id="settingDrawFilteredAlliances" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+					<span class="dark:text-white ml-4">Show Filtered Alliance Players</span>
+				</label>
+			</div>
+		</div>
   </div>
 </div>
 
@@ -112,6 +137,9 @@
   let settingDistance = document.getElementById("settingDistance");
   let settingGuild = document.getElementById("settingGuild");
   let settingSound = document.getElementById("settingSound");
+  let settingDrawFilteredPlayers = document.getElementById("settingDrawFilteredPlayers");
+  let settingDrawFilteredGuilds = document.getElementById("settingDrawFilteredGuilds");
+  let settingDrawFilteredAlliances = document.getElementById("settingDrawFilteredAlliances");
 
   settingOnOff.checked = returnLocalBool("settingOnOff");
   settingNickname.checked = returnLocalBool("settingNickname");
@@ -124,6 +152,21 @@
   settingDistance.checked = returnLocalBool("settingDistance");
   settingGuild.checked = returnLocalBool("settingGuild");
   settingSound.checked = returnLocalBool("settingSound");
+  settingDrawFilteredPlayers.checked = returnLocalBool("settingDrawFilteredPlayers");
+  settingDrawFilteredGuilds.checked = returnLocalBool("settingDrawFilteredGuilds");
+  settingDrawFilteredAlliances.checked = returnLocalBool("settingDrawFilteredAlliances");
+
+
+  settingDrawFilteredPlayers.addEventListener("click", () => {
+    localStorage.setItem("settingDrawFilteredPlayers", settingDrawFilteredPlayers.checked);
+  });
+  settingDrawFilteredGuilds.addEventListener("click", () => {
+    localStorage.setItem("settingDrawFilteredGuilds", settingDrawFilteredGuilds.checked);
+  });
+  settingDrawFilteredAlliances.addEventListener("click", () => {
+    localStorage.setItem("settingDrawFilteredAlliances", settingDrawFilteredAlliances.checked);
+  });
+
 
   settingOnOff.addEventListener("click", () => {
     localStorage.setItem("settingOnOff", settingOnOff.checked);
