@@ -38,7 +38,7 @@ export class PlayersDrawing extends DrawingUtils {
     return originalTop3.concat(rest);
   }
 
-  drawItems(context, canvas, players, devMode, castedSpells, spellsDev) {
+  drawItems(context, canvas, players, devMode, castedSpells, spellsDev, alreadyFilteredPlayers, filteredGuilds, filteredAlliances) {
     let posY = 15;
     const currentTime = new Date();
     const sortedPlayers = this.sortPlayersByDistance(players);
@@ -51,7 +51,8 @@ export class PlayersDrawing extends DrawingUtils {
     for (const playerOne of sortedPlayers) {
       const items = playerOne.items;
       const spells = playerOne.spells;
-
+      if(filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase()) || filteredAlliances.find((name) => name === alliance.toUpperCase()) || alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase()))
+        continue;
       if (items == null) continue;
 
       let posX = 5;
@@ -183,10 +184,21 @@ export class PlayersDrawing extends DrawingUtils {
     }
   }
 
-  invalidate(context, players) {
+  invalidate(context, players, alreadyFilteredPlayers, filteredGuilds, filteredAlliances) {
+    const showFilteredPlayers = this.settings.returnLocalBool("settingDrawFilteredPlayers");
+    const showFilteredGuilds = this.settings.returnLocalBool("settingDrawFilteredGuilds");
+    const showFilteredAlliances = this.settings.returnLocalBool("settingDrawFilteredAlliancess");
+
     for (const playerOne of players) {
       const point = this.transformPoint(playerOne.hX, playerOne.hY);
       let space = 0;
+      console.log("Player Draw",showFilteredPlayers);
+      if(!showFilteredGuilds && filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase()))
+        continue;
+      if(!showFilteredAlliances && filteredAlliances.find((name) => name === playerOne.alliance.toUpperCase()))
+        continue;
+      if(!showFilteredPlayers && alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase()))
+        continue;
 
       const flagId = playerOne.flagId || 0;
       const flagName = FactionFlagInfo[flagId];
@@ -195,10 +207,16 @@ export class PlayersDrawing extends DrawingUtils {
       if (this.settings.settingMounted) {
         context.beginPath();
         context.arc(point.x, point.y, 11, 0, 2 * Math.PI, false); // Adjust the circle position and radius as needed
+        context.strokeStyle = 'red'; // Default strokeStyle
+
         if (playerOne.mounted) {
           context.strokeStyle = 'green';
-        } else {
-          context.strokeStyle = 'red';
+        } else if (filteredGuilds.find((name) => name === playerOne.guildName.toUpperCase())) {
+          context.strokeStyle = 'aquamarine';
+        } else if (filteredAlliances.find((name) => name === playerOne.alliance.toUpperCase())) {
+          context.strokeStyle = 'purple';
+        } else if (alreadyFilteredPlayers.find((name) => name === playerOne.nickname.toUpperCase())) {
+          context.strokeStyle = 'orange';
         }
         context.lineWidth = 3;
         context.stroke();

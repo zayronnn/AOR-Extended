@@ -259,7 +259,7 @@ function render() {
   wispCageDrawing.Draw(context, wispCageHandler.cages);
   fishingDrawing.Draw(context, fishingHandler.fishes);
   dungeonsDrawing.Draw(context, dungeonsHandler.dungeonList);
-  playersDrawing.invalidate(context, playersHandler.playersInRange);
+  playersDrawing.invalidate(context, playersHandler.playersInRange,playersHandler.alreadyFilteredPlayers,playersHandler.filteredGuilds,playersHandler.filteredAlliances);
   trackFootprintsDrawing.invalidate(
     context,
     trackFootprintsHandler.getFootprintsList(),
@@ -324,7 +324,10 @@ function drawItems() {
       playersHandler.playersInRange,
       settings.settingItemsDev,
       playersHandler.castedSpells,
-      settings.settingSpellsDev
+      settings.settingSpellsDev,
+      playersHandler.alreadyFilteredPlayers,
+      playersHandler.filteredGuilds,
+      playersHandler.filteredAlliances
     );
   }
 }
