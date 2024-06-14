@@ -19,7 +19,7 @@ export class TrackFootprintsHandler {
     const logFootprintsList = document.getElementById("logFootprintsList");
     if (logFootprintsList)
       logFootprintsList.addEventListener("click", () =>
-        console.log(this.footprintsList),
+        console.log(this.footprintsList)
       );
   }
 
@@ -32,13 +32,13 @@ export class TrackFootprintsHandler {
 
   removeFootprint(id) {
     this.footprintsList = this.footprintsList.filter(
-      (footprint) => footprint.id !== id,
+      (footprint) => footprint.id !== id
     );
   }
 
   updateFootprintPosition(id, posX, posY) {
     const footprint = this.footprintsList.find(
-      (footprint) => footprint.id === id,
+      (footprint) => footprint.id === id
     );
     if (footprint) {
       footprint.posX = posX;

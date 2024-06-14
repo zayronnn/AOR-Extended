@@ -120,7 +120,7 @@ function onEvent(Parameters) {
   const eventCode = Parameters[252];
 
   switch (eventCode) {
-    case EventCodes.Track:
+    case EventCodes.NewHuntTrack:
       const trackPosX = Parameters[1][0];
       const trackPosY = Parameters[1][1];
       const name = Parameters[3];
