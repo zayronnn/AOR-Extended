@@ -3,18 +3,14 @@
   <div class="grid gap-6 mb-8">
     <div class="mt-4 flex items-start p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
       <div>
-        <h2 class="text-4xl font-semibold text-gray-600 dark:text-gray-300">
-          Players
-        </h2>
+        <h2 class="text-4xl font-semibold text-gray-600 dark:text-gray-300">Players</h2>
       </div>
     </div>
 
     <!-- Show Settings -->
     <div class="p-6 bg-white rounded-lg shadow-xs dark:bg-gray-800">
       <div class="mb-4">
-        <h4 class="text-2xl font-semibold text-gray-600 dark:text-gray-300">
-          Show
-        </h4>
+        <h4 class="text-2xl font-semibold text-gray-600 dark:text-gray-300">Show</h4>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         <div>
@@ -113,39 +109,38 @@
       </div>
     </div>
 
-		<!-- Filtered Players Drawing -->
-		<div class="p-6 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-		<div class="mb-4">
-			<h4 class="text-2xl font-semibold text-gray-600 dark:text-gray-300">
-			Filtered Players Drawing
-			</h4>
-		</div>
-		<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-			<div>
-			<label class="flex items-center space-x-2">
-				<input type="checkbox" id="settingDrawFilteredPlayers" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-				<span class="dark:text-white ml-4">Show Filtered Players</span>
-				<img src="images/Flags/player.png" alt="Cyan Smiley Face" class="ml-2 h-6 w-6">
-			</label>
-			</div>
-			<div>
-			<label class="flex items-center space-x-2">
-				<input type="checkbox" id="settingDrawFilteredGuilds" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-				<span class="dark:text-white ml-4">Show Filtered Guild Players</span>
-				<img src="images/Flags/guild.png" alt="Green Smiley Face" class="ml-2 h-6 w-6">
-			</label>
-			</div>
-			<div>
-			<label class="flex items-center space-x-2">
-				<input type="checkbox" id="settingDrawFilteredAlliances" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-				<span class="dark:text-white ml-4">Show Filtered Alliance Players</span>
-				<img src="images/Flags/alliance.png" alt="Purple Smiley Face" class="ml-2 h-6 w-6">
-			</label>
-			</div>
-		</div>
-		</div>
+    <!-- Filtered Players Drawing -->
+    <div class="p-6 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+      <div class="mb-4">
+        <h4 class="text-2xl font-semibold text-gray-600 dark:text-gray-300">Filtered Players Drawing</h4>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" id="settingDrawFilteredPlayers" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            <span class="dark:text-white ml-4">Show Filtered Players</span>
+            <img src="images/Flags/player.png" alt="Cyan Smiley Face" class="ml-2 h-6 w-6">
+          </label>
+        </div>
+        <div>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" id="settingDrawFilteredGuilds" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            <span class="dark:text-white ml-4">Show Filtered Guild Players</span>
+            <img src="images/Flags/guild.png" alt="Green Smiley Face" class="ml-2 h-6 w-6">
+          </label>
+        </div>
+        <div>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" id="settingDrawFilteredAlliances" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            <span class="dark:text-white ml-4">Show Filtered Alliance Players</span>
+            <img src="images/Flags/alliance.png" alt="Purple Smiley Face" class="ml-2 h-6 w-6">
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 
 <script>
   function returnLocalBool(item) {
