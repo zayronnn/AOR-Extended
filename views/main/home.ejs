@@ -63,17 +63,24 @@
               </span>
             </span>
           </label>
-          <label class="flex items-center space-x-2">
 
-            <input type="checkbox" id ="settingSpells" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" id="settingSpells" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
             <span class="dark:text-white ml-4">Spells</span>
-
           </label>
-          <label class="flex items-center space-x-2">
 
+          <label class="flex items-center space-x-2">
             <input type="checkbox" id="settingSpellsDev" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
             <span class="dark:text-white ml-4">Spells Dev</span>
-
+            <span class="relative group">
+              <svg class="w-4 h-4 ml-2 text-gray-600 dark:text-gray-300 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span class="absolute top-1/2 left-full ml-2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                Shows the IDs of the player's spells, mainly for development purposes.
+              </span>
+            </span>
           </label>
 
           <label class="flex items-center space-x-2">
@@ -95,13 +102,13 @@
     </div>
 
     <div class="mt-8 flex items-start p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-			<div>
-				<h2 class=" text-4xl font-semibold text-gray-600 dark:text-gray-300">
-					Filtered Players Drawing
-				</h2>
-			</div>
-		</div>
-		
+      <div>
+        <h2 class=" text-4xl font-semibold text-gray-600 dark:text-gray-300">
+          Filtered Players Drawing
+        </h2>
+      </div>
+    </div>
+
     <div class="flex items-start p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
       <div>
         <label class="flex items-center space-x-2">
@@ -109,7 +116,7 @@
           <span class="dark:text-white ml-4">Show Filtered Players</span>
           <div class="text-teal-500 ml-2"> (These will show up as a cyan blue smiley face on your radar.)
           </div>
-          </label>
+        </label>
         <label class="flex items-center space-x-2">
           <input type="checkbox" id="settingDrawFilteredGuilds" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
           <span class="dark:text-white ml-4">Show Filtered Guild Players</span>
