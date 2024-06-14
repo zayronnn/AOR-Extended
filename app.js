@@ -92,7 +92,7 @@ app.listen(port, () => {
       open.default(`http://localhost:${port}`).then(() => {
         setTimeout(() => {
           open.default(`http://localhost:${port}/drawing`);
-        }, 500); // Adjust the delay as needed
+        }, 1000); // Adjust the delay as needed
       });
     })
     .catch((err) => {
