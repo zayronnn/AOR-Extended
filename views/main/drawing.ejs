@@ -50,19 +50,26 @@
             justify-content: space-between;
         }
 
-        #buttonContainer, #volumeContainer {
+        #buttonContainer {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
         }
 
-        #button, #logEnemiesList, #sonarButton, #announcerButton, #showNametagRangeButton {
+        .control-button {
             margin: 5px;
             background-color: #1a1c23;
             color: white;
             border: 1px solid gray;
-            padding: 5px 10px;
+            padding: 3px 5px; /* Reduced padding */
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px; /* Increased font size */
+            flex: 1 1 calc(50% - 10px);
+            box-sizing: border-box;
+        }
+
+        #volumeContainer {
+            display: flex;
+            flex-direction: column;
         }
 
         #volumeLabel, #volumeSlider, #playerVolumeLabel, #playerVolumeSlider, #announcerVolumeLabel, #announcerVolumeSlider {
@@ -87,11 +94,12 @@
         <canvas id="nametagRangeCanvas" width="500" height="500"></canvas> <!-- New canvas for nametag range -->
         <div id="controlsContainer">
             <div id="buttonContainer">
-                <button id="button">Clear the Radar</button>
-                <button id="logEnemiesList">Log Enemies List</button>
-                <button id="sonarButton">Enable Sonar</button>
-                <button id="announcerButton">Enable Player Direction Announcer</button>
-                <button id="showNametagRangeButton">Show Nametag Range</button> <!-- New button -->
+                <button id="button" class="control-button">Clear the Radar</button>
+                <button id="logEnemiesList" class="control-button">Log Enemies List</button>
+                <button id="sonarButton" class="control-button">Enable Sonar</button>
+                <button id="announcerButton" class="control-button">Enable Player Direction Announcer</button>
+                <button id="showNametagRangeButton" class="control-button">Show Nametag Range</button>
+                <button id="toggleGridButton" class="control-button">Disable Grid</button>
             </div>
             <div id="volumeContainer">
                 <label id="volumeLabel" for="volumeSlider">Sonar Volume:</label>
@@ -129,8 +137,8 @@
             function drawNametagRange() {
                 nametagRangeContext.clearRect(0, 0, nametagRangeCanvas.width, nametagRangeCanvas.height); // Clear the canvas first
                 if (nametagRangeEnabled) {
-                    const centerX = nametagRangeCanvas.width / 2;
-                    const centerY = nametagRangeCanvas.height / 2;
+                    const centerX = (nametagRangeCanvas.width / 2) + 2.5;
+                    const centerY = (nametagRangeCanvas.height / 2) + 2.5;
                     const radius = 190; // Adjust the radius as needed
 
                     nametagRangeContext.beginPath();
@@ -140,6 +148,26 @@
                     nametagRangeContext.stroke();
                 }
             }
+
+            // Initialize the drawing utils and grid canvas
+            const settings = {};
+            const drawingUtils = new DrawingUtils(settings);
+            const gridCanvas = document.getElementById('gridCanvas');
+            const gridContext = gridCanvas.getContext('2d');
+            let gridEnabled = true;
+            drawingUtils.initGridCanvas(gridCanvas, gridContext);
+
+            // Toggle grid button click handler
+            $('#toggleGridButton').click(function() {
+                gridEnabled = !gridEnabled;
+                if (gridEnabled) {
+                    drawingUtils.initGridCanvas(gridCanvas, gridContext);
+                    $('#toggleGridButton').text('Disable Grid');
+                } else {
+                    drawingUtils.clearGrid(gridContext, gridCanvas);
+                    $('#toggleGridButton').text('Enable Grid');
+                }
+            });
         });
     </script>
 </body>

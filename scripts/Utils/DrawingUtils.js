@@ -21,8 +21,11 @@
   }
 
   initGridCanvas(canvasBottom, contextBottom) {
-    //this.fillCtx(canvasBottom, contextBottom);
     this.drawBoard(canvasBottom, contextBottom);
+  }
+
+  clearGrid(contextBottom, canvasBottom) {
+    contextBottom.clearRect(0, 0, canvasBottom.width, canvasBottom.height);
   }
 
   drawFilledCircle(context, x, y, radius, color) {
