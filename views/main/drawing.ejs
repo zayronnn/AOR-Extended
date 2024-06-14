@@ -131,6 +131,7 @@
 
             $('#showNametagRangeButton').click(function() {
                 nametagRangeEnabled = !nametagRangeEnabled;
+                $(this).text(nametagRangeEnabled ? 'Hide Nametag Range' : 'Show Nametag Range');
                 drawNametagRange();
             });
 
