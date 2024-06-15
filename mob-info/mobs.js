@@ -5,8 +5,8 @@ export const mobs = {
 "351": ["2", "1", "hide"], // Impala
 "352": ["3", "1", "hide"], // Moabird
 "353": ["4", "1", "hide"], // Giant Stag
-"354": ["3", "1", "hide"], // Terrorbird
-"355": ["3", "1", "hide"], // Hyena
+"354": ["5", "1", "hide"], // Terrorbird
+"355": ["6", "1", "hide"], // Hyena
 "356": ["7", "1", "hide"], // Rhino
 "357": ["7", "1", "hide"], // Bighorn Rhino
 "358": ["8", "1", "hide"], // Mammoth 
@@ -328,7 +328,7 @@ export const mobs = {
 // Arcane Spiderling - Mist
 //"ID": ["5", "8", "Mist_Spider"], // Arcane Spiderling
 "279": ["6", "8", "Mist_Spider"], // Arcane Spiderling
-//"ID": ["7", "8", "Mist_Spider"], // Arcane Spiderling
+"280": ["7", "8", "Mist_Spider"], // Arcane Spiderling
 "281": ["8", "8", "Mist_Spider"], // Arcane Spiderling
 // Veilweaver
 //"ID": ["4", "8", "Mist_Veilweaver"],
@@ -473,16 +473,21 @@ export const mobs = {
 // Region End
 // Region - The Undead
 // Enemy
-// Brittle Revenant
-"1431": ["4", "2", "Enemy1"], // 
-"1432": ["5", "2", "Enemy1"], // 
-"1433": ["6", "2", "Enemy1"], // 
-"1434": ["7", "2", "Enemy1"], // 
-"1435": ["8", "2", "Enemy1"], // 
-"1436": ["5", "2", "Enemy1"], // 
-"1437": ["6", "2", "Enemy1"], // 
-"1438": ["7", "2", "Enemy1"], // 
-"1439": ["8", "2", "Enemy1"], // 
+  // Brittle Revenant
+    "1431": ["4", "2", "Enemy1"], // 
+    "1432": ["5", "2", "Enemy1"], // 
+    "1433": ["6", "2", "Enemy1"], // 
+    "1434": ["7", "2", "Enemy1"], // 
+    "1435": ["8", "2", "Enemy1"], // 
+    "1436": ["5", "2", "Enemy1"], // 
+    "1437": ["6", "2", "Enemy1"], // 
+    "1438": ["7", "2", "Enemy1"], // 
+    "1439": ["8", "2", "Enemy1"], // 
+  // Brittle Revenant - Summoned
+    "1784": ["5", "2", "Enemy1"], // 
+    "1785": ["6", "2", "Enemy1"], // 
+    "1786": ["7", "2", "Enemy1"], // 
+    "1787": ["8", "2", "Enemy1"], // 
 // Ghoul
 "1449": ["4", "2", "Enemy1"], // 
 "1450": ["5", "2", "Enemy1"], // 
@@ -602,6 +607,8 @@ export const mobs = {
     "1545": ["6", "5", "Enemy4"], // 
     "1546": ["7", "5", "Enemy4"], // 
     "1547": ["8", "5", "Enemy4"], // 
+  // Cryomancer 
+
 // Boss
   // Dread Lord
     "1562": ["5", "6", "Enemy5"], // 
@@ -804,15 +811,15 @@ export const mobs = {
 "1178": ["6", "4", "Enemy3"], // 
 "1179": ["7", "4", "Enemy3"], // 
 "1180": ["8", "4", "Enemy3"], // 
-// Dark Paladin
-"1237": ["5", "4", "Enemy3"], // 
-"1238": ["6", "4", "Enemy3"], // 
-"1239": ["7", "4", "Enemy3"], // 
-"1240": ["8", "4", "Enemy3"], // 
-//"ID": ["5", "4", "Enemy3"], // 
-"1242": ["6", "4", "Enemy3"], // 
-//"ID": ["7", "4", "Enemy3"], // 
-//"ID": ["8", "4", "Enemy3"], // 
+  // Dark Paladin
+    "1237": ["5", "4", "Enemy3"], // 
+    "1238": ["6", "4", "Enemy3"], // 
+    "1239": ["7", "4", "Enemy3"], // 
+    "1240": ["8", "4", "Enemy3"], // 
+    "1241": ["5", "4", "Enemy3"], // 
+    "1242": ["6", "4", "Enemy3"], // 
+    "1243": ["7", "4", "Enemy3"], // 
+    "1245": ["8", "4", "Enemy3"], // 
 // Callous Occultist
 "1213": ["5", "4", "Enemy3"], // 
 "1214": ["6", "4", "Enemy3"], // 
@@ -843,12 +850,15 @@ export const mobs = {
 "1186": ["6", "5", "Enemy4"], // 
 //"ID": ["7", "5", "Enemy4"], // 
 //"ID": ["8", "5", "Enemy4"], // 
-// Ritual Leader
-"1221": ["5", "5", "Enemy4"], // 
-"1222": ["6", "5", "Enemy4"], // 
-"1223": ["7", "5", "Enemy4"], // 
-"1224": ["8", "5", "Enemy4"], // 
-"1225": ["5", "5", "Enemy4"], // 
+  // Ritual Leader
+    "1221": ["5", "5", "Enemy4"], // 
+    "1222": ["6", "5", "Enemy4"], // 
+    "1223": ["7", "5", "Enemy4"], // 
+    "1224": ["8", "5", "Enemy4"], // 
+    "1225": ["5", "5", "Enemy4"], // 
+    "1226": ["6", "5", "Enemy4"], // 
+    "1227": ["7", "5", "Enemy4"], // 
+    "1228": ["8", "5", "Enemy4"], // 
 // Boss
 // Mistress of Demons
 //"ID": ["4", "6", "Enemy5"], // 
@@ -871,11 +881,84 @@ export const mobs = {
 // Region End
 // Region - The Demons of Hell
 // Enemy
+
+// Hellhound
+"2188": ["5", "2", "Enemy1"], //
+
+	// Enthralled Heretic Mage
+		"2194": ["5", "2", "Enemy1"], //
+	// Demented Heretic Thief
+		"2191": ["5", "2", "Enemy1"], //
+	// Demonic Slaver
+		"2206": ["5", "2", "Enemy1"], //
+	// Demonic Sorcerer
+		"2203": ["5", "2", "Enemy1"], //
+	// Bewildered Heretic Brawler
+		"2218": ["5", "2", "Enemy1"], //
+	// Deranged Heretic Arbalist
+		"2200": ["5", "2", "Enemy1"], //
+
+
+
+// Traps
+	// Bloated Glutton
+		"2247": ["5", "2", "Enemy1"], //
+		"2280": ["5", "2", "Enemy1"], //
+	
+		"2246": ["1", "2", "Enemy1"], // Magma Mephit
+		"2248": ["1", "2", "Enemy1"], // Arcane Mephit
+		"2249": ["1", "2", "Enemy1"], // Volatile Mephit
+	
+	
+	
+	// Ground Trap
+		"2268": ["5", "3", "Enemy2"], //
+		"2271": ["5", "3", "Enemy2"], //
+		"2274": ["5", "3", "Enemy2"], //
+		"2277": ["5", "3", "Enemy2"], //
+		"2280": ["5", "3", "Enemy2"], //
+	
+	// Oven Trap
+		"2256": ["5", "2", "Enemy1"], //
+		"2259": ["5", "2", "Enemy1"], //
+	// Rotating Trap
+		"2250": ["5", "2", "Enemy1"], //
+		"2253": ["5", "2", "Enemy1"], //
+		
+		
+		
+//Malicous Imp
+"2185": ["5", "2", "Enemy1"], //		
+//Demnonic Watcher
+"2182": ["5", "2", "Enemy1"], //	
+		
+		
+
+//Infernal Monstrosity
+"2209": ["5", "2", "Enemy1"], //
+
+//Hiddent Treasure
+"2240": ["5", "9", "HERETICCHEST1"], //
+"2237": ["5", "9", "HERETICCHEST1"], //
+
+
+// Random things around bosse
+	"2230": ["5", "2", "Enemy1"], //
+	"2197": ["5", "2", "Enemy1"], //
+
 // Medium Enemy
 // Enchanted Enemy
 // Mini Boss
+	// Infernal Horror
+		"2221": ["5", "5", "Enemy4"], //
+	// Demonic Underlord
+		"2234": ["5", "5", "Enemy4"], //
 // Boss
+	// Demonic Harbringer
+		"2231": ["5", "6", "Enemy5"], //
+
 // Region End
+
 // Knighfall Abbey
 // Enemy
 // Undead Spectral Rat
@@ -1010,6 +1093,7 @@ export const mobs = {
 //"ID": ["6", "4", "Enemy3"], // 
 //"ID": ["7", "4", "Enemy3"], // 
 //"ID": ["8", "4", "Enemy3"], // 
+// Mini Boss
 // Awakened Swordmaster
 "2667": ["5", "5", "Enemy4"], // 
 "2668": ["6", "5", "Enemy4"], // 
