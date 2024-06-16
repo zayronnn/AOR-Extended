@@ -38,7 +38,7 @@ export class MobsDrawing extends DrawingUtils {
       const point = this.transformPoint(mobOne.hX, mobOne.hY);
 
       let imageName = undefined;
-      let imageFolder = undefined;
+      let imageFolder = "Resources"; // Default to Resources folder
 
       /* Set by default to enemy, since there are more, so we don't add at each case */
       let drawHp = this.settings.enemiesHP;
@@ -50,40 +50,16 @@ export class MobsDrawing extends DrawingUtils {
       ) {
         imageName =
           mobOne.name + "_" + mobOne.tier + "_" + mobOne.enchantmentLevel;
-        imageFolder = "Resources"; // Change folder to living harvestables
-
         drawHp = this.settings.livingResourcesHp;
         drawId = this.settings.livingResourcesID;
       } else if (
         mobOne.type >= EnemyType.Enemy &&
-        mobOne.type <= EnemyType.Boss
+        mobOne.type <= EnemyType.Events
       ) {
         imageName = mobOne.name;
-        imageFolder = "Resources"; // Change folder to enemies
-
-        drawHp = this.settings.enemiesHP;
-        drawId = this.settings.enemiesID;
-      } else if (mobOne.type == EnemyType.Drone) {
-        imageName = mobOne.name;
-        imageFolder = "Resources"; // Change folder to enemies
-
-        drawHp = this.settings.enemiesHP;
-        drawId = this.settings.enemiesID;
-      } else if (mobOne.type == EnemyType.MistBoss) {
-        imageName = mobOne.name;
-        imageFolder = "Resources"; // Change folder to enemies
-
-        drawHp = this.settings.enemiesHP;
-        drawId = this.settings.enemiesID;
-      } else if (mobOne.type == EnemyType.Events) {
-        imageName = mobOne.name;
-        imageFolder = "Resources";
-
-        drawHp = this.settings.enemiesHP;
-        drawId = this.settings.enemiesID;
       }
 
-      if (imageName !== undefined && imageFolder !== undefined)
+      if (imageName !== undefined)
         this.DrawCustomImage(ctx, point.x, point.y, imageName, imageFolder, 40);
       else this.drawFilledCircle(ctx, point.x, point.y, 10, "#4169E1"); // Unmanaged ids
 
@@ -97,7 +73,7 @@ export class MobsDrawing extends DrawingUtils {
           mobOne.health,
           ctx,
           "12px",
-          "yellow",
+          "yellow"
         );
       }
 
@@ -122,7 +98,7 @@ export class MobsDrawing extends DrawingUtils {
           point.y,
           "mist_" + mistsOne.enchant,
           "Resources",
-          30,
+          30
         );
       }
     }
