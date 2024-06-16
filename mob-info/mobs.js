@@ -696,7 +696,9 @@ export const mobs = {
 //"ID": ["6", "4", "Enemy3"], // 
 //"ID": ["7", "4", "Enemy3"], // 
 //"ID": ["8", "4", "Enemy3"], // 
-// Mini Boss
+  // Mini Boss
+    // Druid Elder
+      "1889": ["5", "4", "Enemy3"], // 
 // Unrivaled Warrior
 "1877": ["5", "5", "Enemy4"], // 
 //"1878": ["6", "5", "Enemy4"], // 
@@ -1165,6 +1167,7 @@ export const mobs = {
       "3952": ["6", "12", "Enemy1"], // 
       "3953": ["8", "12", "Enemy1"], // 
   // Bowman
+    "850": ["4", "13", "Enemy2"], // Pathfinder Hunter
     "4029": ["8", "14", "Enemy3"], // Avalonian Hunter
   // Mage
     "868": ["4", "13", "Enemy2"], // 
@@ -1342,8 +1345,10 @@ export const mobs = {
 "68": ["6", "9", "Tracking_Imp"], // Solo
 //"ID": ["4", "9", "Tracking_Imp"], // Group
 // Runestone Golem
-"69": ["6", "9", "Tracking_Runestone_Golem"], // Solo
-//"ID": ["4", "9", "Tracking_Runestone_Golem"], // Group
+"69": ["7", "9", "Tracking_Runestone_Golem"], // Solo
+
+"82": ["7", "9", "Tracking_Runestone_Golem"], // Group
+"83": ["7", "9", "Tracking_Runestone_Golem"], // Group Summon
 // Dawnbird
 //"ID": ["4", "9", "Tracking_Dawnbird"], // Solo
 //"ID": ["4", "9", "Tracking_Dawnbird"], // Group
