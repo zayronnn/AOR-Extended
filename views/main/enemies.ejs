@@ -54,6 +54,7 @@
           </div>
         </div>
       </td>
+
       <td>
         <!-- Avalon Enemies -->
         <div class="p-6 bg-white rounded-lg shadow-xs dark:bg-gray-800">
@@ -70,19 +71,19 @@
             <div>
               <label class="flex items-center space-x-2">
                 <input type="checkbox" id="settingAvalonNormalEnemy" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" />
-                <span class="dark:text-white ml-2">Normal</span>
+                <span class="dark:text-white ml-2">Drone</span>
               </label>
             </div>
             <div>
               <label class="flex items-center space-x-2">
                 <input type="checkbox" id="settingAvalonMediumEnemy" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" />
-                <span class="dark:text-white ml-2">Medium</span>
+                <span class="dark:text-white ml-2">Pathfinder</span>
               </label>
             </div>
             <div>
               <label class="flex items-center space-x-2">
                 <input type="checkbox" id="settingAvalonEnchantedEnemy" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" />
-                <span class="dark:text-white ml-2">Enchanted</span>
+                <span class="dark:text-white ml-2">Avalonian</span>
               </label>
             </div>
             <div>
@@ -111,7 +112,7 @@
         <div>
           <label class="flex items-center space-x-2">
             <input type="checkbox" id="settingBossCrystalSpider" class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" />
-            <span class="dark:text-white ml-2">Crystal Spider</span>
+            <span class="dark:text-white ml-2">Arcane Spiderling</span>
           </label>
         </div>
         <div>
@@ -263,8 +264,8 @@
     localStorage.setItem("settingAllEnemies", settingAllEnemies.checked);
   }
   // Endregion
-
-  // Region Classic enemies
+  
+  // Region Avalon Classic enemies
   const settingAvalonNormalEnemy = document.getElementById("settingAvalonNormalEnemy");
   const settingAvalonMediumEnemy = document.getElementById("settingAvalonMediumEnemy");
   const settingAvalonEnchantedEnemy = document.getElementById("settingAvalonEnchantedEnemy");
