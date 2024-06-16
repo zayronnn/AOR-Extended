@@ -60,7 +60,14 @@ export class MobsDrawing extends DrawingUtils {
       ) {
         imageName = mobOne.name;
         imageFolder = "Resources"; // Change folder to enemies
-
+        drawHp = this.settings.enemiesHP;
+        drawId = this.settings.enemiesID;
+      } else if (
+        mobOne.type >= EnemyType.AvalonEnemy &&
+        mobOne.type <= EnemyType.AvalonBoss
+      ) {
+        imageName = mobOne.name;
+        imageFolder = "Resources"; // Change folder to enemies
         drawHp = this.settings.enemiesHP;
         drawId = this.settings.enemiesID;
       } else if (mobOne.type == EnemyType.Drone) {
