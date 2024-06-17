@@ -43,6 +43,15 @@ export class SpellsInfo {
   }
 
   initSpells() {
+    this.addItem(2023, 5, "SHAPESHIFT_PANTHER");
+    this.addItem(2024, 5, "SHAPESHIFT_ENT");
+    this.addItem(2025, 5, "SHAPESHIFT_BEAR");
+    this.addItem(2026, 8, "SHAPESHIFT_WEREWOLF");
+    this.addItem(2027, 8, "SHAPESHIFT_IMP");
+    this.addItem(2028, 25, "SHAPESHIFT_ROCK_ELEMENTAL");
+    this.addItem(2029, 15, "SHAPESHIFT_AVALONIAN_EAGLE");
+    this.addItem(2030, 0, "SHAPESHIFT_HUMAN");
+    this.addItem(2031, 0, "SHAPESHIFT_WEREWOLF_TO_HUMAN");
     this.addItem(2091, 0, "SHAPE_Q_CAST");
     this.addItem(2092, 0, "SHAPE_Q_CAST_STACK");
     this.addItem(2093, 0, "SHAPE_Q_CAST_AREA");
