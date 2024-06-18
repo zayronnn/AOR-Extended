@@ -61,11 +61,6 @@ app.get("/ignorelist", (req, res) => {
   res.render("layout", { mainContent: viewName });
 });
 
-app.get("/settings", (req, res) => {
-  const viewName = "main/settings";
-  res.render("layout", { mainContent: viewName });
-});
-
 app.get("/drawing", (req, res) => {
   res.render("main/drawing");
 });
