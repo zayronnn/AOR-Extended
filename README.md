@@ -50,7 +50,4 @@ Place the items folder into the images folder.
 
 Place the spells folder into the images folder.
 
-## ✨ Layout to Position Player Inventories Under the Map
-[Download](https://github.com/T0T0W/AOR-Extended/releases/tag/Layout)
-
 Replace this file: `AOR-Extended-main\views\main\drawing.ejs`
