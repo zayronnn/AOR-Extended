@@ -50,5 +50,3 @@ Place the items folder into the images folder.
 [Download](https://github.com/T0T0W/AOR-Extended/releases/tag/Spells)
 
 Place the spells folder into the images folder.
-
-Replace this file: `AOR-Extended-main\views\main\drawing.ejs`
