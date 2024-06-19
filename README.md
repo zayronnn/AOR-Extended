@@ -16,6 +16,7 @@
 - Closest players will show up first in the players tab + The top 3 closest players won't move slow between eachothers for better readability of the players tab. (IDEA + CODE: IEnjoyToCode0Sometimes)
 - Own player icon is now centered properly.
 - Added a button to show a circle that tells you the range where people start seeing your nametag.
+- Added a button that change position between player items and buttons/volume sliders, you don't need layout file anymore.
 
 ## 🔰 How to Run (Windows)
 1. Download and install [Node.js v18.18.2 (64-bit)](https://nodejs.org/dist/v18.18.2/node-v18.18.2-x64.msi).
