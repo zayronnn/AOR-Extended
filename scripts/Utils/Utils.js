@@ -15,7 +15,6 @@ import { MobsHandler } from "../Handlers/MobsHandler.js";
 import { WispCageHandler } from "../Handlers/WispCageHandler.js";
 import { FishingHandler } from "../Handlers/FishingHandler.js";
 import { TrackFootprintsHandler } from "../Handlers/TrackFootprintsHandler.js";
-import { SpellsInfo } from '../Handlers/SpellsInfo.js';
 import { Settings } from './Settings.js';
 
 import { GetMobList } from "../../mob-info/MobsInfo.js";
@@ -41,10 +40,8 @@ const harvestablesDrawing = new HarvestablesDrawing(settings);
 const dungeonsHandler = new DungeonsHandler(settings);
 
 var itemsInfo = new ItemsInfo();
-var spellsInfo = new SpellsInfo();
 
 itemsInfo.initItems();
-spellsInfo.initSpells();
 
 var map = new MapH(-1);
 const mapsDrawing = new MapDrawing(settings);
@@ -54,7 +51,7 @@ const mobsHandler = new MobsHandler(settings);
 mobsHandler.updateMobInfo(await GetMobList());
 
 const harvestablesHandler = new HarvestablesHandler(settings);
-const playersHandler = new PlayersHandler(settings,spellsInfo);
+const playersHandler = new PlayersHandler(settings);
 
 const wispCageHandler = new WispCageHandler(settings);
 const wispCageDrawing = new WispCageDrawing(settings);
@@ -64,12 +61,11 @@ const fishingDrawing = new FishingDrawing(settings);
 
 const chestsDrawing = new ChestsDrawing(settings);
 const mobsDrawing = new MobsDrawing(settings);
-const playersDrawing = new PlayersDrawing(settings,spellsInfo);
+const playersDrawing = new PlayersDrawing(settings);
 const dungeonsDrawing = new DungeonsDrawing(settings);
 const trackFootprintsHandler = new TrackFootprintsHandler(settings);
 const trackFootprintsDrawing = new TrackFootprintsDrawing(settings);
 playersDrawing.updateItemsInfo(itemsInfo.iteminfo);
-playersDrawing.updateSpellsInfo(spellsInfo);
 
 
 let lpX = 0.0;
@@ -79,12 +75,6 @@ const drawingUtils = new DrawingUtils();
 drawingUtils.initCanvas(canvas, context);
 drawingUtils.initGridCanvas(canvasGrid, contextGrid);
 drawingUtils.InitOurPlayerCanvas(canvasOurPlayer, contextOurPlayer);
-
-function breakSpell(Parameters) {
-  const playerId = Parameters[0];
-  const spellId = Parameters[5];
-  return { playerId, itemId: Parameters[6], targetId: Parameters[7], spellId };
-}
 
 const socket = new WebSocket("ws://localhost:5002");
 
@@ -176,7 +166,6 @@ function onEvent(Parameters) {
 
     case EventCodes.CharacterEquipmentChanged:
       playersHandler.updateItems(id, Parameters);
-      playersHandler.updateSpells(id, Parameters);
       break;
 
     case EventCodes.NewMob:
@@ -201,10 +190,6 @@ function onEvent(Parameters) {
 
     case EventCodes.MistsWispCageOpened:
       wispCageHandler.CageOpenedEvent(Parameters);
-      break;
-
-    case EventCodes.CastStart:
-      playersHandler.handleCastSpell(breakSpell(Parameters));
       break;
 
     // TODO
@@ -303,7 +288,6 @@ function update() {
   fishingDrawing.Interpolate(fishingHandler.fishes, lpX, lpY, t);
   dungeonsDrawing.interpolate(dungeonsHandler.dungeonList, lpX, lpY, t);
   playersDrawing.interpolate(playersHandler.playersInRange, lpX, lpY, t);
-  playersHandler.removeSpellsWithoutCooldown();
   trackFootprintsDrawing.interpolate(
     trackFootprintsHandler.getFootprintsList(),
     lpX,
@@ -323,8 +307,6 @@ function drawItems() {
       canvasItems,
       playersHandler.playersInRange,
       settings.settingItemsDev,
-      playersHandler.castedSpells,
-      settings.settingSpellsDev,
       playersHandler.alreadyFilteredPlayers,
       playersHandler.filteredGuilds,
       playersHandler.filteredAlliances
