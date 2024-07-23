@@ -9,20 +9,8 @@ export class PlayersDrawing extends DrawingUtils {
     }
 
     sortPlayersByDistance(players) {
-        // Sort all players by their distance
-        const sortedPlayers = players.slice().sort((a, b) => a.distance - b.distance);
-
-        // Extract the top 8 closest players
-        const top8 = sortedPlayers.slice(0, 8);
-
-        // Maintain the original order among the top 8 closest players
-        const originalTop8 = players.filter(player => top8.includes(player));
-
-        // Get the rest of the players, excluding the original top 8
-        const rest = sortedPlayers.slice(8);
-
-        // Combine the original top 8 with the sorted rest
-        return originalTop8.concat(rest);
+        // Sort all players by their distance and return the top 8 closest players
+        return players.slice().sort((a, b) => a.distance - b.distance).slice(0, 8);
     }
 
     drawItems(context, canvas, players, devMode, alreadyFilteredPlayers, filteredGuilds, filteredAlliances) {
@@ -35,6 +23,10 @@ export class PlayersDrawing extends DrawingUtils {
         const itemGap = 5; // Small gap between items
 
         const sortedPlayers = players.length > 0 ? this.sortPlayersByDistance(players) : [];
+        
+        // Get the original top 8 players by maintaining their order
+        const top8 = sortedPlayers.map(player => player.nickname);
+        const originalTop8 = players.filter(player => top8.includes(player.nickname));
 
         // Draw player box backgrounds first
         context.fillStyle = "rgba(128, 128, 128, 0.1)";
@@ -45,7 +37,7 @@ export class PlayersDrawing extends DrawingUtils {
 
         // Draw player information on top of the backgrounds
         for (let i = 0; i < 8; i++) {
-            const playerOne = sortedPlayers[i] || null;
+            const playerOne = originalTop8[i] || null;
             const posY = i * (playerBoxHeight + gap) + gap; // Adjusted to account for gap at the top
 
             if (playerOne) {
