@@ -271,6 +271,9 @@ export const mobs = {
   // Region End
   
   // Region Fiber
+  "426": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_SWAMP_DEAD_LEVEL4_LOCKED
+  "432": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_STEPPE_DEAD_LEVEL4_LOCKED
+  "438": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_MOUNTAIN_DEAD_LEVEL4_LOCKED
   // Swamp
   "472": ["3", "0", "fiber"], // Swamp Spirit
   "473": ["5", "0", "fiber"], // Mature Swamp Spirit
@@ -280,6 +283,7 @@ export const mobs = {
   "553": ["3", "0", "fiber"], // Hemp Dryad
   "554": ["3", "0", "fiber"], // Skyflower Dryad
   "555": ["3", "0", "fiber"], // Amberleaf Dryad
+  "557": ["8", "0", "fiber"], // Ghost Hemp Dryad
   //"ID": ["7", "0", "fiber"], // 
   //"ID": ["8", "0", "fiber"], // 
   // Veteran Roads - OLD
@@ -287,6 +291,8 @@ export const mobs = {
   //"ID": ["5", "0", "fiber"], // 
   "560": ["6", "0", "fiber"], // Old Amberleaf Dryad
   "561": ["7", "0", "fiber"], // Old Sunflax Dryad
+  "562": ["8", "0", "fiber"], // Old Ghost Hemp Dryad
+  "567": ["8", "0", "fiber"], // Ancient Ghost Hemp Dryad
   //"ID": ["8", "0", "fiber"], // 
   // Elite Roads - ANCIENT
   //"ID": ["4", "0", "fiber"], // 
@@ -300,6 +306,7 @@ export const mobs = {
   "587": ["4", "0", "fiber"], // Hemp Dryad
   "588": ["5", "0", "fiber"], // Skyflower Dryad
   "589": ["6", "0", "fiber"], // Amberleaf Dryad
+  "591": ["8", "0", "fiber"], // Ghost Hemp Dryad
   //"ID": ["7", "0", "fiber"], // 
   //"ID": ["8", "0", "fiber"], // 
   // Mists - T7
@@ -316,9 +323,12 @@ export const mobs = {
   //"ID": ["5", "0", "fiber"], // 
   "637": ["6", "0", "fiber"], // Amberleaf Dryad
   "638": ["7", "0", "fiber"], // Sunflax Dryad
+  "639": ["8", "0", "fiber"], // "Ghost Hemp Dryad
+  "680": ["8", "0", "fiber"], // GUARDIANDRYAD3 T8_MOB_GUARDIAN_FOREST_DRYAD
   //"ID": ["8", "0", "fiber"], // 
   // Giant
   "685": ["6", "0", "fiber"], // Dryad's Aspect - 500
+  "707": ["8", "0", "fiber"], // Old Ghost Hemp Aspect
   //"ID": ["6", "0", "fiber"], // Enormous Dryad - 2560
   //"ID": ["7", "0", "fiber"], // Ancient Sunflax Titan -
   //"ID": ["7", "0", "fiber"], // 
