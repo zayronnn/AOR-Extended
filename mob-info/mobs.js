@@ -1,6 +1,12 @@
 export const mobs = {
   // Region Hide
     // Steppe Biome
+      "332": ["3", "1", "hide"], // MISTDEER1
+      "333": ["4", "1", "hide"], // MISTSTAG1
+      "334": ["5", "1", "hide"], // MISTOWL1
+      "335": ["6", "1", "hide"], // MISTHOUND1
+      "336": ["7", "1", "hide"], // MISTBEAR1
+      "337": ["8", "1", "hide"], // MISTDRAGONHAWK1
       "386": ["1", "1", "hide"], // Marmot
       "387": ["2", "1", "hide"], // Impala
       "388": ["3", "1", "hide"], // Moabird
@@ -313,7 +319,7 @@ export const mobs = {
   //"ID": ["3", "0", "fiber"], // 
   //"ID": ["4", "0", "fiber"], // 
   "611": ["5", "0", "fiber"], // Hemp Dryad
-  "612": ["6", "0", "fiber"], // Skyflower Dryad
+  "612": ["5", "0", "fiber"], // Skyflower Dryad T5_MOB_CRITTER_FIBER_MISTS_RED
   "613": ["6", "0", "fiber"], // Amberleaf Dryad
   "614": ["7", "0", "fiber"], // Sunflax Dryad
   //"ID": ["8", "0", "fiber"], // 
