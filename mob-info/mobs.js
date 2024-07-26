@@ -1,12 +1,6 @@
 export const mobs = {
   // Region Hide
     // Steppe Biome
-      "332": ["3", "1", "hide"], // MISTDEER1
-      "333": ["4", "1", "hide"], // MISTSTAG1
-      "334": ["5", "1", "hide"], // MISTOWL1
-      "335": ["6", "1", "hide"], // MISTHOUND1
-      "336": ["7", "1", "hide"], // MISTBEAR1
-      "337": ["8", "1", "hide"], // MISTDRAGONHAWK1
       "386": ["1", "1", "hide"], // Marmot
       "387": ["2", "1", "hide"], // Impala
       "388": ["3", "1", "hide"], // Moabird
