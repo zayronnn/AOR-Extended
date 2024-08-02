@@ -11,7 +11,7 @@
 - Added Player Direction Announcer. (great for people with only one screen)
 - Added Player Direction Announcer volume slider.
 - Added Min HP to show monsters.
-- Show player spells and their cooldown. (FULL CREDITS: IEnjoyToCode0Sometimes)
+- Show player spells and their cooldown. (FULL CREDITS: IEnjoyToCode0Sometimes) (REMOVED)
 - Sorting enemies by their type now works + Important mobs now have an icon showing up. (FULL CREDITS: TheShadowGovernment)
 - Closest players will show up first in the players tab + The top 3 closest players won't move slow between eachothers for better readability of the players tab. (IDEA + CODE: IEnjoyToCode0Sometimes)
 - Own player icon is now centered properly.
@@ -28,7 +28,14 @@
 
    ![download](https://github.com/T0T0W/AOR-Extended/assets/161255413/72cce3c1-47fc-4cbe-bb1f-fa5a95c3dd84)
 
-6. Run `INSTALL.bat` to install dependencies.
+6. Run `INSTALL.bat` to install dependencies. MAKE SURE TO NOT RUN IT IN ADMIN MODE !
+
+   If everything went well it will look like something like this
+
+   
+   ![success](https://github.com/user-attachments/assets/cae2073b-dad3-4595-984c-9fd9cc5970b0)
+
+
 7. Once finished, use `RUN.bat` to start the radar and wait for the prompt:
    ```
    Please select one of the adapters that you use to connect to the internet:
@@ -45,8 +52,3 @@
 [Download](https://github.com/T0T0W/AOR-Extended/releases/tag/Items)
 
 Place the items folder into the images folder.
-
-## ✨ Spells Pack to View Player Spells
-[Download](https://github.com/T0T0W/AOR-Extended/releases/tag/Spells)
-
-Place the spells folder into the images folder.
