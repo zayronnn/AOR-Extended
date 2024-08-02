@@ -13,7 +13,7 @@
 - Added Min HP to show monsters.
 - Show player spells and their cooldown. (FULL CREDITS: IEnjoyToCode0Sometimes) (REMOVED)
 - Sorting enemies by their type now works + Important mobs now have an icon showing up. (FULL CREDITS: TheShadowGovernment)
-- Closest players will show up first in the players tab + The top 3 closest players won't move slow between eachothers for better readability of the players tab. (IDEA + CODE: IEnjoyToCode0Sometimes)
+- Closest players will show up first in the players tab + The top 3 closest players won't move slot between eachothers for better readability of the players tab. (IDEA + CODE: IEnjoyToCode0Sometimes)
 - Own player icon is now centered properly.
 - Added a button to show a circle that tells you the range where people start seeing your nametag.
 - Added a button that change position between player items and buttons/volume sliders, you don't need layout file anymore.
