@@ -188,13 +188,20 @@ function onEvent(Parameters) {
       wispCageHandler.NewCageEvent(Parameters);
       break;
 
-    case EventCodes.MistsWispCageOpened:
+    case EventCodes.NewCagedObject:
+      wispCageHandler.NewCageEvent(Parameters);
+      break;
+
+    case EventCodes.CagedObjectStateUpdated:
+      wispCageHandler.NewCageEvent(Parameters);
+      break;
+
+     case EventCodes.CagedObjectStateUpdated:
       wispCageHandler.CageOpenedEvent(Parameters);
       break;
 
-    // TODO
-    case EventCodes.NewFishingZoneObject:
-      fishingHandler.NewFishEvent(Parameters);
+    case EventCodes.MistsWispCageOpened:
+      wispCageHandler.CageOpenedEvent(Parameters);
       break;
 
     // TODO
