@@ -16,6 +16,16 @@ BigInt.prototype.toJSON = function () {
 };
 
 app.use(express.static(__dirname + "/views"));
+
+// Adicione uma data de expiração
+const expirationDate = new Date('2025-01-20T23:59:59'); 
+
+// Verifique se a data atual é posterior à data de expiração
+if (new Date() > expirationDate) {
+  console.log('O programa não pode ser mais aberto. Data de expiração atingida.');
+  process.exit(1); // Encerra o programa
+}
+
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
@@ -80,7 +90,7 @@ app.use("/config", express.static(__dirname + "/config"));
 const port = 5001;
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Online - Copie e cole no seu navegador a url> http://localhost:${port}`);
   import("open")
     .then((open) => {
       open.default(`http://localhost:${port}`).then(() => {
@@ -105,8 +115,11 @@ if (!adapterIp) {
   adapterIp = getAdapterIp();
 } else {
   console.log();
-  console.log(`Using last adapter selected - ${adapterIp}`);
-  console.log('If you want to change adapter, delete the  "ip.txt"  file.');
+  console.log('Mindware');
+  console.log('discord.gg/xyFuZw7gdz');
+  console.log('.');
+  console.log(`Usando o ultimo adaptador selecionado - ${adapterIp}`);
+  console.log('Se quiser trocar de adaptador, exclua o arquivo "ip.txt".');
   console.log();
 }
 
@@ -114,7 +127,7 @@ let device = Cap.findDevice(adapterIp);
 
 if (device == undefined) {
   console.log();
-  console.log(`Last adapter is not working, please choose a new one.`);
+  console.log(`O ultimo adaptador noo esta funcionando, escolha um novo, apague ip.txt na pasta e escolha novamente.`);
   console.log();
 
   adapterIp = getAdapterIp();
