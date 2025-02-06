@@ -1,9 +1,10 @@
 export const mobs = {
   // Region Hide
     // Steppe Biome
-      "386": ["1", "1", "hide"], // Marmot
-      "387": ["2", "1", "hide"], // Impala
-      "388": ["3", "1", "hide"], // Moabird
+      "383": ["1", "1", "hide"], // Marmot
+      "384": ["2", "1", "hide"], // Marmot
+      "386": ["3", "1", "hide"], // Marmot
+      "388": ["4", "1", "hide"], // Moabird
       "389": ["4", "1", "hide"], // Giant Stag
       "390": ["5", "1", "hide"], // Terrorbird
       "391": ["6", "1", "hide"], // Hyena
@@ -11,92 +12,108 @@ export const mobs = {
       "393": ["7", "1", "hide"], // Bighorn Rhino
       "394": ["8", "1", "hide"], // Mammoth 
       "395": ["8", "1", "hide"], // Ancient Mammoth 
+      "405": ["1", "1", "hide"], // Marmot
+      "406": ["2", "1", "hide"], // Impala
+      "407": ["3", "1", "hide"], // Moabird
+      "409": ["5", "1", "hide"], // Terrorbird
+      "411": ["6", "1", "hide"], // Hyena
+      "413": ["6", "1", "hide"], // Hyena
+      "415": ["7", "1", "hide"], // Rhino
+      "414": ["7", "1", "hide"], // Bighorn Rhino
+      "418": ["8", "1", "hide"], // Mammoth 
+      "416": ["8", "1", "hide"], // Ancient Mammoth 
     // Steppe Biome treasure
       "396": ["4", "1", "hide"], // Rare Giant Stag 
       "397": ["5", "1", "hide"], // 
-      "398": ["6", "1", "hide"], // 
+      "759": ["6", "1", "hide"], // 
       "399": ["7", "1", "hide"], // 
       "400": ["8", "1", "hide"], // Rare Ancient Mammoth
     // Cougars
-      "475": ["3", "1", "hide"], // Cougar
-      "476": ["5", "1", "hide"], // Cougar
-      "477": ["7", "1", "hide"], // Cougar
+      "500": ["3", "1", "hide"], // Cougar
+      "501": ["5", "1", "hide"], // Cougar
+      "502": ["3", "1", "ore"], // Ore Elemental
+      "503": ["5", "1", "ore"], // Mature Ore Elemental
     // Highland Biome
-      "408": ["1", "1", "hide"], // Rabbit
-      "402": ["1", "1", "hide"], // Hill Marmot
+      "366": ["1", "1", "hide"], // Rabbit
+      "427": ["1", "1", "hide"], // Hill Marmot
     // Forest Biome
-      "358": ["1", "1", "hide"], // Rabbit
-      "359": ["2", "1", "hide"], // Fox
-      "360": ["2", "1", "hide"], // Fox tutorial
-      "361": ["3", "1", "hide"], // Wolf
-      "362": ["4", "1", "hide"], // Boar
-      "363": ["5", "1", "hide"], // Bear
-      "364": ["6", "1", "hide"], // Direwolf
-      "365": ["6", "1", "hide"], // Moose
-      "366": ["7", "1", "hide"], // Feral Boar
-      "367": ["7", "1", "hide"], // Direboar
-      "368": ["8", "1", "hide"], // Feral Bear
-      "369": ["8", "1", "hide"], // Direbear
+      "366": ["1", "1", "hide"], // Rabbit
+      "367": ["2", "1", "hide"], // Fox
+      "367": ["2", "1", "hide"], // Fox tutorial
+      "369": ["3", "1", "hide"], // Wolf
+      "371": ["4", "1", "hide"], // Boar
+      "373": ["5", "1", "hide"], // Bear
+      "375": ["6", "1", "hide"], // Direwolf
+      "377": ["6", "1", "hide"], // Moose
+      "372": ["7", "1", "hide"], // Feral Boar
+      "SEARCHING FOR ID": ["7", "1", "hide"], // Direboar
+      "374": ["8", "1", "hide"], // Feral Bear
+      "374": ["8", "1", "hide"], // Direbear
     // Forest Biome treasure
-      "370": ["4", "1", "hide"], // 
-      "371": ["5", "1", "hide"], // 
-      "372": ["6", "1", "hide"], // 
-      "373": ["7", "1", "hide"], // Rare Direboar
-      "374": ["8", "1", "hide"], // Rare Direbear
+      "ID": ["4", "1", "hide"], // 
+      "ID": ["5", "1", "hide"], // 
+      "SEARCHING FOR ID": ["6", "1", "hide"], // 
+      "374": ["5", "1", "hide"], // Rare Direboar
+      "SEARCHING FOR ID": ["8", "1", "hide"], // Rare Direbear
     // Swamp Biome
-      "375": ["1", "1", "hide"], // Toad
-      "376": ["2", "1", "hide"], // Snake
-      "377": ["3", "1", "hide"], // Giant Toad
-      "378": ["4", "1", "hide"], // Monitor Lizard
-      "379": ["5", "1", "hide"], // Giant Snake
-      "380": ["6", "1", "hide"], // Swamp Dragon
-      "381": ["7", "1", "hide"], // 
-      "382": ["8", "1", "hide"], // 
+      "390": ["1", "1", "hide"], // Toad
+      "392": ["3", "1", "hide"], // Giant Toad
+      "393": ["2", "1", "hide"], // Snake
+      "394": ["4", "1", "hide"], // Giant Toad
+      "396": ["4", "1", "hide"], // Monitor Lizard
+      "396": ["5", "1", "hide"], // Giant Snake
+      "398": ["6", "1", "hide"], // Swamp Dragon
+      "399": ["7", "1", "hide"], // 
+      "400": ["8", "1", "hide"], // 
     // Swamp Biome treasure
       //"ID": ["4", "1", "hide"], // 
       //"ID": ["5", "1", "hide"], // 
       //"ID": ["6", "1", "hide"], // 
     // Mountain Biome
-      "401": ["1", "1", "hide"], // Snow Rabbit 
+      "426": ["1", "1", "hide"], // Snow Rabbit 
     // Mists
-      "330": ["1", "1", "hide"], // Wolpertinger
-      "331": ["2", "1", "hide"], // Fey Fox
-      "332": ["3", "1", "hide"], // Foglands Doe
-      "333": ["4", "1", "hide"], // Foglands Hart
-      "334": ["5", "1", "hide"], // Great Mystic Owl
-      "335": ["6", "1", "hide"], // Feral Wolfhound
-      "336": ["7", "1", "hide"], // Misthide Mauler
-      "337": ["8", "1", "hide"], // Dragonhawk
+      "518": ["6", "1", "hide"], // Mistcougar
+      "338": ["1", "1", "hide"], // Wolpertinger
+      "339": ["2", "1", "hide"], // Fey Fox
+      "340": ["3", "1", "hide"], // Foglands Doe
+      "341": ["4", "1", "hide"], // Foglands Hart
+      "342": ["5", "1", "hide"], // Great Mystic Owl
+      "343": ["6", "1", "hide"], // Feral Wolfhound
+      "344": ["7", "1", "hide"], // Misthide Mauler
+      "345": ["8", "1", "hide"], // Dragonhawk
     // Treasure Mists
-      "338": ["4", "1", "hide"], // 
-      "339": ["5", "1", "hide"], // 
-      "340": ["6", "1", "hide"], // 
-      "341": ["7", "1", "hide"], // 
-      "342": ["8", "1", "hide"], // 
+      "341": ["4", "1", "hide"], // 
+      "342": ["5", "1", "hide"], // 
+      "343": ["6", "1", "hide"], // 
+      "344": ["7", "1", "hide"], // 
+      "345": ["8", "1", "hide"], //
     // Cougars
-      "494": ["5", "1", "hide"], // Small Mistcougar
-      "495": ["6", "1", "hide"], // Mistcougar
-      "496": ["7", "1", "hide"], // Large Mistcougar
-      "497": ["8", "1", "hide"], // Alpha Mistcougar
+      "519": ["7", "1", "hide"], // Large Mistcougar
+      "520": ["6", "1", "hide"], // Mistcougar
+      "521": ["7", "1", "hide"], // Large Mistcougar
+      "522": ["8", "1", "hide"], // Alpha Mistcougar
     // Region Roads
       // Roads - Normal
         "493": ["4", "1", "hide"], // Mistcougar Runt
         "494": ["5", "1", "hide"], // Small Mistcougar
         "495": ["6", "1", "hide"], // Mistcougar
         "364": ["6", "1", "hide"], // Direwolf
-        "366": ["7", "1", "hide"], // Feral Boar
+        "379": ["7", "1", "hide"], // Feral Boar
       // Roads Veteran - Old
         //"ID": ["4", "1", "hide"], // 
         //"ID": ["5", "1", "hide"], // 
         //"ID": ["6", "1", "hide"], // 
         //"ID": ["7", "1", "hide"], // 
         //"ID": ["8", "1", "hide"], // 
+        "526": ["7", "1", "hide"], // old large mistcougar
       // Roads Elite - Ancient
         //"ID": ["4", "1", "hide"], // 
         //"ID": ["5", "1", "hide"], // 
         //"ID": ["6", "1", "hide"], // 
         //"ID": ["7", "1", "hide"], // 
         //"ID": ["8", "1", "hide"], // 
+	"532": ["8", "1", "hide"], // 
+	"527": ["8", "1", "hide"], // 
     // Region Giant
       //"ID": ["6", "0", "hide"], // 
       //"ID": ["6", "0", "hide"], // 
@@ -112,19 +129,22 @@ export const mobs = {
     "485": ["5", "0", "Logs"], // 
     "486": ["5", "0", "Logs"], // 
     "487": ["7", "0", "Logs"], // 
+    "510": ["5", "1", "Logs"], // Mature Forest Spirit ---------------------------------newly added by me
   // Region Roads
     // Roads - NORMAL
-      "508": ["4", "0", "Logs"], // Pine Spirit 
-      "509": ["5", "0", "Logs"], // Cedar Spirit 
-      "510": ["6", "0", "Logs"], // Bloodoak Spirit
-      "511": ["7", "0", "Logs"], // 
-      "512": ["8", "0", "Logs"], // 
+      "508": ["5", "0", "Logs"], // Mature Forest Spirit 
+      "509": ["3", "0", "Logs"], // Cedar Spirit 
+      "535": ["6", "0", "Logs"], // Bloodoak Spirit
+      "511": ["5", "0", "Logs"], // 
+      "512": ["3", "0", "Logs"], // Rock Elemental
+      "533": ["6", "0", "Logs"], //
+      "583": ["4", "0", "Logs"], //
     // Roads Veteran - OLD
       "513": ["4", "0", "Logs"], // Old Pine Spirit
       "514": ["5", "0", "Logs"], // Old Cedar Spirit
-      "515": ["6", "0", "Logs"], // Old Bloodoak Spirit
+      "540": ["6", "0", "Logs"], // Old Bloodoak Spirit
       "516": ["7", "0", "Logs"], // Old Ashenbark Spirit
-      "517": ["8", "0", "Logs"], // Old Whitewood Spirit
+      "517": ["5", "0", "Hide"], // Small Mistcougar
     // Roads Elite - ANCIENT
       //"ID": ["4", "0", "Logs"], // 
       //"ID": ["5", "0", "Logs"], // 
@@ -138,22 +158,25 @@ export const mobs = {
       "570": ["5", "0", "Logs"], // Cedar Spirit
       "571": ["6", "0", "Logs"], // Bloodoak Spirit
     // Mists - T7
-      "592": ["3", "0", "Logs"], // Forest Spirit
-      "593": ["4", "0", "Logs"], // Forest Spirit
-      "594": ["5", "0", "Logs"], // Cedar Spirit
-      "595": ["6", "0", "Logs"], // Bloodoak Spirit
-      "596": ["7", "0", "Logs"], // Ashenbark Spirit
+     // 
+      "592": ["4", "0", "Logs"], // Pine Spirit
+      "593": ["3", "0", "Logs"], // Forest Spirit
+      "594": ["6", "0", "Logs"], // Bloodoak Spirit
+      "595": ["5", "0", "Logs"], // Bloodoak Spirit
+      "596": ["6", "0", "Logs"], // Ashenbark Spirit
       //"ID": ["8", "0", "Logs"], // 
     // Mists - T8
       "616": ["3", "0", "Logs"], // Forest Spirit
-      "617": ["4", "0", "Logs"], // Pine Spirit
-      "618": ["5", "0", "Logs"], // Cedar Spirit
-      "619": ["6", "0", "Logs"], // Bloodoak Spirit
-      "620": ["7", "0", "Logs"], // Ashenbark Spirit
-      "621": ["8", "0", "Logs"], // Whitewood Spirit
+      "617": ["5", "0", "Logs"], // Cedar Spirit
+      "618": ["6", "0", "Logs"], // Bloodoak Spirit
+      "619": ["7", "0", "Logs"], // Ashenbark Spirit
+      "620": ["6", "0", "Logs"], // Bloodoak Spirit
+      "621": ["7", "0", "Logs"], // Ashenbark Spirit
+      "644": ["6", "0", "Logs"], // Whitewood Spirit
+      "646": ["8", "0", "Logs"], // Whitewood Spirit
   // Region Giant
     //"ID": ["6", "0", "Logs"], // Ancient Ent's Aspect
-    //"ID": ["6", "0", "Logs"], // Ancient Ent
+    "667": ["6", "0", "Logs"], // Ancient Ent
     //"ID": ["7", "0", "Logs"], // 
     //"ID": ["7", "0", "Logs"], // 
     "695": ["8", "6", "GUARDIANFORESTSPIRTIT3"], // Old Whitewood Aspect
@@ -161,17 +184,19 @@ export const mobs = {
   
   // Region Rock
     // Highland
-      "489": ["3", "0", "rock"], // Rock Elemental
-      "490": ["5", "0", "rock"], // Mature Rock Elemental
-      "491": ["6", "0", "rock"], // Mature Rock Elemental
-      "492": ["7", "0", "rock"], // Elder Rock Elemental
+      "513": ["3", "0", "rock"], // Rock Elemental
+      "514": ["3", "0", "rock"], // Mature Rock Elemental
+      "515": ["5", "0", "rock"], // Mature Rock Elemental
+      "516": ["6", "0", "rock"], // Elder Rock Elemental
       // Region Roads
         // Roads - NORMAL
           "523": ["4", "0", "rock"], // Travertine Elemental
           "524": ["5", "0", "rock"], // Granite Elemental
-          "525": ["6", "0", "rock"], // Slate Elemental
-          "526": ["7", "0", "rock"], // 
-          "527": ["8", "0", "rock"], // 
+          "550": ["6", "0", "rock"], // Slate Elemental
+         // "526": ["7", "0", "rock"], // 
+         // "527": ["8", "0", "rock"], // 
+          "556": ["7", "0", "rock"], // 
+          "548": ["6", "0", "rock"], // 
         // Veteran Roads - OLD
           "528": ["4", "0", "rock"], // Old Travertine Elemental
           "529": ["5", "0", "rock"], // Old Granite Elemental
@@ -194,21 +219,24 @@ export const mobs = {
             //"ID": ["8", "0", "rock"], // 
           // Mists - T7
             "598": ["3", "0", "rock"], // Rock Elemental
-            "599": ["4", "0", "rock"], // Travertine Elemental
-            "600": ["5", "0", "rock"], // Granite Elemental
-            "601": ["6", "0", "rock"], // 
-            "602": ["7", "0", "rock"], // Basalt Elemental
+            "599": ["3", "0", "rock"], // Travertine Elemental
+            "600": ["6", "0", "rock"], // Slate Elemental
+            "601": ["5", "0", "rock"], // 
+            "602": ["6", "0", "rock"], // Basalt Elemental
             //"ID": ["8", "0", "rock"], // 
           // Mists - T8
             "622": ["3", "0", "rock"], // Rock Elemental
-            "623": ["4", "0", "rock"], // Travertine Elemental
+            "623": ["5", "0", "rock"], // Granite Elemental
             "624": ["5", "0", "rock"], // Granite Elemental
-            "625": ["6", "0", "rock"], // Slate Elemental
+            "625": ["7", "0", "rock"], // Basalt Elemental
             "626": ["7", "0", "rock"], // Basalt Elemental
             "627": ["8", "0", "rock"], // Marble Elemental
+            "650": ["6", "0", "rock"], // Marble Elemental
+            "651": ["7", "0", "rock"], // Marble Elemental
+            "658": ["8", "0", "rock"], // Marble Elemental
         // Region Giant
           //"ID": ["6", "0", "rock", // Old Slate Aspect
-          "651": ["6", "0", "GUARDIANROCKGIANT1"], // Rock Giant
+          //"651": ["6", "0", "GUARDIANROCKGIANT1"], // Rock Giant
           //"ID": ["7", "0", "rock", // 
           //"ID": ["7", "0", "rock", // 
           //"ID": ["8", "0", "rock", // 
@@ -216,23 +244,24 @@ export const mobs = {
   
   // Region Ore
     // Mountain
-        "479": ["3", "0", "ore"], // Ore Elemental
-        "480": ["5", "0", "ore"], // Mature Ore Elemental
-        "481": ["5", "0", "ore"], // Mature Ore Elemental
-        "482": ["7", "0", "ore"], // Elder Ore Elemental
-        "483": ["7", "0", "ore"], // 
+        "504": ["3", "0", "ore"], // Ore Elemental
+        "505": ["5", "0", "ore"], // Mature Ore Elemental
+        "506": ["5", "0", "ore"], // Mature Ore Elemental
+        "507": ["7", "0", "ore"], // Elder Ore Elemental
+        "508": ["5", "0", "Logs"], // Mature Forest Spirit
     // Region Roads
       // Roads - NORMAL
       "538": ["4", "0", "ore"], // Iron Elemental
       "539": ["5", "0", "ore"], // Titanium Elemental
-      "540": ["6", "0", "ore"], // Runite Elemental
+      "565": ["6", "0", "ore"], // Runite Elemental
       "541": ["7", "0", "ore"], // Meteorite Elemental
       "542": ["8", "0", "ore"], // 
+      "563": ["6", "0", "ore"], // 
     // Veteran Roads - OLD
       //"ID": ["4", "0", "ore"], // 
       "544": ["5", "0", "ore"], // Old Titanium Elemental 
       "545": ["6", "0", "ore"], // Old Runite Elemental
-      "546": ["7", "0", "ore"], // Old Meteorite Elemental
+      "546": ["4", "0", "rock"], // Travertine Elemental
       "547": ["8", "0", "ore"], // Old Adamantium Elemental
       // Elite Roads - ANCIENT
       //"ID": ["4", "0", "ore"], // 
@@ -245,25 +274,27 @@ export const mobs = {
         "580": ["3", "0", "ore"], // Ore Elemental
         "581": ["4", "0", "ore"], // Iron Elemental
         "582": ["5", "0", "ore"], // Titanium Elemental
-        "583": ["6", "0", "ore"], // Runite Elemental
+        "583": ["6", "0", "fiber"], // Old Amberleaf Dryad
         "584": ["7", "0", "ore"], // Meteorite Elemental
         "585": ["8", "0", "ore"], // Adamantium Elemental
       // Mists - T7/T8
         "604": ["3", "0", "ore"], // Ore Elemental
-        "605": ["4", "0", "ore"], // Iron Elemental
-        "606": ["5", "0", "ore"], // Titanium Elemental
-        "607": ["6", "0", "ore"], // Runite Elemental
-        "608": ["7", "0", "ore"], // Meteorite Elemental
-        "609": ["8", "0", "ore"], // Adamantium Elemental
+        "605": ["3", "0", "ore"], // Iron Elemental
+        "606": ["6", "0", "ore"], // Runite Elemental
+        "607": ["5", "0", "ore"], // Runite Elemental
+        "608": ["6", "0", "ore"], // Meteorite Elemental
+        "609": ["7", "0", "ore"], // Adamantium Elemental
       // Mists - T8
         "628": ["3", "0", "ore"], // Ore Elemental
-        "629": ["4", "0", "ore"], // Iron Elemental
-        "630": ["5", "0", "ore"], // Titanium Elemental
-        "631": ["6", "0", "ore"], // Runite Elemental
-        "632": ["7", "0", "ore"], // Meteorite Elemental
-        "633": ["8", "0", "ore"], // Adamantium Elemental
+        "629": ["5", "0", "ore"], // Titanium Elemental
+        "630": ["6", "0", "ore"], // Runite Elemental
+        "631": ["7", "0", "ore"], // Meteorite Elemental
+        "632": ["6", "0", "ore"], // Runite Elemental
+        "633": ["7", "0", "ore"], // Adamantium Elemental
+        "656": ["7", "0", "ore"], // Adamantium Elemental
+        "657": ["7", "0", "ore"], // Adamantium Elemental
     // Region Giant
-      //"ID": ["6", "0", "ore"], // Ore Colossus' Aspect
+      "712": ["6", "0", "ore"], // Ore Colossus' Aspect
       //"ID": ["6", "0", "ore"], // Ore Colossus
       "699": ["6", "0", "GUARDIANFORESTOREGIANT1"], // Old Runite Aspect
       //"ID": ["7", "0", "ore"], // Ancient Meteorite Titan
@@ -271,19 +302,20 @@ export const mobs = {
   // Region End
   
   // Region Fiber
-  "426": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_SWAMP_DEAD_LEVEL4_LOCKED
-  "432": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_STEPPE_DEAD_LEVEL4_LOCKED
-  "438": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_MOUNTAIN_DEAD_LEVEL4_LOCKED
+  "NEED FIX THIS ID": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_SWAMP_DEAD_LEVEL4_LOCKED
+  "NEED FIX THIS ID": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_STEPPE_DEAD_LEVEL4_LOCKED
+  "NEED FIX THIS ID": ["8", "0", "fiber"], // HILLMARMOT1 T8_MOB_UNIQUE_TREASURE_FIBER_MOUNTAIN_DEAD_LEVEL4_LOCKED
   // Swamp
-  "472": ["3", "0", "fiber"], // Swamp Spirit
-  "473": ["5", "0", "fiber"], // Mature Swamp Spirit
-  "474": ["7", "0", "fiber"], // Elder Swamp Spirit
+  "497": ["3", "0", "fiber"], // Swamp Spirit
+  "498": ["5", "0", "fiber"], // Mature Swamp Spirit
+  "499": ["5", "0", "hide"], // Sabretooth Tiger
   // Region Roads
   // Roads - NORMAL
   "553": ["3", "0", "fiber"], // Hemp Dryad
   "554": ["3", "0", "fiber"], // Skyflower Dryad
-  "555": ["3", "0", "fiber"], // Amberleaf Dryad
+  "580": ["6", "0", "fiber"], // Amberleaf Dryad
   "557": ["8", "0", "fiber"], // Ghost Hemp Dryad
+  "578": ["6", "0", "fiber"], // Amberleaf Dryad
   //"ID": ["7", "0", "fiber"], // 
   //"ID": ["8", "0", "fiber"], // 
   // Veteran Roads - OLD
@@ -293,6 +325,7 @@ export const mobs = {
   "561": ["7", "0", "fiber"], // Old Sunflax Dryad
   "562": ["8", "0", "fiber"], // Old Ghost Hemp Dryad
   "567": ["8", "0", "fiber"], // Ancient Ghost Hemp Dryad
+  "592": ["4", "0", "logs"], // Pine Spirit
   //"ID": ["8", "0", "fiber"], // 
   // Elite Roads - ANCIENT
   //"ID": ["4", "0", "fiber"], // 
@@ -313,22 +346,23 @@ export const mobs = {
   //"ID": ["3", "0", "fiber"], // 
   //"ID": ["4", "0", "fiber"], // 
   "611": ["5", "0", "fiber"], // Hemp Dryad
-  "612": ["5", "0", "fiber"], // Skyflower Dryad T5_MOB_CRITTER_FIBER_MISTS_RED
-  "613": ["6", "0", "fiber"], // Amberleaf Dryad
-  "614": ["7", "0", "fiber"], // Sunflax Dryad
+  "612": ["6", "0", "fiber"], // Amberleaf Dryad
+  "613": ["5", "0", "fiber"], // Amberleaf Dryad
+  "614": ["6", "0", "fiber"], // Sunflax Dryad
   //"ID": ["8", "0", "fiber"], // 
   // Mists - T8
   //"ID": ["3", "0", "fiber"], // 
-  "635": ["4", "0", "fiber"], // Hemp Dryad
+  "635": ["5", "0", "fiber"], // Skyflower Dryad
   //"ID": ["5", "0", "fiber"], // 
-  "637": ["6", "0", "fiber"], // Amberleaf Dryad
-  "638": ["7", "0", "fiber"], // Sunflax Dryad
-  "639": ["8", "0", "fiber"], // "Ghost Hemp Dryad
+  "637": ["7", "0", "fiber"], // Sunflax Dryad
+  "638": ["6", "0", "fiber"], // Amberleaf Dryad
+  "639": ["7", "0", "fiber"], // Sunflax Dryad
   "680": ["8", "0", "fiber"], // GUARDIANDRYAD3 T8_MOB_GUARDIAN_FOREST_DRYAD
   //"ID": ["8", "0", "fiber"], // 
+  "662": ["6", "0", "fiber"], // "Ghost Hemp Dryad
   // Giant
   "685": ["6", "0", "fiber"], // Dryad's Aspect - 500
-  "707": ["8", "0", "fiber"], // Old Ghost Hemp Aspect
+  "732": ["8", "0", "fiber"], // Old Ghost Hemp Aspect
   //"ID": ["6", "0", "fiber"], // Enormous Dryad - 2560
   //"ID": ["7", "0", "fiber"], // Ancient Sunflax Titan -
   //"ID": ["7", "0", "fiber"], // 
@@ -337,36 +371,52 @@ export const mobs = {
   
   // Region Mist bosses
   // Crystal Spider - Map Boss
-  //"ID": ["4", "8", "Mist_Spider"], // Crystal Spider
-  "319": ["5", "8", "Mist_Spider"], // Crystal Spider
-  "320": ["6", "8", "Mist_Spider"], // Crystal Spider
-  //"ID": ["7", "8", "Mist_Spider"], // Crystal Spider
-  //"322": ["8", "8", "Mist_Spider"], // Crystal Spider
+  "SEARCHING FOR ID": ["5", "8", "Mist_Spider"],
+  "320": ["6", "8", "Mist_Spider"],
+  "SEARCHING FOR ID": ["7", "8", "Mist_Spider"],
+  "SEARCHING FOR ID": ["8", "8", "Mist_Spider"],
+  "SEARCHING FOR ID": ["4", "8", "Mist_Spider"],
+  "SEARCHING FOR ID": ["5", "8", "Mist_Spider"],
+  "SEARCHING FOR ID": ["6", "8", "Mist_Spider"],
+  "SEARCHING FOR ID": ["4", "8", "Mist_Spider"], // Crystal Spider
+  "SEARCHING FOR ID": ["5", "8", "Mist_Spider"], // Crystal Spider
+  "SEARCHING FOR ID": ["6", "8", "Mist_Spider"], // Crystal Spider
+  "SEARCHING FOR ID": ["7", "8", "Mist_Spider"], // Crystal Spider
+  "SEARCHING FOR ID": ["8", "8", "Mist_Spider"], // Crystal Spider
+  // New Crystal Spiders
+  "323": ["5", "8", "Mist_Spider"], // Crystal Cobra in Open World
+  "325": ["6", "8", "Mist_Spider"], // Crystal Cobra in Open world
+  "329": ["6", "8", "Mist_Spider"], // Crystal Beetle in Open World
+  "321": ["7", "8", "Mist_Spider"], // Crystal Spider in Open World
+  "324": ["6", "8", "Mist_Spider"], // Crystal Cobra in Open world
+  "328": ["6", "8", "Mist_Spider"], // Crystal Beetle in Open World
+
+
   // Arcane Spiderling - Mist
-  //"ID": ["5", "8", "Mist_Spider"], // Arcane Spiderling
+
+  "314": ["5", "8", "Mist_Spider"], // Arcane Spiderling
   "315": ["6", "8", "Mist_Spider"], // Arcane Spiderling
   "316": ["7", "8", "Mist_Spider"], // Arcane Spiderling
   "317": ["8", "8", "Mist_Spider"], // Arcane Spiderling
   // Veilweaver
-  //"ID": ["4", "8", "Mist_Veilweaver"],
-  "344": ["5", "8", "Mist_Veilweaver"], 
-  //"ID": ["6", "8", "Mist_Veilweaver"],
+ // "343": ["4", "8", "Mist_Veilweaver"],
+ // "344": ["5", "8", "Mist_Veilweaver"], 
+ // "345": ["6", "8", "Mist_Veilweaver"],
   "346": ["7", "8", "Mist_Veilweaver"],
-  //"ID": ["8", "8", "Mist_Veilweaver"],
+  "347": ["8", "8", "Mist_Veilweaver"],
   // Fey Dragon
-  //"ID": ["4", "8", "Mist_Fey_Dragon"],
+  "348": ["4", "8", "Mist_Fey_Dragon"],
   "349": ["5", "8", "Mist_Fey_Dragon"], // 
-  //"ID": ["6", "8", "Mist_Fey_Dragon"],
-  //"ID": ["7", "8", "Mist_Fey_Dragon"],
-  //"ID": ["8", "8", "Mist_Fey_Dragon"],
+  "350": ["6", "8", "Mist_Fey_Dragon"],
+  "351": ["7", "8", "Mist_Fey_Dragon"],
+  "352": ["8", "8", "Mist_Fey_Dragon"],
   // Griffin
   "353": ["4", "8", "Mist_Griffin"], // 
-  //"ID": ["5", "8", "Mist_Griffin"], //
+  "354": ["5", "8", "Mist_Griffin"], //
   "355": ["6", "8", "Mist_Griffin"], // 
   "356": ["7", "8", "Mist_Griffin"], // 
-  //"ID": ["8", "8", "Mist_Griffin"], //
+  "357": ["8", "8", "Mist_Griffin"], //
   // Region End
-  
   // Region Enemies
   // Region - The Heretics
   // Enemy
@@ -438,12 +488,45 @@ export const mobs = {
   // Artful Arsonist
     "998": ["5", "4", "Enemy3"], // 
     "999": ["6", "4", "Enemy3"], // 
-    "1000": ["7", "4", "Enemy3"], // 
+    "1000": ["3", "4", "Enemy3"], // 
     "1001": ["8", "4", "Enemy3"], // 
     "1002": ["5", "4", "Enemy3"], // 
     "1003": ["6", "4", "Enemy3"], // 
     "1004": ["7", "4", "Enemy3"], // 
-    "1005": ["8", "4", "Enemy3"], // 
+    "1005": ["8", "4", "Enemy3"], //
+    "1036": ["3", "4", "Enemy3"], //
+    "1063": ["3", "4", "Enemy3"], //  
+    "1072": ["3", "4", "Enemy3"], //
+    "1054": ["3", "4", "Enemy3"], //
+    "1127": ["3", "4", "Enemy3"], //
+    "1128": ["3", "4", "Enemy3"], //
+    "1129": ["3", "4", "Enemy3"], //
+    "1130": ["3", "4", "Enemy3"], //
+    "1133": ["3", "4", "Enemy3"], //
+    "1135": ["3", "4", "Enemy3"], //
+    "1136": ["3", "4", "Enemy3"], //
+    "1141": ["3", "4", "Enemy3"], //
+    "1143": ["3", "4", "Enemy3"], //
+
+    "2884": ["3", "4", "Enemy3"], //
+    "2905": ["3", "4", "Enemy3"], //
+    "2926": ["3", "4", "Enemy3"], //
+    "2933": ["3", "4", "Enemy3"], //
+    "2947": ["3", "4", "Enemy3"], //
+    "2968": ["3", "4", "Enemy3"], //
+    "2996": ["3", "4", "Enemy3"], //
+    "3017": ["3", "4", "Enemy3"], //
+    "2912": ["3", "4", "Enemy3"], //
+
+    "1133": ["4", "5", "Enemy4"], //
+    "1589": ["4", "5", "Enemy4"], //
+    "3206": ["4", "5", "Enemy4"], //
+    "3211": ["4", "5", "Enemy4"], //
+    "3246": ["4", "5", "Enemy4"], //
+    "3241": ["4", "5", "Enemy4"], //
+    "3221": ["4", "5", "Enemy4"], //
+    "3221": ["4", "5", "Enemy4"], //
+
   // Brawny Bouncer
   "1026": ["5", "4", "Enemy3"], // 
   "1027": ["6", "4", "Enemy3"], // 
@@ -457,13 +540,12 @@ export const mobs = {
   // 
   //"980": ["5", "5", "Enemy4"], // 
   //"981": ["6", "5", "Enemy4"], // 
-  //"982": ["7", "5", "Enemy4"], // 
+  "982": ["3", "5", "Enemy3"], // 
   //"983": ["8", "5", "Enemy4"], // 
   
   
   // Enforcer
   "1035": ["5", "5", "Enemy4"], // 
-  "1036": ["6", "5", "Enemy4"], // 
   "1037": ["7", "5", "Enemy4"], // 
   "1038": ["8", "5", "Enemy4"], // 
   "1039": ["5", "5", "Enemy4"], // 
@@ -473,7 +555,7 @@ export const mobs = {
   // Rabble-Rouser
   "953": ["5", "5", "Enemy4"], // 
   "954": ["6", "5", "Enemy4"], // 
-  "955": ["7", "5", "Enemy4"], // 
+  "955": ["3", "5", "Enemy3"], // 
   "956": ["8", "5", "Enemy4"], // 
   "957": ["5", "5", "Enemy4"], // 
   "958": ["6", "5", "Enemy4"], // 
@@ -484,154 +566,155 @@ export const mobs = {
       "1006": ["4", "6", "Enemy5"], // 
       "1007": ["5", "6", "Enemy5"], // 
       "1008": ["6", "6", "Enemy5"], // 
-      "1009": ["7", "6", "Enemy5"], // 
+      "1009": ["3", "4", "Enemy3"], // 
       "1010": ["8", "6", "Enemy5"], // 
   // Region End
   
   // Region - The Undead
   // Enemy
     // Brittle Revenant
-      "1467": ["4", "2", "Enemy1"], // 
-      "1468": ["5", "2", "Enemy1"], // 
-      "1469": ["6", "2", "Enemy1"], // 
-      "1470": ["7", "2", "Enemy1"], // 
-      "1471": ["8", "2", "Enemy1"], // 
-      "1472": ["5", "2", "Enemy1"], // 
-      "1473": ["6", "2", "Enemy1"], // 
-      "1474": ["7", "2", "Enemy1"], // 
-      "1475": ["8", "2", "Enemy1"], // 
+      "1526": ["4", "2", "Enemy1"], // 
+      "1527": ["5", "2", "Enemy1"], // 
+      "1528": ["6", "2", "Enemy1"], // 
+      "1529": ["7", "2", "Enemy1"], // 
+      "1530": ["8", "2", "Enemy1"], // 
+      "1531": ["5", "2", "Enemy1"], // 
+      "1532": ["6", "2", "Enemy1"], // 
+      "1533": ["7", "2", "Enemy1"], // 
+      "1534": ["8", "2", "Enemy1"], // 
     // Brittle Revenant - Summoned
       "1820": ["5", "2", "Enemy1"], // 
       "1821": ["6", "2", "Enemy1"], // 
       "1822": ["7", "2", "Enemy1"], // 
       "1823": ["8", "2", "Enemy1"], // 
   // Ghoul
-  "1485": ["4", "2", "Enemy1"], // 
-  "1486": ["5", "2", "Enemy1"], // 
-  "1487": ["6", "2", "Enemy1"], // 
-  "1488": ["7", "2", "Enemy1"], // 
-  "1489": ["8", "2", "Enemy1"], // 
-  "1490": ["5", "2", "Enemy1"], // 
-  "1491": ["6", "2", "Enemy1"], // 
-  "1492": ["7", "2", "Enemy1"], // 
-  "1493": ["8", "2", "Enemy1"], // 
+  "1548": ["4", "2", "Enemy1"], // 
+  "1549": ["5", "2", "Enemy1"], // 
+  "1550": ["6", "2", "Enemy1"], // 
+  "1551": ["7", "2", "Enemy1"], // 
+  "1552": ["8", "2", "Enemy1"], // 
+  "1553": ["5", "2", "Enemy1"], // 
+  "1554": ["6", "2", "Enemy1"], // 
+  "1555": ["4", "2", "Enemy4"], // 
+  "1556": ["8", "2", "Enemy1"], // 
   // Feeble Frostweaver
-  "1476": ["4", "2", "Enemy1"], // 
-  "1477": ["5", "2", "Enemy1"], // 
-  "1478": ["6", "2", "Enemy1"], // 
-  "1479": ["7", "2", "Enemy1"], // 
-  "1480": ["8", "2", "Enemy1"], // 
-  "1481": ["5", "2", "Enemy1"], // 
-  "1482": ["6", "2", "Enemy1"], // 
-  "1483": ["7", "2", "Enemy1"], // 
-  "1484": ["8", "2", "Enemy1"], // 
+  "1537": ["4", "2", "Enemy1"], // 
+  "1538": ["5", "2", "Enemy1"], // 
+  "1539": ["6", "2", "Enemy1"], // 
+  "1540": ["7", "2", "Enemy1"], // 
+  "1541": ["8", "2", "Enemy1"], // 
+  "1542": ["5", "2", "Enemy1"], // 
+  "1543": ["6", "2", "Enemy1"], // 
+  "1544": ["4", "2", "Enemy1"], // 
+  "1545": ["8", "2", "Enemy1"], // 
   // Medium Enemy
   // Revenant
-  "1494": ["4", "3", "Enemy2"], // 
-  "1495": ["5", "3", "Enemy2"], // 
-  "1496": ["6", "3", "Enemy2"], // 
-  "1497": ["7", "3", "Enemy2"], // 
-  "1498": ["8", "3", "Enemy2"], // 
-  "1499": ["5", "3", "Enemy2"], // 
-  "1500": ["6", "3", "Enemy2"], // 
-  "1501": ["7", "3", "Enemy2"], // 
-  "1502": ["8", "3", "Enemy2"], // 
+  "1559": ["4", "3", "Enemy2"], // 
+  "1560": ["5", "3", "Enemy2"], // 
+  "1561": ["6", "3", "Enemy2"], // 
+  "1562": ["7", "3", "Enemy2"], // 
+  "1563": ["8", "3", "Enemy2"], // 
+  "1564": ["5", "3", "Enemy2"], // 
+  "1565": ["6", "3", "Enemy2"], // 
+  "1566": ["7", "3", "Enemy2"], // 
+  "1567": ["8", "3", "Enemy2"], // 
   // Frostweaver
-  "1557": ["4", "3", "Enemy2"], // 
-  "1558": ["5", "3", "Enemy2"], // 
-  "1559": ["6", "3", "Enemy2"], // 
-  "1560": ["7", "3", "Enemy2"], // 
-  "1561": ["8", "3", "Enemy2"], // 
-  "1562": ["5", "3", "Enemy2"], // 
-  "1563": ["6", "3", "Enemy2"], // 
-  "1564": ["7", "3", "Enemy2"], // 
-  "1565": ["8", "3", "Enemy2"], // 
+  "1522": ["4", "3", "Enemy4"], //
+  "1632": ["4", "3", "Enemy4"], //
+  "1636": ["4", "3", "Enemy2"], // 
+  "1637": ["5", "3", "Enemy2"], // 
+  "1638": ["6", "3", "Enemy2"], // 
+  "1639": ["7", "3", "Enemy2"], // 
+  "1640": ["8", "3", "Enemy2"], // 
+  "1641": ["5", "3", "Enemy2"], // 
+  "1642": ["6", "3", "Enemy2"], // 
+  "1643": ["7", "3", "Enemy2"], // 
+  "1644": ["8", "3", "Enemy2"], // 
   // Bone Archer
-  "1521": ["4", "3", "Enemy2"], // 
-  "1522": ["5", "3", "Enemy2"], // 
-  "1523": ["6", "3", "Enemy2"], // 
-  "1524": ["7", "3", "Enemy2"], // 
-  "1525": ["8", "3", "Enemy2"], // 
-  "1526": ["5", "3", "Enemy2"], // 
-  "1527": ["6", "3", "Enemy2"], // 
-  "1528": ["7", "3", "Enemy2"], // 
-  "1529": ["8", "3", "Enemy2"], // 
+  "1592": ["4", "3", "Enemy2"], // 
+  "1593": ["5", "3", "Enemy2"], // 
+  "1594": ["6", "3", "Enemy2"], // 
+  "1595": ["7", "3", "Enemy2"], // 
+  "1596": ["8", "3", "Enemy2"], // 
+  "1597": ["5", "3", "Enemy2"], // 
+  "1598": ["6", "3", "Enemy2"], // 
+  "1599": ["7", "3", "Enemy2"], // 
   // Enchanted Enemy
   // Unyielding Revenant
-  "1503": ["5", "4", "Enemy3"], // 
-  "1504": ["5", "4", "Enemy3"], // 
-  "1505": ["6", "4", "Enemy3"], // 
-  "1506": ["7", "4", "Enemy3"], // 
-  "1507": ["8", "4", "Enemy3"], // 
-  "1508": ["5", "4", "Enemy3"], // 
-  "1509": ["6", "4", "Enemy3"], // 
-  "1510": ["7", "4", "Enemy3"], // 
-  "1511": ["8", "4", "Enemy3"], // 
-  // Relentless Dreadknight
-  "1584": ["4", "4", "Enemy3"], // 
-  "1585": ["5", "4", "Enemy3"], // 
-  "1586": ["6", "4", "Enemy3"], // 
-  "1587": ["7", "4", "Enemy3"], // 
-  "1588": ["8", "4", "Enemy3"], // 
-  "1589": ["5", "4", "Enemy3"], // 
-  "1590": ["6", "4", "Enemy3"], // 
-  "1591": ["7", "4", "Enemy3"], // 
-  "1592": ["8", "4", "Enemy3"], // 
-  // Dominant Frostweaver
-  "1566": ["4", "4", "Enemy3"], // 
-  "1567": ["5", "4", "Enemy3"], // 
-  "1568": ["6", "4", "Enemy3"], // 
-  "1569": ["7", "4", "Enemy3"], // 
-  "1570": ["8", "4", "Enemy3"], // 
+  "1570": ["5", "4", "Enemy3"], // 
   "1571": ["5", "4", "Enemy3"], // 
   "1572": ["6", "4", "Enemy3"], // 
   "1573": ["7", "4", "Enemy3"], // 
   "1574": ["8", "4", "Enemy3"], // 
+  "1575": ["5", "4", "Enemy3"], // 
+  "1576": ["6", "4", "Enemy3"], // 
+  "1577": ["7", "4", "Enemy3"], // 
+  "1578": ["8", "4", "Enemy3"], // 
+  // Relentless Dreadknight
+  "1669": ["4", "4", "Enemy3"], // 
+  "1670": ["5", "4", "Enemy3"], // 
+  "1671": ["6", "4", "Enemy3"], // 
+  "1672": ["7", "4", "Enemy3"], // 
+  "1673": ["8", "4", "Enemy3"], // 
+  "1674": ["5", "4", "Enemy3"], // 
+  "1675": ["6", "4", "Enemy3"], // 
+  "1676": ["7", "4", "Enemy3"], // 
+  "1677": ["8", "4", "Enemy3"], // 
+  // Dominant Frostweaver
+  "1647": ["4", "4", "Enemy3"], // 
+  "1648": ["5", "4", "Enemy3"], // 
+  "1649": ["6", "4", "Enemy3"], // 
+  "1650": ["7", "4", "Enemy3"], // 
+  "1651": ["8", "4", "Enemy3"], // 
+  "1652": ["5", "4", "Enemy3"], // 
+  "1653": ["6", "4", "Enemy3"], // 
+  "1654": ["7", "4", "Enemy3"], // 
+  "1655": ["8", "4", "Enemy3"], // 
   // Unerring Bone Archer
-  "1531": ["5", "4", "Enemy3"], // 
-  "1532": ["6", "4", "Enemy3"], // 
-  "1533": ["7", "4", "Enemy3"], // 
-  "1534": ["8", "4", "Enemy3"], // 
-  "1535": ["5", "4", "Enemy3"], // 
-  "1536": ["6", "4", "Enemy3"], // 
-  "1537": ["7", "4", "Enemy3"], // 
-  "1538": ["8", "4", "Enemy3"], // 
+  "1604": ["5", "4", "Enemy3"], // 
+  "1605": ["6", "4", "Enemy3"], // 
+  "1606": ["7", "4", "Enemy3"], // 
+  "1607": ["8", "4", "Enemy3"], // 
+  "1608": ["5", "4", "Enemy3"], // 
+  "1609": ["6", "4", "Enemy3"], // 
+  "1610": ["7", "4", "Enemy3"], // 
+  "1611": ["8", "4", "Enemy3"], // 
   // Mini Boss
   // Awakened Swordmaster
-  "1513": ["5", "5", "Enemy4"], // 
-  "1514": ["6", "5", "Enemy4"], // 
-  "1515": ["7", "5", "Enemy4"], // 
-  "1516": ["8", "5", "Enemy4"], // 
-  "1517": ["5", "5", "Enemy4"], // 
-  "1518": ["6", "5", "Enemy4"], // 
-  "1519": ["7", "5", "Enemy4"], // 
-  "1520": ["8", "5", "Enemy4"], // 
+  "1582": ["5", "5", "Enemy4"], // 
+  "1583": ["6", "5", "Enemy4"], // 
+  "1584": ["7", "5", "Enemy4"], // 
+  "1585": ["8", "5", "Enemy4"], // 
+  "1586": ["5", "5", "Enemy4"], // 
+  "1587": ["6", "5", "Enemy4"], // 
+  "1588": ["4", "5", "Enemy4"], // 
+  "1589": ["4", "5", "Enemy4"], // 
   // Risen Marksman
-  "1539": ["4", "5", "Enemy4"], // 
-  "1540": ["5", "5", "Enemy4"], // 
-  "1541": ["6", "5", "Enemy4"], // 
-  "1542": ["7", "5", "Enemy4"], // 
-  "1543": ["8", "5", "Enemy4"], // 
-  "1544": ["4", "5", "Enemy4"], // 
-  "1545": ["5", "5", "Enemy4"], // 
-  "1546": ["6", "5", "Enemy4"], // 
-  "1547": ["7", "5", "Enemy4"], // 
-  "1548": ["8", "5", "Enemy4"], // 
+  "1614": ["4", "5", "Enemy4"], // 
+  "1615": ["5", "5", "Enemy4"], // 
+  "1616": ["6", "5", "Enemy4"], // 
+  "1617": ["7", "5", "Enemy4"], // 
+  "1618": ["8", "5", "Enemy4"], // 
+  "1619": ["4", "5", "Enemy4"], // 
+  "1620": ["5", "5", "Enemy4"], // 
+  "1621": ["6", "5", "Enemy4"], // 
+  "1622": ["7", "5", "Enemy4"], // 
+  "1623": ["8", "5", "Enemy4"], // 
     // Cryomancer
-      "1576": ["5", "5", "Enemy4"], // 
-      "1577": ["6", "5", "Enemy4"], // 
-      "1578": ["7", "5", "Enemy4"], // 
-      "1579": ["8", "5", "Enemy4"], // 
-      "1580": ["5", "5", "Enemy4"], // 
-      "1581": ["6", "5", "Enemy4"], // 
-      "1582": ["7", "5", "Enemy4"], // 
-      "1583": ["8", "5", "Enemy4"], // 
+      "1659": ["5", "5", "Enemy4"], // 
+      "1660": ["6", "5", "Enemy4"], // 
+      "1661": ["7", "5", "Enemy4"], // 
+      "1662": ["8", "5", "Enemy4"], // 
+      "1663": ["5", "5", "Enemy4"], // 
+      "1664": ["6", "5", "Enemy4"], // 
+      "1665": ["4", "5", "Enemy4"], // 
+      "1666": ["8", "5", "Enemy4"], // 
   
   // Boss
     // Dread Lord
       "1598": ["5", "6", "Enemy5"], // 
       "1599": ["6", "6", "Enemy5"], // 
-      "1600": ["7", "6", "Enemy5"], // 
+      "1683": ["7", "6", "Enemy5"], // 
       "1601": ["8", "6", "Enemy5"], // 
       //"ID": ["5", "6", "Enemy5"], // 
       //"ID": ["6", "6", "Enemy5"], // 
@@ -640,8 +723,8 @@ export const mobs = {
     // Nameless Hero
       //"ID": ["5", "6", "Enemy5"], // 
       "1604": ["6", "6", "Enemy5"], // 
-      "1605": ["7", "6", "Enemy5"], // 
-      "1606": ["8", "6", "Enemy5"], // 
+      "1694": ["7", "6", "Enemy5"], // 
+      "SEARCHING FOR ID": ["8", "6", "Enemy5"], // 
       //"ID": ["5", "6", "Enemy5"], // 
       //"ID": ["6", "6", "Enemy5"], // 
       //"ID": ["7", "6", "Enemy5"], // 
@@ -649,8 +732,8 @@ export const mobs = {
     // Master Cryomancer
       //"ID": ["4", "6", "Enemy5"], // 
       //"ID": ["5", "6", "Enemy5"], // 
-      "1613": ["6", "6", "Enemy5"], // 
-      //"ID": ["7", "6", "Enemy5"], // 
+      //"ID": ["6", "6", "Enemy5"], // 
+      "1705": ["7", "6", "Enemy5"], // 
       //"ID": ["8", "6", "Enemy5"], // 
       //"ID": ["5", "6", "Enemy5"], // 
       //"ID": ["6", "6", "Enemy5"], // 
@@ -661,12 +744,12 @@ export const mobs = {
   // Region - The Keepers of Albion
   // Enemy
     // Wildling
-      "1910": ["5", "2", "Enemy1"], // 
+      "2006": ["5", "2", "Enemy1"], // 
     // Knifling
-      "1915": ["5", "2", "Enemy1"], // 
+      "2018": ["5", "2", "Enemy1"], // 
   // Medium Enemy
     // Berserk
-      "1911": ["5", "3", "Enemy2"], // 
+      "2006": ["5", "3", "Enemy2"], // 
       //"ID": ["6", "3", "Enemy2"], // 
       //"ID": ["7", "3", "Enemy2"], // 
       //"ID": ["8", "3", "Enemy2"], // 
@@ -674,8 +757,10 @@ export const mobs = {
       //"ID": ["6", "3", "Enemy2"], // 
       //"ID": ["7", "3", "Enemy2"], // 
       //"ID": ["8", "3", "Enemy2"], //
+    // Wilding
+      "2003": ["5", "3", "Enemy2"], // 
     // Huntress
-      "1916": ["5", "3", "Enemy2"], // 
+      "2021": ["5", "3", "Enemy2"], // 
       //"ID": ["6", "3", "Enemy2"], // 
       //"ID": ["7", "3", "Enemy2"], // 
       //"ID": ["8", "3", "Enemy2"], // 
@@ -684,7 +769,7 @@ export const mobs = {
       //"ID": ["7", "3", "Enemy2"], // 
       //"ID": ["8", "3", "Enemy2"], //    
     // Druid
-      "1923": ["5", "3", "Enemy2"], // 
+      "2042": ["5", "3", "Enemy2"], // 
       //"ID": ["6", "3", "Enemy2"], // 
       //"ID": ["7", "3", "Enemy2"], // 
       //"ID": ["8", "3", "Enemy2"], // 
@@ -693,12 +778,14 @@ export const mobs = {
       //"ID": ["7", "3", "Enemy2"], // 
       //"ID": ["8", "3", "Enemy2"], //
   // Enchanted Enemy
-    // Renowed Huntress
-      "1917": ["5", "4", "Enemy3"], // 
+    // Renowned Huntress
+      "2024": ["5", "4", "Enemy3"], // 
     // Battle-scarred Berserk
-      "1912": ["5", "4", "Enemy3"], // 
+      "2009": ["5", "4", "Enemy3"], // 
     // Grizzled Giant
-      "1920": ["5", "4", "Enemy3"], //
+      "2033": ["5", "4", "Enemy3"], //
+    // Enlightened Druid
+      "2045": ["5", "4", "Enemy3"], //
   // Mini Boss
     // Unrivaled Warrior
       "1913": ["5", "5", "Enemy4"], // 
@@ -716,44 +803,44 @@ export const mobs = {
   // Region - The Disciples of Morgana
   // Enemy
   // Acolyte Occultist
-  "1232": ["4", "2", "Enemy1"], // 
-  "1233": ["5", "2", "Enemy1"], // 
-  "1234": ["6", "2", "Enemy1"], // 
-  "1235": ["7", "2", "Enemy1"], // 
-  "1236": ["8", "2", "Enemy1"], // 
-  "1237": ["5", "2", "Enemy1"], // 
-  "1238": ["6", "2", "Enemy1"], // 
-  "1239": ["7", "2", "Enemy1"], // 
-  "1240": ["8", "2", "Enemy1"], // 
+  "1277": ["4", "2", "Enemy1"], // 
+  "1278": ["5", "2", "Enemy1"], // 
+  "1279": ["6", "2", "Enemy1"], // 
+  "1280": ["7", "2", "Enemy1"], // 
+  "1281": ["8", "2", "Enemy1"], // 
+  "1282": ["5", "2", "Enemy1"], // 
+  "1283": ["6", "2", "Enemy1"], // 
+  "1284": ["7", "2", "Enemy1"], // 
+  "1285": ["8", "2", "Enemy1"], // 
   // Suppressor Recruit
-  "1192": ["4", "2", "Enemy1"], // 
-  "1193": ["5", "2", "Enemy1"], // 
-  "1194": ["6", "2", "Enemy1"], // 
-  "1195": ["7", "2", "Enemy1"], // 
-  "1196": ["8", "2", "Enemy1"], // 
-  "1197": ["5", "2", "Enemy1"], // 
-  "1198": ["6", "2", "Enemy1"], // 
-  "1199": ["7", "2", "Enemy1"], // 
-  "1200": ["8", "2", "Enemy1"], // 
+  "1227": ["4", "2", "Enemy1"], // 
+  "1228": ["5", "2", "Enemy1"], // 
+  "1229": ["6", "2", "Enemy1"], // 
+  "1230": ["7", "2", "Enemy1"], // 
+  "1231": ["8", "2", "Enemy1"], // 
+  "1232": ["5", "2", "Enemy1"], // 
+  "1233": ["6", "2", "Enemy1"], // 
+  "1234": ["7", "2", "Enemy1"], // 
+  "1235": ["8", "2", "Enemy1"], // 
   // Pikeman Recruit
-  "1153": ["5", "2", "Enemy1"], // 
-  "1154": ["6", "2", "Enemy1"], // 
-  "1155": ["7", "2", "Enemy1"], // 
-  "1156": ["8", "2", "Enemy1"], // 
-  "1157": ["5", "2", "Enemy1"], // 
-  "1158": ["6", "2", "Enemy1"], // 
-  "1159": ["7", "2", "Enemy1"], // 
-  "1160": ["8", "2", "Enemy1"], // 
+  "1178": ["5", "2", "Enemy1"], // 
+  "1179": ["6", "2", "Enemy1"], // 
+  //"1180": ["7", "2", "Enemy1"], // 
+  "1181": ["8", "2", "Enemy1"], // 
+  "1182": ["5", "2", "Enemy1"], // 
+  "1183": ["6", "2", "Enemy1"], // 
+  "1184": ["7", "2", "Enemy1"], // 
+  "1185": ["8", "2", "Enemy1"], // 
   // Guard Dogs
-  "1295": ["5", "2", "Enemy1"], // Obsessed Guard Dog
-  "1296": ["6", "2", "Enemy1"], // 
-  "1297": ["7", "2", "Enemy1"], // 
-  "1298": ["8", "2", "Enemy1"], // Zealous Guard Dog
+  "1354": ["5", "2", "Enemy1"], // Obsessed Guard Dog
+  "1355": ["6", "2", "Enemy1"], // 
+  "1356": ["7", "2", "Enemy1"], // 
+  "1357": ["8", "2", "Enemy1"], // Zealous Guard Dog
   // Summoned Imp
     //"ID": ["5", "2", "Enemy1"], // 
-    "1449": ["6", "2", "Enemy1"], //  ??
+    "1508": ["6", "2", "Enemy1"], //  ??
     //"ID": ["7", "2", "Enemy1"], // 
-    "1452": ["8", "2", "Enemy1"], // 
+    "1511": ["8", "2", "Enemy1"], // 
   // Morgana Squire
   //"ID": ["4", "2", "Enemy1"], // 
   //"ID": ["5", "2", "Enemy1"], // 
@@ -776,104 +863,104 @@ export const mobs = {
       //"ID": ["8", "2", "Enemy1"], // 
   // Medium Enemy
   // Occultist
-  "1241": ["5", "3", "Enemy2"], // 
-  "1242": ["6", "3", "Enemy2"], // 
-  "1243": ["7", "3", "Enemy2"], // 
-  "1244": ["8", "3", "Enemy2"], // 
-  "1245": ["5", "3", "Enemy2"], // 
-  "1246": ["6", "3", "Enemy2"], // 
-  "1247": ["7", "3", "Enemy2"], // 
-  "1248": ["8", "3", "Enemy2"], // 
+  "1288": ["5", "3", "Enemy2"], // 
+  "1289": ["6", "3", "Enemy2"], // 
+  "1290": ["7", "3", "Enemy2"], // 
+  "1291": ["8", "3", "Enemy2"], // 
+  "1292": ["5", "3", "Enemy2"], // 
+  "1293": ["6", "3", "Enemy2"], // 
+  "1294": ["7", "3", "Enemy2"], // 
+  "1295": ["8", "3", "Enemy2"], // 
   // Suppressor
-  "1201": ["5", "3", "Enemy2"], // 
-  "1202": ["6", "3", "Enemy2"], // 
-  "1203": ["7", "3", "Enemy2"], // 
-  "1204": ["8", "3", "Enemy2"], // 
-  "1205": ["5", "3", "Enemy2"], // 
-  "1206": ["6", "3", "Enemy2"], // 
-  "1207": ["7", "3", "Enemy2"], // 
-  "1208": ["8", "3", "Enemy2"], // 
+  "1238": ["5", "3", "Enemy2"], // 
+  "1239": ["6", "3", "Enemy2"], // 
+  "1240": ["7", "3", "Enemy2"], // 
+  "1241": ["8", "3", "Enemy2"], // 
+  "1242": ["5", "3", "Enemy2"], // 
+  "1243": ["6", "3", "Enemy2"], // 
+  "1244": ["7", "3", "Enemy2"], // 
+  "1245": ["8", "3", "Enemy2"], // 
   // Pikeman
-  "1161": ["5", "3", "Enemy2"], // 
-  "1162": ["6", "3", "Enemy2"], // 
-  "1163": ["7", "3", "Enemy2"], // 
-  "1164": ["8", "3", "Enemy2"], // 
-  "1165": ["5", "3", "Enemy2"], // 
-  "1166": ["6", "3", "Enemy2"], // 
-  "1167": ["7", "3", "Enemy2"], // 
-  "1168": ["8", "3", "Enemy2"], // 
+  "1188": ["5", "3", "Enemy2"], // 
+  "1189": ["6", "3", "Enemy2"], // 
+  "1190": ["7", "3", "Enemy2"], // 
+  "1191": ["8", "3", "Enemy2"], // 
+  "1192": ["5", "3", "Enemy2"], // 
+  "1193": ["6", "3", "Enemy2"], // 
+  "1194": ["7", "3", "Enemy2"], // 
+  "1195": ["8", "3", "Enemy2"], // 
   // Enchanted Enemy
     // Blackguard Pikeman
-      "1169": ["5", "4", "Enemy3"], // 
-      "1170": ["6", "4", "Enemy3"], // 
-      "1171": ["7", "4", "Enemy3"], // 
-      "1172": ["8", "4", "Enemy3"], // 
-      "1173": ["5", "4", "Enemy3"], // 
-      "1174": ["6", "4", "Enemy3"], // 
-      "1175": ["7", "4", "Enemy3"], // 
-      "1176": ["8", "4", "Enemy3"], // 
+      "1198": ["5", "4", "Enemy3"], // 
+      "1199": ["6", "4", "Enemy3"], // 
+      "1200": ["7", "4", "Enemy3"], // 
+      "1201": ["8", "4", "Enemy3"], // 
+      "1202": ["5", "4", "Enemy3"], // 
+      "1203": ["6", "4", "Enemy3"], // 
+      "1204": ["7", "4", "Enemy3"], // 
+      "1205": ["8", "4", "Enemy3"], // 
   // Merciless Suppressor
-  "1209": ["5", "4", "Enemy3"], // 
-  "1210": ["6", "4", "Enemy3"], // 
-  "1211": ["7", "4", "Enemy3"], // 
-  "1212": ["8", "4", "Enemy3"], // 
-  "1213": ["5", "4", "Enemy3"], // 
-  "1214": ["6", "4", "Enemy3"], // 
-  "1215": ["7", "4", "Enemy3"], // 
-  "1216": ["8", "4", "Enemy3"], // 
+  "1248": ["5", "4", "Enemy3"], // 
+  "1249": ["6", "4", "Enemy3"], // 
+  "1250": ["7", "4", "Enemy3"], // 
+  "1251": ["8", "4", "Enemy3"], // 
+  "1252": ["5", "4", "Enemy3"], // 
+  "1253": ["6", "4", "Enemy3"], // 
+  "1254": ["7", "4", "Enemy3"], // 
+  "1255": ["8", "4", "Enemy3"], // 
     // Dark Paladin
-      "1273": ["5", "4", "Enemy3"], // 
-      "1274": ["6", "4", "Enemy3"], // 
-      "1275": ["7", "4", "Enemy3"], // 
-      "1276": ["8", "4", "Enemy3"], // 
-      "1277": ["5", "4", "Enemy3"], // 
-      "1278": ["6", "4", "Enemy3"], // 
-      "1279": ["7", "4", "Enemy3"], // 
-      "1281": ["8", "4", "Enemy3"], // 
+      "1328": ["5", "4", "Enemy3"], // 
+      "1329": ["6", "4", "Enemy3"], // 
+      "1330": ["7", "4", "Enemy3"], // 
+      "1331": ["8", "4", "Enemy3"], // 
+      "1332": ["5", "4", "Enemy3"], // 
+      "1333": ["6", "4", "Enemy3"], // 
+      "1334": ["7", "4", "Enemy3"], // 
+      "1335": ["8", "4", "Enemy3"], // 
   // Callous Occultist
-  "1249": ["5", "4", "Enemy3"], // 
-  "1250": ["6", "4", "Enemy3"], // 
-  "1251": ["7", "4", "Enemy3"], // 
-  "1252": ["8", "4", "Enemy3"], // 
-  "1253": ["5", "4", "Enemy3"], // 
-  "1254": ["6", "4", "Enemy3"], // 
-  "1255": ["7", "4", "Enemy3"], // 
-  "1256": ["8", "4", "Enemy3"], // 
+  "1298": ["5", "4", "Enemy3"], // 
+  "1299": ["6", "4", "Enemy3"], // 
+  "1300": ["7", "4", "Enemy3"], // 
+  "1301": ["8", "4", "Enemy3"], // 
+  "1302": ["5", "4", "Enemy3"], // 
+  "1303": ["6", "4", "Enemy3"], // 
+  "1304": ["7", "4", "Enemy3"], // 
+  "1305": ["8", "4", "Enemy3"], // 
   // Mini Boss
   // Guard Lieutenant
-  "1177": ["5", "5", "Enemy4"], // 
-  "1178": ["6", "5", "Enemy4"], // 
-  "1179": ["7", "5", "Enemy4"], // 
-  "1480": ["8", "5", "Enemy4"], // 
-  "1181": ["5", "5", "Enemy4"], // 
-  "1182": ["6", "5", "Enemy4"], // 
-  "1183": ["8", "5", "Enemy4"], // 
-  "1184": ["7", "5", "Enemy4"], //
+  "1208": ["5", "5", "Enemy4"], // 
+  "1209": ["6", "5", "Enemy4"], // 
+  "1210": ["7", "5", "Enemy4"], // 
+  "1211": ["8", "5", "Enemy4"], // 
+  "1212": ["5", "5", "Enemy4"], // 
+  "1213": ["6", "5", "Enemy4"], // 
+  "1214": ["8", "5", "Enemy4"], // 
+  "1215": ["7", "5", "Enemy4"], //
   // Suppression Squad Leader
-  //"ID": ["4", "5", "Enemy3"], // 
-  //"ID": ["5", "5", "Enemy4"], // 
-  "1218": ["6", "5", "Enemy4"], // 
-  //"ID": ["7", "5", "Enemy4"], // 
-  "1220": ["8", "5", "Enemy4"], // 
-  //"ID": ["5", "5", "Enemy4"], // 
-  //"ID": ["5", "5", "Enemy4"], // 
-  "1222": ["6", "5", "Enemy4"], // 
-  //"ID": ["7", "5", "Enemy4"], // 
-  //"ID": ["8", "5", "Enemy4"], // 
+  "ID": ["4", "5", "Enemy3"], // 
+  "1258": ["5", "5", "Enemy4"], // 
+  "1259": ["6", "5", "Enemy4"], // 
+  "1260": ["7", "5", "Enemy4"], // 
+  "1261": ["8", "5", "Enemy4"], // 
+  "1262": ["5", "5", "Enemy4"], // 
+  "1263": ["5", "5", "Enemy4"], // 
+  "1264": ["6", "5", "Enemy4"], // 
+  "1265": ["7", "5", "Enemy4"], // 
+  "1266": ["8", "5", "Enemy4"], // 
     // Ritual Leader
-      "1257": ["5", "5", "Enemy4"], // 
-      "1258": ["6", "5", "Enemy4"], // 
-      "1259": ["7", "5", "Enemy4"], // 
-      "1260": ["8", "5", "Enemy4"], // 
-      "1261": ["5", "5", "Enemy4"], // 
-      "1262": ["6", "5", "Enemy4"], // 
-      "1263": ["7", "5", "Enemy4"], // 
-      "1264": ["8", "5", "Enemy4"], // 
+      "1308": ["5", "5", "Enemy4"], // 
+      "1309": ["6", "5", "Enemy4"], // 
+      "1310": ["7", "5", "Enemy4"], // 
+      "1311": ["8", "5", "Enemy4"], // 
+      "1312": ["5", "5", "Enemy4"], // 
+      "1313": ["6", "5", "Enemy4"], // 
+      "1314": ["7", "5", "Enemy4"], // 
+      "1315": ["8", "5", "Enemy4"], // 
   // Boss
     // Mistress of Demons
       //"ID": ["4", "6", "Enemy5"], // 
       //"ID": ["5", "6", "Enemy5"], // 
-      "1266": ["6", "6", "Enemy5"], // 
+      "ID": ["6", "6", "Enemy5"], // 
       //"ID": ["7", "6", "Enemy5"], // 
       //"ID": ["8", "6", "Enemy5"], // 
     // Chosen of Morgana
@@ -883,15 +970,15 @@ export const mobs = {
       //"ID": ["7", "6", "Enemy5"], // 
       //"ID": ["8", "6", "Enemy5"], //
     // Master Of Suppression
-      //"ID": ["4", "6", "Enemy5"], // 
-      //"ID": ["5", "6", "Enemy5"], // 
-      //"ID": ["6", "6", "Enemy5"], // 
-      //"ID": ["7", "6", "Enemy5"], // 
-      "1228": ["8", "6", "Enemy5"], //   
+      "1267": ["4", "6", "Enemy5"], // 
+      "1268": ["5", "6", "Enemy5"], // 
+      "1269": ["6", "6", "Enemy5"], // 
+      "1270": ["7", "6", "Enemy5"], // 
+      "1271": ["8", "6", "Enemy5"], //   
     // Commander of the Guard
       //"ID": ["4", "6", "Enemy5"], // 
       //"ID": ["5", "6", "Enemy5"], // 
-      //"ID": ["6", "6", "Enemy5"], // 
+      "1219": ["6", "6", "Enemy5"], // 
       //"ID": ["7", "6", "Enemy5"], // 
       "1188": ["8", "6", "Enemy5"], // 
   // Region End
@@ -954,7 +1041,7 @@ export const mobs = {
   //Infernal Monstrosity
   "2245": ["5", "2", "Enemy1"], //
   
-  //Hiddent Treasure
+  //Hidden Treasure
   "2276": ["5", "9", "HERETICCHEST1"], //
   "2273": ["5", "9", "HERETICCHEST1"], //
   
@@ -1026,24 +1113,24 @@ export const mobs = {
         "2625": ["7", "2", "Enemy1"], // 
         "2626": ["8", "2", "Enemy1"], // 
       // Feeeble Frostweaver
-        //"2663": ["5", "2", "Enemy1"], // 
-        //"2664": ["6", "2", "Enemy1"], // 
-        //"2665": ["7", "2", "Enemy1"], // 
-        //"2666": ["8", "2", "Enemy1"], // 
+        "2663": ["5", "2", "Enemy1"], // 
+        "2664": ["6", "2", "Enemy1"], // 
+        "2665": ["7", "2", "Enemy1"], // 
+        "2666": ["8", "2", "Enemy1"], // 
       // Brittle Revenant
-        //"2667": ["5", "2", "Enemy1"], // 
-        //"2668": ["6", "2", "Enemy1"], // 
-        //"2669": ["7", "2", "Enemy1"], // 
-        //"2670": ["8", "2", "Enemy1"], // 
+        "1527": ["5", "2", "Enemy1"], // 
+        "1528": ["6", "2", "Enemy1"], // 
+        "1529": ["7", "2", "Enemy1"], // 
+        "1530": ["8", "2", "Enemy1"], // 
       // Bone Archer
-        "2679": ["5", "2", "Enemy1"], // 
-        "2680": ["6", "2", "Enemy1"], // 
-        "2681": ["7", "2", "Enemy1"], // 
-        "2682": ["8", "2", "Enemy1"], // 
-        "2683": ["5", "2", "Enemy1"], // 
-        "2684": ["6", "2", "Enemy1"], // 
-        "2685": ["7", "2", "Enemy1"], // 
-        "2686": ["8", "2", "Enemy1"], // 
+        "1593": ["5", "2", "Enemy1"], // 
+        "1594": ["6", "2", "Enemy1"], // 
+        "1595": ["7", "2", "Enemy1"], // 
+        "1596": ["8", "2", "Enemy1"], // 
+        "1597": ["5", "2", "Enemy1"], // 
+        "1598": ["6", "2", "Enemy1"], // 
+        "1599": ["7", "2", "Enemy1"], // 
+        "1600": ["4", "2", "Enemy4"], // 
     // Medium Enemy
       // 
         "2695": ["5", "3", "Enemy2"], // 
@@ -1129,6 +1216,16 @@ export const mobs = {
         //"ID": ["6", "6", "Enemy5"], // 
         //"ID": ["7", "6", "Enemy5"], // 
         //"ID": ["8", "6", "Enemy5"], // 
+      // Forgotten Champion
+        //"ID": ["4", "6", "Enemy5"], // 
+        //"ID": ["5", "6", "Enemy5"], // 
+        //"ID": ["6", "6", "Enemy5"], // 
+        "1628": ["7", "6", "Enemy5"], // 
+        //"ID": ["8", "6", "Enemy5"], // 
+        //"ID": ["5", "6", "Enemy5"], // 
+        //"ID": ["6", "6", "Enemy5"], // 
+        //"ID": ["7", "6", "Enemy5"], // 
+        //"ID": ["8", "6", "Enemy5"], // 
       // Master Cryomancer
         //"ID": ["4", "6", "Enemy5"], // 
         "2731": ["5", "6", "Enemy5"], // 
@@ -1139,16 +1236,61 @@ export const mobs = {
         //"ID": ["6", "6", "Enemy5"], // 
         //"ID": ["7", "6", "Enemy5"], // 
         //"ID": ["8", "6", "Enemy5"], // 
+     // Group Camp in Open World Undead
+       "1668": ["7", "9", "GUARD"], // Cryomancer
+       "1558": ["7", "9", "GUARD"], // Ghoul
+       "1613": ["7", "9", "GUARD"], // Unerring Bone Archer
+       "1580": ["7", "9", "GUARD"], // Unyielding Revenant
+       "1547": ["7", "9", "GUARD"], // Feeble Frostweaver
+       "1569": ["7", "9", "GUARD"], // Guard Tower
+       "1536": ["7", "9", "GUARD"], // Brittle Revenant
+       "1602": ["7", "9", "GUARD"], // Bone Archer
+       "1646": ["7", "9", "GUARD"], // Frostweaver
+       "1657": ["7", "9", "GUARD"], // Dominant Frostweaver
+       "1679": ["7", "9", "GUARD"], // Relentless Dreadknight
+     // Group Camp in Open World Morgana
+       "1186": ["6", "9", "GUARD"], // Pikeman Recruit
+       "1256": ["6", "9", "GUARD"], // Merciless Suppressor
+       "1236": ["6", "9", "GUARD"], // Suppressor Recruit
+       "1286": ["6", "9", "GUARD"], // Acolyte Occultist
+       "1296": ["6", "9", "GUARD"], // Occultist
+       "1246": ["6", "9", "GUARD"], // Suppressor
+       "1196": ["6", "9", "GUARD"], // Pikeman
+       "1246": ["6", "9", "GUARD"], // Suppressor Recruit
+       "1336": ["6", "9", "GUARD"], // Dark Paladin
+       "1306": ["6", "9", "GUARD"], // Callous Occultist
+       "1316": ["6", "9", "GUARD"], // Ritual Leader
+    // Static Mobs Morgana
+       "1385": ["8", "9", "GUARD"], // Elite Zealous Footman
+       "1409": ["8", "9", "GUARD"], // Elite Zealous Crossbowman
+       "1505": ["8", "9", "GUARD"], // Giant Raven
+       "1362": ["8", "9", "GUARD"], // Elite Zealous Squire
+       "1491": ["8", "9", "GUARD"], // Elite Zealous Knight
   // Region End
   
   // Region - The Avalonian
     // Avalonian Treasure Drone
-      "830": ["5", "7", "AVALONMINION6"], // Green Chest
-      "831": ["6", "7", "AVALONMINION6"], // Green Chest
-      "832": ["7", "7", "AVALONMINION6"], // Green Chest
-      "833": ["8", "7", "AVALONMINION6"], // 
-      "836": ["7", "7", "AVALONMINION6"], // 
-      "838": ["5", "7", "AVALONMINION6"], // Epic Chest
+    // Standard
+      "855": ["5", "7", "AVALONMINION2"], // Green Chest
+      "856": ["6", "7", "AVALONMINION2"], // Green Chest
+      "857": ["7", "7", "AVALONMINION2"], // Green Chest
+      "858": ["8", "7", "AVALONMINION2"], // Green Chest
+    // Uncomon ": ["6", "7", "AVALONMINION6"], // Green Chest
+      "859": ["5", "7", "AVALONMINION3"], // Green Chest
+      "860": ["6", "7", "AVALONMINION3"], // Green Chest
+      "861": ["7", "7", "AVALONMINION3"], // Green Chest
+      "862": ["8", "7", "AVALONMINION3"], // Green Chest
+    // Rare    ": ["6", "7", "AVALONMINION6"], // Green Chest
+      "863": ["5", "7", "AVALONMINION4"], // Green Chest
+      "864": ["6", "7", "AVALONMINION4"], // Green Chest
+      "865": ["7", "7", "AVALONMINION4"], // Green Chest
+      "866": ["8", "7", "AVALONMINION4"], // Green Chest
+    // Legendar": ["6", "7", "AVALONMINION6"], // Green Chest
+      "867": ["5", "7", "AVALONMINION5"], // Green Chest
+      "868": ["6", "7", "AVALONMINION5"], // Green Chest
+      "869": ["7", "7", "AVALONMINION5"], // Green Chest
+      "870": ["8", "7", "AVALONMINION5"], // Green Chest
+    //#endregion
     // Drones
       // Pathfinder Heavy Drone
         "853": ["4", "12", "Enemy1"], // 
@@ -1239,41 +1381,42 @@ export const mobs = {
     // Caerleon
       "2038": ["6", "9", "GUARD"], // Caerleon City Guard
       "2040": ["6", "9", "BANDIT_RINGLEADER"], // Bandit Ringleader
-      "2042": ["6", "9", "GUARD"], // Bandit Pillager
+      "SEARCHING FOR ID": ["6", "9", "GUARD"], // Bandit Pillager
       "2046": ["6", "9", "GUARD"], // Bandit Arsonist
     // Guard
-      "2086": ["4", "9", "GUARD"], // Watchtower Mage
-      "2087": ["5", "9", "GUARD"], // Watchtower Mage
-      "2088": ["6", "9", "GUARD"], // Watchtower Mage
-      "2091": ["4", "9", "GUARD"], // Watchtower Swordsman
-      "2092": ["5", "9", "GUARD"], // Watchtower Swordsman
-      "2093": ["6", "9", "GUARD"], // Watchtower Swordsman
-      "2096": ["4", "9", "GUARD"], // Watchtower Arbelist
-      "2097": ["5", "9", "GUARD"], // Watchtower Arbelist
-      "2098": ["6", "9", "GUARD"], // Watchtower Arbelist
+      "2213": ["4", "9", "GUARD"], // Watchtower Mage
+      "2214": ["5", "9", "GUARD"], // Watchtower Mage
+      "2215": ["6", "9", "GUARD"], // Watchtower Mage
+      "2218": ["4", "9", "GUARD"], // Watchtower Swordsman
+      "2219": ["5", "9", "GUARD"], // Watchtower Swordsman
+      "2220": ["6", "9", "GUARD"], // Watchtower Swordsman
+      "2223": ["4", "9", "GUARD"], // Watchtower Arbelist
+      "2224": ["5", "9", "GUARD"], // Watchtower Arbelist
+      "2225": ["6", "9", "GUARD"], // Watchtower Arbelist
       "2104": ["4", "9", "GUARD"], // Royal Guard Tower
       "2105": ["6", "9", "GUARD"], // Guard Tower
       "305": ["7", "9", "T7_MOB_WATCHTOWER_ARCANEGUARD_ELITE"], // Sentry Mage
       "306": ["6", "9", "T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN"], // Siphoning Mage
   // Region End
-  
+
+
   // Hidden treasure
     // Forest Biome
-      "720": ["4", "9", "ROAMINGCHESTFOREST1"], // Hidden Treasure - Forest
-      "725": ["5", "9", "ROAMINGCHESTFOREST1"], // Hidden Treasure - Forest
-      "730": ["6", "9", "ROAMINGCHESTFOREST1"], // Hidden Treasure - Forest
+      "ID": ["4", "9", "ROAMINGCHESTFOREST1"], // Hidden Treasure - Forest
+      "750": ["5", "9", "ROAMINGCHESTFOREST1"], // Hidden Treasure - Forest
+      "755": ["6", "9", "ROAMINGCHESTFOREST1"], // Hidden Treasure - Forest
       //"ID": ["7", "9", "ROAMINGCHESTFOREST1"], // Hidden Treasure - Forest
       //"ID": ["8", "9", "ROAMINGCHESTFOREST1"], // Hidden Treasure - Forest
     // Highland Biome
-      "721": ["4", "9", "ROAMINGCHESTHIGHLAND1"], // Hidden Treasure - Highland
-      "726": ["5", "9", "ROAMINGCHESTHIGHLAND1"], // Hidden Treasure - Highland
-      "731": ["6", "9", "ROAMINGCHESTHIGHLAND1"], // Hidden Treasure - Highland
+      "745": ["4", "9", "ROAMINGCHESTHIGHLAND1"], // Hidden Treasure - Highland
+      "746": ["5", "9", "ROAMINGCHESTHIGHLAND1"], // Hidden Treasure - Highland
+      "747": ["6", "9", "ROAMINGCHESTHIGHLAND1"], // Hidden Treasure - Highland
       //"ID": ["7", "9", "ROAMINGCHESTHIGHLAND1"], // Hidden Treasure - Highland
       //"ID": ["8", "9", "ROAMINGCHESTHIGHLAND1"], // Hidden Treasure - Highland
     // Mountain Biome
-      "723": ["4", "9", "ROAMINGCHESTMOUNTAIN1"], // Hidden Treasure - Winter
-      "728": ["5", "9", "ROAMINGCHESTMOUNTAIN1"], // Hidden Treasure - Winter
-      "733": ["6", "9", "ROAMINGCHESTMOUNTAIN1"], // Hidden Treasure - Winter
+      "748": ["4", "9", "ROAMINGCHESTMOUNTAIN1"], // Hidden Treasure - Winter
+      "753": ["5", "9", "ROAMINGCHESTMOUNTAIN1"], // Hidden Treasure - Winter
+      "758": ["6", "9", "ROAMINGCHESTMOUNTAIN1"], // Hidden Treasure - Winter
       //"ID": ["7", "9", "ROAMINGCHESTMOUNTAIN1"], // Hidden Treasure - Winter
       //"ID": ["8", "9", "ROAMINGCHESTMOUNTAIN1"], // Hidden Treasure - Winter
     // Steppe Biome
@@ -1285,25 +1428,23 @@ export const mobs = {
     // Swamp Biome
       "722": ["4", "9", "ROAMINGCHESTSWAMP1"], // Hidden Treasure - Swamp
       "727": ["5", "9", "ROAMINGCHESTSWAMP1"], // Hidden Treasure - Swamp
-      "732": ["6", "9", "ROAMINGCHESTSWAMP1"], // Hidden Treasure - Swamp
-      //"ID": ["7", "9", "ROAMINGCHESTSWAMP1"], // Hidden Treasure - Swamp
-      //"ID": ["8", "9", "ROAMINGCHESTSWAMP1"], // Hidden Treasure - Swamp
+      "757": ["6", "9", "ROAMINGCHESTSWAMP1"], // Hidden Treasure - Swamp
     // Avalon Biome
       "715": ["4", "9", "HERETICCHEST1"], // Hidden Treasure - Avalon
       "716": ["5", "9", "HERETICCHEST1"], // Hidden Treasure - Avalon
       "717": ["6", "9", "HERETICCHEST1"], // Hidden Treasure - Avalon
       "718": ["7", "9", "HERETICCHEST1"], // Hidden Treasure - Avalon
-      //"ID": ["8", "9", "HERETICCHEST1"], // Hidden Treasure - Avalon
+      "719": ["8", "9", "HERETICCHEST1"], // Hidden Treasure - Avalon
   // Region End
   
   // Events
-    "768": ["2", "9", "EVENTEASTERCHEST1"], // 
-    "769": ["3", "9", "EVENTEASTERCHEST1"], // 
-    "770": ["4", "9", "EVENTEASTERCHEST1"], // 
-    "771": ["5", "9", "EVENTEASTERCHEST1"], // 
-    "772": ["6", "9", "EVENTEASTERCHEST1"], // 
-    "773": ["7", "9", "EVENTEASTERCHEST1"], // 
-    "774": ["8", "9", "EVENTEASTERCHEST1"], // 
+    "ID": ["2", "9", "EVENTEASTERCHEST1"], // 
+    "ID": ["3", "9", "EVENTEASTERCHEST1"], // 
+    "ID": ["4", "9", "EVENTEASTERCHEST1"], // 
+    "ID": ["5", "9", "EVENTEASTERCHEST1"], // 
+    "ID": ["6", "9", "EVENTEASTERCHEST1"], // 
+    "ID": ["7", "9", "EVENTEASTERCHEST1"], // 
+    "ID": ["8", "9", "EVENTEASTERCHEST1"], // 
   // Region End
   
   // Region Tracking Boss
@@ -1335,10 +1476,10 @@ export const mobs = {
   "115": ["8", "9", "Tracking_Harvester_of_Souls"], // 
   // Shadow Panther
   "97": ["4", "9", "Tracking_Panther"], // Solo
-  //"111": ["4", "9", "Tracking_Panther"], // Group
+  "111": ["4", "9", "Tracking_Panther"], // Group
   // Sylvian
   "97": ["4", "9", "Tracking_Sylvian"], // Solo
-  //"ID": ["4", "9", "Tracking_Sylvian"], // Group
+  "ID": ["4", "9", "Tracking_Sylvian"], // Group
   // Spirit Bear
   "101": ["4", "9", "Tracking_Spirit_Bear"], // Solo
   //"ID": ["4", "9", "Tracking_Spirit_Bear"], // Group
@@ -1355,4 +1496,64 @@ export const mobs = {
   //"ID": ["4", "9", "Tracking_Dawnbird"], // Solo
   //"ID": ["4", "9", "Tracking_Dawnbird"], // Group
   // Region End
+  
+    // TIER 5
+    // OPEN WORLD - MOBS
+      "1992": ["5", "9", "Enemy1"], // BRANCO - Selvagem
+      "1995": ["5", "9", "Enemy2"], // VERDE - Berserker
+      "2010": ["5", "9", "Enemy2"], // VERDE - Caçadora
+      "2007": ["5", "9", "Enemy2"], // VERDE - Caniveteira
+      "2031": ["5", "9", "Enemy2"], // VERDE - Druida
+      "1998": ["5", "9", "Enemy3"], // AZUL - Berserker Experiente
+      "2013": ["5", "9", "Enemy3"], // AZUL - Caçadora Renomada
+      "2022": ["5", "9", "Enemy3"], // AZUL - Gigante Grisalho
+      "2016": ["5", "9", "Enemy4"], // ROXO - Líder do Bando
+      "2001": ["5", "9", "Enemy4"], // ROXO - Guerreiro Invicto
+      "2037": ["5", "9", "Enemy4"], // ROXO - Druida Ancião
+
+    // OPEN WORLD - CRISTAIS
+    //  "329": ["7", "9", "Enemy1"], // BRANCO - Carniçal (Teste)
+
+  // TIER 7
+    // OPEN WORLD - MOBS
+      "1547": ["7", "9", "Enemy1"], // BRANCO - Carniçal
+      "1525": ["7", "9", "Enemy1"], // BRANCO - Fantasma Frágil
+      "1536": ["7", "9", "Enemy1"], // BRANCO - Aranha Gelada Frágil
+      "1558": ["7", "9", "Enemy2"], // VERDE - Fantasma
+      "1591": ["7", "9", "Enemy2"], // VERDE - Arqueiro de Osso
+      "1635": ["7", "9", "Enemy2"], // VERDE - Aranha Gelada
+      "1569": ["7", "9", "Enemy3"], // AZUL - Fantasma Obstinado
+      "1646": ["7", "9", "Enemy3"], // AZUL - Aranha Gelada Dominante
+      "1602": ["7", "9", "Enemy3"], // AZUL - Arqueiro de Osso Infálivel
+      "1668": ["7", "9", "Enemy3"], // AZUL - Cavaleiro Terrível Implacável
+      "1613": ["7", "9", "Enemy4"], // ROXO - Atirador Ressucitado
+      "1580": ["7", "9", "Enemy4"], // ROXO - Espadachim Despertado
+      "1679": ["7", "9", "Enemy5"], // ROXO - Soberano Terrível
+      "1918": ["7", "9", "Enemy3"], // BOSS AMARELO - Aranha Gelada Dominante (Static)
+      "1919": ["7", "9", "Enemy4"], // BOSS LARANJA - Criomante (Static)
+      "1884": ["7", "9", "Enemy4"], // BOSS LARANJA - Atirador Ressuscitado (Static)
+
+    // OPEN WORLD - CRISTAIS
+    //  "329": ["7", "9", "Enemy1"], // BRANCO - Carniçal (Teste)
+
+  // TIER 8
+    // OPEN WORLD - MOBS
+      "1353": ["8", "9", "Enemy1"], // BRANCO - Dog
+      "1507": ["8", "9", "Enemy1"], // BRANCO - Bat
+      "1177": ["8", "9", "Enemy1"], // BRANCO - Piqueiro Recruta
+      "1227": ["8", "9", "Enemy1"], // BRANCO - Supressor Recruta
+      "1277": ["8", "9", "Enemy1"], // BRANCO - Ocultista Acólita
+      "1187": ["8", "9", "Enemy2"], // VERDE - Piqueiro
+      "1237": ["8", "9", "Enemy2"], // VERDE - Surpressor
+      "1287": ["8", "9", "Enemy2"], // VERDE - Ocultista
+      "1197": ["8", "9", "Enemy3"], // AZUL - Piqueiro Guarda-Negro
+      "1247": ["8", "9", "Enemy3"], // AZUL - Supressor Impedioso
+      "1297": ["8", "9", "Enemy3"], // AZUL - Ocultista Insensível
+      "1327": ["8", "9", "Enemy3"], // AZUL - Paladino Negro
+      "1257": ["8", "9", "Enemy4"], // ROXO - Líder de Supressão
+      "1307": ["8", "9", "Enemy4"], // ROXO - Líder de Ritual
+      "1207": ["8", "9", "Enemy4"], // ROXO - Guarda Tenente
+      "1217": ["8", "9", "Enemy5"], // DOURADO - Comandante da Guarda
+      "1267": ["8", "9", "Enemy5"], // DOURADO - Comandante da Guarda
+
   };
