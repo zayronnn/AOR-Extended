@@ -5,10 +5,13 @@ const fs = require("node:fs");
 const getAdapterIp = () => {
   const interfaces = networkInterfaces();
 
-  console.log();
-  console.log(
-    "Please select one of the adapter that you use to connect to the internet:",
-  );
+console.log();
+    console.log('Selecione o Adptador de rede principal.');
+	console.log('Nao recomendamos o Uso de VPN ou NoPing (fale conosco caso use!');
+	console.log('Compatibilidade com (ExitLag) Ative o modo Legado');
+	console.log('.');
+    console.log('Selecione um dos adaptadores que voce usa para se conectar a Internet:');
+	console.log('.');
 
   let i = 1;
   const selection = {};
@@ -27,19 +30,19 @@ const getAdapterIp = () => {
 
   while (true) {
     console.log();
-    let userSelect = readlineSync.question("input the number here: ");
+    let userSelect = readlineSync.question("insira o numero aqui: ");
     selectedIp = selection[userSelect];
     selectedName = selectionName[userSelect];
 
     if (selectedIp) break;
 
     console.clear();
-    console.log("Invalid input, try again");
+    console.log("Entrada invalida, tente novamente");
     console.log();
 
     console.log();
     console.log(
-      "Please select one of the adapter that you use to connect to the internet:",
+      "Selecione um dos adaptadores que voce usa para se conectar a Internet:",
     );
 
     for (let j = 1; j < i; j++) {
@@ -48,11 +51,11 @@ const getAdapterIp = () => {
   }
 
   console.log();
-  console.log(`You have selected "${selectedName} - ${selectedIp}"`);
+  console.log(`Voce selecionou "${selectedName} - ${selectedIp}"`);
   console.log();
 
   fs.writeFile("ip.txt", selectedIp, (err) => {
-    if (err) console.log("Error when saving ip.");
+    if (err) console.log("Erro ao salvar ip.");
   });
 
   return selectedIp;
