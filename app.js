@@ -18,7 +18,7 @@ BigInt.prototype.toJSON = function () {
 app.use(express.static(__dirname + "/views"));
 
 // Adicione uma data de expiração
-const expirationDate = new Date('2025-01-20T23:59:59'); 
+const expirationDate = new Date('2025-02-20T23:59:59'); 
 
 // Verifique se a data atual é posterior à data de expiração
 if (new Date() > expirationDate) {
