@@ -113,24 +113,24 @@ export class PlayersHandler {
       this.alreadyFilteredPlayers.push(nickname.toUpperCase());
     }
 
-    const alliance = String(Parameters[49]);
+    const alliance = String(Parameters[51]);
 
     if (this.filteredAlliances.find((name) => name === alliance.toUpperCase())) {
       this.alreadyFilteredPlayers.push(nickname.toUpperCase());
     }
 
     /* Position */
-    var positionArray = Parameters[14];
+    var positionArray = Parameters[16];
     const posX = positionArray[0];
     const posY = positionArray[1];
 
     /* Health */
-    const currentHealth = Parameters[20];
-    const initialHealth = Parameters[21];
+    const currentHealth = Parameters[22];
+    const initialHealth = Parameters[23];
 
     /* Items & flag */
-    const items = Parameters[38];
-    const flagId = Parameters[51];
+    const items = Parameters[40];
+    const flagId = Parameters[53];
 
     this.addPlayer(
       posX,
