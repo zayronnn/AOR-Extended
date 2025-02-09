@@ -10,17 +10,17 @@ export class PlayersDrawing extends DrawingUtils {
 
     sortPlayersByDistance(players) {
         // Sort all players by their distance and return the top 8 closest players
-        return players.slice().sort((a, b) => a.distance - b.distance).slice(0, 8);
+        return players.slice().sort((a, b) => a.distance - b.distance).slice(0, 15);
     }
 
     drawItems(context, canvas, players, devMode, alreadyFilteredPlayers, filteredGuilds, filteredAlliances) {
         const canvasHeight = 500; // Total canvas height
-        const canvasWidth = 500;
+        const canvasWidth = 550;
         const gap = 2;
         const playerBoxHeight = Math.floor((canvasHeight - (gap * 9)) / 8); // Adjusted for 8 players with gaps
         const playerBoxWidth = canvasWidth;
-        const itemSize = 60; // Increased item icon size
-        const itemGap = 5; // Small gap between items
+        const itemSize = 65; // Increased item icon size
+        const itemGap = 1; // Small gap between items
 
         const sortedPlayers = players.length > 0 ? this.sortPlayersByDistance(players) : [];
         
